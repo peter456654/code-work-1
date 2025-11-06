@@ -63,7 +63,7 @@ const CurrentOpportunities = () => {
     {
       title: "Marketing Intern",
       experience: "Fresher",
-      workMode: "Hybrid",
+      workMode: "Onsite",
       type: "Full-time"
     }
   ];
