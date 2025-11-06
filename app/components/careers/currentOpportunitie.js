@@ -47,7 +47,25 @@ const CurrentOpportunities = () => {
       workMode: "Onsite",
       type: "Full-time"
     },
-   
+    {
+      title: "Lead Engineer - Full Stack",
+      experience: "Minimum 4 years",
+      workMode: "Hybrid",
+      type: "Full-time"
+    },
+    
+    {
+      title: "UI UX Designer",
+      experience: "Minimum 3 Years",
+      workMode: "Hybrid",
+      type: "Full-time"
+    },
+    {
+      title: "Marketing Intern",
+      experience: "Fresher",
+      workMode: "Hybrid",
+      type: "Full-time"
+    }
   ];
 
   return (
