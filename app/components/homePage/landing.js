@@ -3,7 +3,8 @@ import React from "react";
 import Link from "next/link";
 const Landing = () => {
   return (
-    <section className="relative w-full h-auto sm:h-[80vh] md:h-screen flex items-center bg-primary overflow-hidden">
+    <>
+      <section className="relative w-full h-auto sm:h-[80vh] md:h-screen flex items-center bg-primary overflow-hidden">
       {/* Interactive 3D Background */}
       <div className="absolute inset-0 w-full h-full">
         
@@ -11,7 +12,7 @@ const Landing = () => {
         <div
           className="absolute inset-0 w-full h-full z-10"
           style={{
-            background: `linear-gradient(135deg, rgba(0, 37, 62) 0%, rgba(0, 37, 62) 30%, rgba(0, 37, 62) 70%, rgba(0, 37, 62) 100%)`,
+            background: `linear-gradient(135deg, rgba(5,12,37,0.8) 0%, rgba(5,12,37,0.8) 30%, rgba(5,12,37,0.8) 70%, rgba(5,12,37,0.8) 100%)`,
           }}
         ></div>
 
@@ -23,14 +24,14 @@ const Landing = () => {
         </div> */}
 
         {/* Enhanced stars effect */}
-        <div className="absolute inset-0 z-20">
+        {/* <div className="absolute inset-0 z-20">
           <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-white rounded-full opacity-60 animate-pulse"></div>
           <div className="absolute top-1/3 right-1/3 w-0.5 h-0.5 bg-white rounded-full opacity-40 animate-pulse animation-delay-1000"></div>
           <div className="absolute bottom-1/4 left-1/2 w-1 h-1 bg-secondary rounded-full opacity-50 animate-pulse animation-delay-2000"></div>
           <div className="absolute top-1/2 right-1/4 w-0.5 h-0.5 bg-white rounded-full opacity-70 animate-pulse animation-delay-3000"></div>
           <div className="absolute bottom-1/3 right-1/2 w-1 h-1 bg-white rounded-full opacity-30 animate-pulse animation-delay-4000"></div>
           <div className="absolute top-3/4 left-1/5 w-0.5 h-0.5 bg-secondary rounded-full opacity-60 animate-pulse animation-delay-1500"></div>
-        </div>
+        </div> */}
       </div>
 
       {/* Content Container with higher z-index */}
@@ -61,8 +62,7 @@ const Landing = () => {
             {/* Enhanced Paragraph Container */}
             <div className="paragraph-container mb-10 sm:mb-12 w-full lg:w-[70vw] xl:w-[70vw]">
               <p className="text-base sm:text-lg md:text-xl lg:text-xl leading-relaxed text-white/90 font-light">
-               Empowering organizations to    <span className="">adapt, evolve, </span> 
-                 <span className="font-medium">and thrive in the </span> AI-driven era.
+                Transform your business with intelligent, AI-driven solutions that automate processes, enhance decision-making, and boost operational efficiency.
               </p>
               
               {/* Decorative line */}
@@ -92,7 +92,7 @@ const Landing = () => {
             </div>
 
             {/* Additional Stats or Features */}
-            <div className="flex justify-center md:justify-start items-center space-x-6 lg:space-x-8 text-white/60 text-sm">
+            <div className="flex justify-center md:justify-start items-center space-x-6 lg:space-x-8 text-white/60 text-base sm:text-lg md:text-xl">
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-secondary rounded-full animate-pulse"></div>
                 <span>AI Powered</span>
@@ -152,7 +152,8 @@ const Landing = () => {
         }
 
       `}</style>
-    </section>
+      </section>
+    </>
   );
 };
 

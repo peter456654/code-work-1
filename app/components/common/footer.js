@@ -102,19 +102,19 @@ const Footer = () => {
   return (
     <footer className="w-full bg-primary text-white relative overflow-hidden">
       {/* Background Decorative Elements */}
-      <div className="absolute inset-0 opacity-5">
+      {/* <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-20 w-40 h-40 bg-secondary/20 rounded-full animate-blob"></div>
         <div className="absolute top-60 right-32 w-32 h-32 bg-secondary/15 rounded-full animate-blob animation-delay-2000"></div>
         <div className="absolute bottom-40 left-1/3 w-48 h-48 bg-secondary/25 rounded-full animate-blob animation-delay-4000"></div>
-      </div>
+      </div> */}
 
       {/* Floating Elements */}
-      <div className="absolute inset-0 pointer-events-none opacity-20">
+      {/* <div className="absolute inset-0 pointer-events-none opacity-20">
         <div className="absolute top-32 left-16 w-2 h-2 bg-secondary rounded-full animate-pulse"></div>
         <div className="absolute top-48 right-20 w-1 h-1 bg-white/60 rounded-full animate-pulse animation-delay-1000"></div>
         <div className="absolute bottom-56 left-1/4 w-3 h-3 bg-secondary/80 rounded-full animate-pulse animation-delay-2000"></div>
         <div className="absolute top-3/4 right-1/3 w-1 h-1 bg-white/40 rounded-full animate-pulse animation-delay-3000"></div>
-      </div>
+      </div> */}
 
       {/* Main Footer Content */}
       <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-6 sm:py-8 relative z-10">
@@ -317,7 +317,7 @@ const Footer = () => {
             <Link href="/contact-ai-solutions">
               <div className="button-bg rounded-full p-0.5 hover:scale-105 transition duration-300 active:scale-100">
                 <button className="px-4 sm:px-6 text-xs sm:text-base py-1.5 sm:py-2  rounded-full font-semibold bg-black  flex items-center space-x-2">
-                  <span className="text-white">Get In Touch</span>
+                  <span className="text-white">Get Started</span>
                   <FaArrowRight size={14} className="sm:text-base" />
                 </button>
               </div>

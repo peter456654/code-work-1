@@ -7,9 +7,9 @@ import {
   SiReact,
   SiNextdotjs,
   SiPython,
-  SiJava,
+  SiOpenjdk,
   SiR,
-  SiAzuredevops,
+  SiMicrosoftazure,
   SiDocker,
   SiKubernetes,
   SiGraphql,
@@ -24,9 +24,9 @@ const DrivingInnovation = () => {
     { name: "React", Icon: SiReact },
     { name: "Next.js", Icon: SiNextdotjs },
     { name: "Python", Icon: SiPython },
-    { name: "Java", Icon: SiJava },
+    { name: "Java", Icon: SiOpenjdk },
     { name: "R Language", Icon: SiR },
-    { name: "Azure", Icon: SiAzuredevops },
+    { name: "Microsoft Azure", Icon: SiMicrosoftazure },
     { name: "Docker", Icon: SiDocker },
     { name: "Kubernetes", Icon: SiKubernetes },
     { name: "GraphQL", Icon: SiGraphql },
@@ -37,20 +37,20 @@ const DrivingInnovation = () => {
   return (
     <section className="bg-primary w-full py-16 pt-8 relative sm:py-20 md:py-24 lg:py-28 xl:py-32 overflow-hidden">
       {/* Background Decorative Elements */}
-      <div className="absolute inset-0 opacity-10">
+      {/* <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-40 h-40 bg-secondary/20 rounded-full animate-blob"></div>
         <div className="absolute top-60 right-32 w-32 h-32 bg-secondary/15 rounded-full animate-blob animation-delay-2000"></div>
         <div className="absolute bottom-40 left-1/3 w-48 h-48 bg-secondary/25 rounded-full animate-blob animation-delay-4000"></div>
         <div className="absolute top-1/3 right-1/4 w-24 h-24 bg-secondary/10 rounded-full animate-blob animation-delay-1000"></div>
-      </div>
+      </div> */}
 
       {/* Floating Elements */}
-      <div className="absolute inset-0 pointer-events-none">
+      {/* <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-32 left-16 w-3 h-3 bg-secondary rounded-full animate-pulse"></div>
         <div className="absolute top-48 right-20 w-2 h-2 bg-white/60 rounded-full animate-pulse animation-delay-1000"></div>
         <div className="absolute bottom-56 left-1/4 w-4 h-4 bg-secondary/80 rounded-full animate-pulse animation-delay-2000"></div>
         <div className="absolute top-3/4 right-1/3 w-2 h-2 bg-white/40 rounded-full animate-pulse animation-delay-3000"></div>
-      </div>
+      </div> */}
 
       {/* Enhanced Main Content */}
       <div className="px-4 pt-20 flex w-full justify-center relative z-10">
@@ -59,8 +59,8 @@ const DrivingInnovation = () => {
           {/* Left Side: Enhanced Text Content */}
           <div className="w-full md:w-[65%] space-y-6 sm:space-y-8">
             {/* Section Badge */}
-            <div className="inline-flex items-center px-4 py-2 rounded-full border border-secondary/30 bg-white/5 backdrop-blur-sm">
-              <span className="text-secondary text-sm font-medium">— Our Excellence —</span>
+            <div>
+              <span className="text-secondary text-lg font-medium">— Our Excellence —</span>
             </div>
 
             {/* Enhanced Title */}
@@ -95,6 +95,7 @@ const DrivingInnovation = () => {
                   alt="Team working"
                   width={700}
                   height={600}
+                  unoptimized
                   className="w-full h-auto rounded-2xl group-hover:brightness-110 transition-all duration-500"
                 />
               </div>
@@ -113,8 +114,8 @@ const DrivingInnovation = () => {
           
           {/* Enhanced Section Header */}
           <div className="mb-12">
-            <div className="inline-flex items-center px-4 py-2 rounded-full border border-secondary/30 bg-white/5 backdrop-blur-sm mb-6">
-              <span className="text-secondary text-sm font-medium">— Technology Stack —</span>
+            <div >
+              <span className="text-secondary text-lg font-medium">— Technology Stack —</span>
             </div>
             <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
               <span className="text-white">Technologies We </span>

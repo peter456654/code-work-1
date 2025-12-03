@@ -4,11 +4,11 @@ const WhyChooseUs = () => {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        // @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     
-        * {
-          font-family: 'Poppins', sans-serif;
-        }
+        // * {
+        //   font-family: 'Poppins', sans-serif;
+        // }
 
         @keyframes blob {
           0% {
@@ -40,41 +40,40 @@ const WhyChooseUs = () => {
       
       <section className="bg-primary relative pt-28 py-16 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 overflow-hidden">
         {/* Background Decorative Elements */}
-        <div className="absolute inset-0 opacity-10">
+        {/* <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-20 w-40 h-40 bg-secondary/20 rounded-full animate-blob"></div>
           <div className="absolute top-60 right-32 w-32 h-32 bg-secondary/15 rounded-full animate-blob animation-delay-2000"></div>
           <div className="absolute bottom-40 left-1/3 w-48 h-48 bg-secondary/25 rounded-full animate-blob animation-delay-4000"></div>
-        </div>
+        </div> */}
 
         {/* Floating Elements */}
-        <div className="absolute inset-0 pointer-events-none">
+        {/* <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-32 left-16 w-3 h-3 bg-secondary rounded-full animate-pulse"></div>
           <div className="absolute top-48 right-20 w-2 h-2 bg-white/60 rounded-full animate-pulse animation-delay-1000"></div>
           <div className="absolute bottom-56 left-1/4 w-4 h-4 bg-secondary/80 rounded-full animate-pulse animation-delay-2000"></div>
           <div className="absolute top-3/4 right-1/3 w-2 h-2 bg-white/40 rounded-full animate-pulse animation-delay-3000"></div>
-        </div>
+        </div> */}
 
         <div className="container mx-auto relative z-10">
           {/* Enhanced Header Section */}
           <div className="text-center mb-16">
             {/* Section Badge */}
-            <div className="inline-flex items-center px-4 py-2 rounded-full border border-secondary/30 bg-white/5 backdrop-blur-sm mb-6">
-              <span className="text-secondary text-sm font-medium">— Our Advantages —</span>
+            <div >
+              <span className="text-secondary text-lg font-medium">— Our Advantages —</span>
             </div>
 
             {/* Enhanced Title */}
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-              <span className="text-white">Why </span>
+              <span className="text-white">See How </span>
               <span className="bg-gradient-to-r from-secondary via-cyan-400 to-secondary bg-clip-text text-transparent">
-                Choose
+                CODEWORK
               </span>
-              <span className="text-white"> Us?</span>
+              <span className="text-white"> Works for You</span>
             </h2>
 
             {/* Subtitle */}
             <p className="text-white/90 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed">
-              Discover the advantages that make <span className="text-secondary font-medium">Codework</span> your trusted partner for AI-powered solutions
-            </p>
+Schedule a demo to discover how our enterprise AI suite helps your team build and deploy AI applications and agents in just 30 days.             </p>
           </div>
           
           {/* Enhanced Expandable Image Cards Container */}
@@ -83,7 +82,7 @@ const WhyChooseUs = () => {
             <div className="relative group flex-grow transition-all w-full lg:w-80 h-[400px] duration-500 hover:w-full cursor-pointer">
               <img 
                 className="h-full w-full object-cover object-center rounded-2xl"
-                src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?q=80&w=800&h=400&auto=format&fit=crop"
+                src="https://plus.unsplash.com/premium_photo-1754792065280-04e403fb6e9c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fEluZHVzdHJ5LVNwZWNpZmljJTIwVXNlJTIwQ2FzZXMlMjBibHVlfGVufDB8fDB8fHww"
                 alt="Punctual Deliveries" 
               />
               {/* Enhanced Overlay */}
@@ -102,7 +101,7 @@ const WhyChooseUs = () => {
                     </svg>
                   </div>
                   <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-secondary transition-colors duration-300">
-                    Punctual Deliveries
+                    Industry-specific use cases 
                   </h3>
                   <div className="overflow-hidden">
                     <p className="text-sm text-white/80 leading-relaxed transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-200">
@@ -117,7 +116,7 @@ const WhyChooseUs = () => {
             <div className="relative group flex-grow transition-all w-full lg:w-80 h-[400px] duration-500 hover:w-full cursor-pointer">
               <img 
                 className="h-full w-full object-cover object-center rounded-2xl"
-                src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=800&h=400&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1576272531110-2a342fe22342?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8RmxleGlibGUlMjBXb3JrZmxvd3MlMjBVc2luZyUyMENvZGUlMjBvciUyMFZpc3VhbCUyMEludGVyZmFjZXMlMjBibHVlfGVufDB8fDB8fHww"
                 alt="Transparent Pricing" 
               />
               {/* Enhanced Overlay */}
@@ -137,7 +136,7 @@ const WhyChooseUs = () => {
                     </svg>
                   </div>
                   <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-secondary transition-colors duration-300">
-                    Transparent Pricing
+                    Flexible workflows using code or visual interfaces that fit your team 
                   </h3>
                   <div className="overflow-hidden">
                     <p className="text-sm text-white/80 leading-relaxed transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-200">
@@ -152,7 +151,7 @@ const WhyChooseUs = () => {
             <div className="relative group flex-grow transition-all w-full lg:w-80 h-[400px] duration-500 hover:w-full cursor-pointer">
               <img 
                 className="h-full w-full object-cover object-center rounded-2xl"
-                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=800&h=400&auto=format&fit=crop"
+                src="https://plus.unsplash.com/premium_photo-1680699963071-9d446da362bf?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjF8fFRoZSUyMEFJJTIwYmx1ZXxlbnwwfHwwfHx8MA%3D%3D"
                 alt="Support You Can Count On" 
               />
               {/* Enhanced Overlay */}
@@ -171,7 +170,7 @@ const WhyChooseUs = () => {
                     </svg>
                   </div>
                   <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-secondary transition-colors duration-300">
-                    Reliable Support
+                   The fastest path to achieving AI impact
                   </h3>
                   <div className="overflow-hidden">
                     <p className="text-sm text-white/80 leading-relaxed transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-200">

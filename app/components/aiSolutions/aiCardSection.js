@@ -8,7 +8,7 @@ const Card = ({ card, additionalStyle, index }) => {
 
   return (
     <div
-      className={`relative ${card.roundedCorner} overflow-hidden shadow-2xl bg-cover bg-center transition-all duration-700 transform hover:scale-110 hover:-rotate-1 cursor-pointer ${additionalStyle} group h-[300px] sm:h-[360px] md:h-[440px] w-full max-w-[600px] animate-float-up`}
+      className={`relative ${card.roundedCorner} overflow-hidden shadow-2xl bg-cover bg-center transition-all duration-700 transform hover:scale-105 hover:-rotate-1 cursor-pointer ${additionalStyle} group h-[220px] sm:h-[320px] md:h-[360px] w-full max-w-[520px] animate-float-up`}
       style={{ 
         backgroundImage: `url(${card.image})`,
         animationDelay: `${index * 0.2}s`
@@ -32,7 +32,7 @@ const Card = ({ card, additionalStyle, index }) => {
               {/* Icon glow effect */}
               <div className="absolute inset-0 bg-secondary/30 rounded-full blur-xl animate-pulse"></div>
               <IconComponent
-                size={64}
+                size={53}
                 className="relative z-10 transition-all duration-500 group-hover:rotate-12 group-hover:scale-110"
                 style={{ fill: "url(#iconGradient)" }}
               />
@@ -40,7 +40,7 @@ const Card = ({ card, additionalStyle, index }) => {
           )}
         </div>
         <div className="w-full flex items-center ml-4 sm:ml-24 justify-between">
-          <h3 className="text-2xl font-bold transition-all duration-700 ease-in-out group-hover:-translate-y-32 group-hover:opacity-0 group-hover:scale-125">
+          <h3 className="text-xl font-bold transition-all duration-700 ease-in-out group-hover:-translate-y-32 group-hover:opacity-0 group-hover:scale-125">
             {card.title}
           </h3>
         </div>
@@ -48,7 +48,7 @@ const Card = ({ card, additionalStyle, index }) => {
         <div className="absolute top-1/2 right-4 sm:right-16 md:right-16 lg:right-32 transform -translate-y-1/2 transition-all duration-700 ease-in-out group-hover:translate-x-24 group-hover:opacity-0 group-hover:rotate-45 group-hover:scale-125">
           <div className="relative">
             <div className="absolute inset-0 bg-secondary/40 rounded-full blur-lg animate-pulse"></div>
-            <MdArrowCircleRight size={34} className="relative z-10" style={{ fill: "url(#iconGradient)" }} />
+            <MdArrowCircleRight size={28} className="relative z-10" style={{ fill: "url(#iconGradient)" }} />
           </div>
         </div>
       </div>
@@ -56,7 +56,7 @@ const Card = ({ card, additionalStyle, index }) => {
       {/* Enhanced hover content */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-white opacity-0 transition-all duration-500 group-hover:opacity-100 transform group-hover:scale-105">
         <div className="text-center px-6 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-700 delay-100">
-          <h3 className="text-3xl font-bold mb-4 text-secondary drop-shadow-lg animate-bounce-subtle">{card.title}</h3>
+          <h3 className="text-2xl font-bold mb-4 text-secondary drop-shadow-lg animate-bounce-subtle">{card.title}</h3>
           <p className="text-lg leading-relaxed font-light max-w-md opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-300">
             {card.description}
           </p>
@@ -149,20 +149,20 @@ const AiCardSection = () => {
   return (
     <div className="relative p-8 bg-primary overflow-hidden">
       {/* Enhanced background with floating elements */}
-      <div className="absolute inset-0 opacity-10">
+      {/* <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-40 h-40 bg-secondary/20 rounded-full animate-blob"></div>
         <div className="absolute top-60 right-32 w-32 h-32 bg-secondary/15 rounded-full animate-blob animation-delay-2000"></div>
         <div className="absolute bottom-40 left-1/3 w-48 h-48 bg-secondary/25 rounded-full animate-blob animation-delay-4000"></div>
         <div className="absolute top-1/3 right-1/4 w-24 h-24 bg-secondary/10 rounded-full animate-blob animation-delay-1000"></div>
-      </div>
+      </div> */}
 
       {/* Floating particles */}
-      <div className="absolute inset-0 pointer-events-none">
+      {/* <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-32 left-16 w-3 h-3 bg-secondary rounded-full animate-pulse"></div>
         <div className="absolute top-48 right-20 w-2 h-2 bg-white/60 rounded-full animate-pulse animation-delay-1000"></div>
         <div className="absolute bottom-56 left-1/4 w-4 h-4 bg-secondary/80 rounded-full animate-pulse animation-delay-2000"></div>
         <div className="absolute top-3/4 right-1/3 w-2 h-2 bg-white/40 rounded-full animate-pulse animation-delay-3000"></div>
-      </div>
+      </div> */}
 
       {/* Enhanced SVG gradients */}
       <svg width="0" height="0" className="absolute">
@@ -182,8 +182,8 @@ const AiCardSection = () => {
 
       {/* Section Header */}
       <div className="text-center mb-16 relative z-10">
-        <div className="inline-flex items-center px-4 py-2 rounded-full border border-secondary/30 bg-white/5 backdrop-blur-sm mb-6">
-          <span className="text-secondary text-sm font-medium">— AI Solutions —</span>
+        <div>
+          <span className="text-secondary text-lg font-medium">— AI Solutions —</span>
         </div>
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4">
           <span className="text-white"> Our  </span>
@@ -198,7 +198,7 @@ const AiCardSection = () => {
 
       {/* Desktop view */}
       <div className="hidden md:block relative z-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-12 justify-items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-9 justify-items-center">
           {displayedCards.map((card, index) => (
             <Card key={card.id} card={card} additionalStyle={card.additionalStyle} index={index} />
           ))}
