@@ -11,27 +11,38 @@ const AIKeynoteCarousel = () => {
   const [activeIndex, setActiveIndex] = useState(2);
   const topNavContainerRef = useRef(null);
   const topBtnRefs = useRef([]);
+  const scrollBehaviorRef = useRef('auto');
+  const [isInteracting, setIsInteracting] = useState(false);
 
   useEffect(() => {
+    if (isInteracting) return;
     const interval = setInterval(() => {
+      scrollBehaviorRef.current = 'auto';
       setActiveIndex((prev) => (prev + 1) % topics.length);
     }, 3000);
     return () => clearInterval(interval);
-  }, [topics.length]);
+  }, [topics.length, isInteracting]);
 
   const handlePrev = () => {
+    scrollBehaviorRef.current = 'smooth';
     setActiveIndex((prev) => (prev - 1 + topics.length) % topics.length);
   };
 
   const handleNext = () => {
+    scrollBehaviorRef.current = 'smooth';
     setActiveIndex((prev) => (prev + 1) % topics.length);
   };
 
   useEffect(() => {
     const el = topBtnRefs.current[activeIndex];
-    if (el && topNavContainerRef.current) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-    }
+    const container = topNavContainerRef.current;
+    if (!el || !container) return;
+    if (scrollBehaviorRef.current !== 'smooth') return;
+    const target =
+      el.offsetLeft - container.clientWidth / 2 + el.clientWidth / 2;
+    const maxScroll = container.scrollWidth - container.clientWidth;
+    const clamped = Math.max(0, Math.min(target, maxScroll));
+    container.scrollTo({ left: clamped, behavior: 'smooth' });
   }, [activeIndex]);
 
   return (
@@ -40,13 +51,20 @@ const AIKeynoteCarousel = () => {
       <div className="relative px-8 py-6 overflow-hidden">
         <div className="flex items-center justify-between max-w-7xl mx-auto">
           <div className="flex-1 overflow-hidden">
-            <div ref={topNavContainerRef} className="flex gap-3 items-center overflow-x-auto scroll-smooth whitespace-nowrap hide-scrollbar">
+            <div
+              ref={topNavContainerRef}
+              className="flex gap-3 items-center overflow-x-auto scroll-smooth whitespace-nowrap hide-scrollbar no-scroll-chaining"
+              onMouseEnter={() => setIsInteracting(true)}
+              onMouseLeave={() => setIsInteracting(false)}
+              onTouchStart={() => setIsInteracting(true)}
+              onTouchEnd={() => setIsInteracting(false)}
+            >
               {topics.map((svc, idx) => (
                 <Link key={idx} href={svc.link}>
                   <button
                     ref={(el) => (topBtnRefs.current[idx] = el)}
-                    onMouseEnter={() => setActiveIndex(idx)}
-                    onClick={() => setActiveIndex(idx)}
+                    onMouseEnter={() => { scrollBehaviorRef.current = 'smooth'; setActiveIndex(idx); }}
+                    onClick={() => { scrollBehaviorRef.current = 'smooth'; setActiveIndex(idx); }}
                     className={`px-6 py-2.5 rounded-full whitespace-nowrap text-sm font-medium transition-all duration-300 border ${
                       idx === activeIndex
                         ? 'bg-primary text-secondary border-secondary/20'
@@ -123,5 +141,8 @@ export default AIKeynoteCarousel;
   }
   .hide-scrollbar::-webkit-scrollbar {
     display: none;
+  }
+  .no-scroll-chaining {
+    overscroll-behavior: contain;
   }
 `}</style>
