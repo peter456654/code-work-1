@@ -16,8 +16,8 @@ export default {
     },
     extend: {
       colors: {
-        primary:  '#050c25',
-        secondary: '#1ddfea',
+        primary:  '#ffffff',
+        secondary: '#000000',
       },
       keyframes: {
         marquee: {

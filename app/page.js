@@ -10,6 +10,14 @@ import WhyChooseUs from "./components/homePage/whyChooseUs";
 import WeListening from "./components/homePage/weListening";
 import AnimatedRows from "./components/common/scroll";
 import ScrollAnimatedRows from "./components/common/scrollimage2";
+import ChatBotAi from "./components/homePage/chatBotAi";
+import AIKeynoteCarousel from "./components/homePage/serviceCarousel";
+import OurProduct from "./components/ourProduct/ourProduct";
+import SoftwareServices from "./components/homePage/softwareServices";
+import HomeClient from "./components/homePage/homeClient";
+import WeekResult from "./components/homePage/weekResult";
+import NextStep from "./components/homePage/nextStep";
+import AIEnabled from "./components/homePage/AIEnabled";
 
 
 export default function Home() {
@@ -82,17 +90,27 @@ export default function Home() {
       {/* Animation Trigger Zone - First Two Components */}
       <div id="animation-zone">
         <Landing />
-          <WhatWeOffer />
+        <ChatBotAi />
+        <AIKeynoteCarousel />
+        <AreasExcellence />
+        <OurProduct />
+        <SoftwareServices />
+        <HomeClient />
+         <AIEnabled />
+        <WeekResult />
+        <NextStep />
+{/*        
+          <WhatWeOffer /> */}
       </div>
 
       {/* Remaining Components - No Animation */}
-      <Clients />
-     <AreasExcellence />
-      <ScrollAnimatedRows />
+      {/* <Clients />
+     
+      <ScrollAnimatedRows /> */}
       {/* <ServicesCarousel /> */}
-      <AiInnovations />
+      {/* <AiInnovations />
       <WhyChooseUs />
-      <WeListening />
+      <WeListening /> */}
     </div>
   );
 }

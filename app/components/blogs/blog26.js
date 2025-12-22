@@ -51,12 +51,12 @@ const Blog26 = () => {
   }, []);
 
   return (
-    <div className="bg-primary py-12 pt-40 min-h-screen">
+    <div className="bg-secondary py-12 pt-40 min-h-screen">
       <div className="max-w-screen-xl mx-auto px-4 flex gap-8">
         {/* LEFT SIDEBAR - TABLE OF CONTENTS */}
         <div className="hidden lg:block w-64 sticky top-24 h-fit">
           <div className="bg-primary/60 backdrop-blur-sm rounded-xl border border-secondary/20 p-6 shadow-glow">
-            <h3 className="text-lg font-bold text-secondary mb-4 flex items-center">
+            <h3 className="text-lg font-bold text-primary mb-4 flex items-center">
               <FiList className="mr-2" />
               Table of Contents
             </h3>
@@ -70,8 +70,8 @@ const Blog26 = () => {
                   onClick={() => scrollToSection(item.id)}
                   className={`block w-full text-left px-3 py-2 rounded-lg text-sm transition-all duration-200 ${
                     activeSection === item.id
-                      ? "bg-secondary/20 text-secondary border-l-4 border-secondary"
-                      : "text-white/70 hover:text-white hover:bg-white/5"
+                      ? "bg-primary/20 text-primary border-l-4 border-primary"
+                      : "text-primary hover:text-primary/80 hover:bg-primary/5"
                   }`}
                 >
                   {index + 1}. {item.title}
@@ -91,9 +91,9 @@ const Blog26 = () => {
 
         {/* MOBILE TOC OVERLAY */}
         {isTocOpen && (
-          <div className="lg:hidden fixed inset-0 z-40 bg-black/50" onClick={() => setIsTocOpen(false)}>
+          <div className="lg:hidden fixed inset-0 z-40 bg-secondary/50" onClick={() => setIsTocOpen(false)}>
             <div className="bg-primary w-80 h-full overflow-y-auto p-6 shadow-xl" onClick={e => e.stopPropagation()}>
-              <h3 className="text-lg font-bold text-secondary mb-4 flex items-center">
+              <h3 className="text-lg font-bold text-primary mb-4 flex items-center">
                 <FiList className="mr-2" />
                 Table of Contents
               </h3>
@@ -107,8 +107,8 @@ const Blog26 = () => {
                     }}
                     className={`block w-full text-left px-3 py-2 rounded-lg text-sm transition-all duration-200 ${
                       activeSection === item.id
-                        ? "bg-secondary/20 text-secondary border-l-4 border-secondary"
-                        : "text-white/70 hover:text-white hover:bg-white/5"
+                        ? "bg-primary/20 text-primary border-l-4 border-primary"
+                        : "text-primary hover:text-primary/80 hover:bg-primary/5"
                     }`}
                   >
                     {index + 1}. {item.title}
@@ -122,12 +122,12 @@ const Blog26 = () => {
         {/* MAIN CONTENT */}
         <div className="flex-1 max-w-4xl">
           {/* TITLE */}
-          <h1 className="text-5xl font-extrabold text-secondary mb-8 drop-shadow-glow">
+          <h1 className="text-5xl font-extrabold text-primary mb-8 drop-shadow-glow">
             AI Consulting
           </h1>
 
           {/* FEATURE IMAGE */}
-          <div className="relative w-full h-[400px] border-4 border-secondary border-t-0 border-l-0 rounded-lg overflow-hidden mb-8 shadow-glow">
+          <div className="relative w-full h-[400px] border-4 border-primary border-t-0 border-l-0 rounded-lg overflow-hidden mb-8 shadow-glow">
             <Image
               src="/blog/blog2.jpg"
               alt="AI Consulting"
@@ -138,32 +138,32 @@ const Blog26 = () => {
           </div>
 
           {/* META */}
-          <div className="flex items-center text-sm text-white mb-10 space-x-3">
-            <div className="w-8 h-8 rounded-full bg-cyan-400/20 flex items-center justify-center text-cyan-400 font-extrabold drop-shadow-glow">
+          <div className="flex items-center text-sm text-primary mb-10 space-x-3">
+            <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-extrabold drop-shadow-glow">
               C
             </div>
             <span className="uppercase tracking-wide font-semibold">Codework</span>
             <span>•</span>
             <div className="flex items-center">
-              <FiClock className="mr-1 text-cyan-400" />
+              <FiClock className="mr-1 text-primary" />
               <span>16 July 2025</span>
             </div>
           </div>
 
           {/* SECTION: AI Consulting Overview */}
           <section id="ai-consulting-overview" className="scroll-mt-24">
-            <p className="text-white/80 text-xl leading-relaxed mb-10">
+            <p className="text-primary/80 text-xl leading-relaxed mb-10">
               Transform your business with AI consulting and development services that position you as an industry leader.
             </p>
           </section>
 
           {/* SECTION: Why Choose Our AI Consulting Services */}
           <section id="why-choose-our-services" className="scroll-mt-24">
-            <h2 className="text-2xl font-bold text-white mb-4">Why Choose Our AI Consulting Services</h2>
-            <p className="text-white/80 leading-relaxed mb-4">
+            <h2 className="text-2xl font-bold text-primary mb-4">Why Choose Our AI Consulting Services</h2>
+            <p className="text-primary/80 leading-relaxed mb-4">
               Align your business goals with smart, scalable AI solutions through expert guidance from Codework.
             </p>
-            <ul className="list-disc ml-6 text-white/80 mb-10 space-y-2">
+            <ul className="list-disc ml-6 text-primary/80 mb-10 space-y-2">
               <li>We help identify and prioritize the most impactful AI use cases for your business.</li>
               <li>Our team recommends scalable tools that suit your project requirements and future growth.</li>
               <li>We design a solid roadmap to integrate AI into your operations smoothly.</li>
@@ -173,40 +173,40 @@ const Blog26 = () => {
 
           {/* SECTION: Unlock Growth with Codework's AI Expertise */}
           <section id="unlock-growth-with-codework" className="scroll-mt-24">
-            <h2 className="text-2xl font-bold text-white mb-4">Unlock Growth with Codework's AI Expertise</h2>
-            <p className="text-white/80 leading-relaxed mb-10">
+            <h2 className="text-2xl font-bold text-primary mb-4">Unlock Growth with Codework's AI Expertise</h2>
+            <p className="text-primary/80 leading-relaxed mb-10">
               Leverage AI-powered insights to spark innovation, widen your customer base, and unlock new sources of revenue[67][68].
             </p>
           </section>
 
           {/* SECTION: New AI Product Development */}
           <section id="new-ai-product-development" className="scroll-mt-24">
-            <h2 className="text-2xl font-bold text-white mb-4">New AI Product Development</h2>
-            <p className="text-white/80 leading-relaxed mb-4">
+            <h2 className="text-2xl font-bold text-primary mb-4">New AI Product Development</h2>
+            <p className="text-primary/80 leading-relaxed mb-4">
               Minimize risks and reduce development costs by validating your AI product idea early.
             </p>
-            <p className="text-white/80 leading-relaxed mb-4">
+            <p className="text-primary/80 leading-relaxed mb-4">
               Codework's AI consultants assist you in every phase—from defining project scope and selecting the right tools, to estimating timelines and resource needs.
             </p>
-            <p className="text-white/80 leading-relaxed mb-10">
+            <p className="text-primary/80 leading-relaxed mb-10">
               With over a decade of experience in AI consulting and solution development, Codework supports you from concept to successful launch—and beyond.
             </p>
           </section>
 
           {/* SECTION: Integrating AI into Existing Products */}
           <section id="integrating-ai-into-existing-products" className="scroll-mt-24">
-            <h2 className="text-2xl font-bold text-white mb-4">Integrating AI into Existing Products</h2>
-            <p className="text-white/80 leading-relaxed mb-4">
+            <h2 className="text-2xl font-bold text-primary mb-4">Integrating AI into Existing Products</h2>
+            <p className="text-primary/80 leading-relaxed mb-4">
               Stay competitive by enhancing your current solutions with intelligent capabilities.
             </p>
-            <p className="text-white/80 leading-relaxed mb-4">
+            <p className="text-primary/80 leading-relaxed mb-4">
               Our experts perform a detailed analysis of your systems, data pipelines, and infrastructure to recommend the best AI integration strategy.
             </p>
-            <p className="text-white/80 leading-relaxed mb-6">
+            <p className="text-primary/80 leading-relaxed mb-6">
               Codework's AI engineers ensure a seamless transformation by applying proven expertise and delivering tailor-made solutions.
             </p>
-            <div className="bg-secondary/10 border border-secondary/30 rounded-lg p-6 mb-10">
-              <p className="text-secondary font-semibold text-center">
+            <div className="bg-primary/10 border border-primary/30 rounded-lg p-6 mb-10">
+              <p className="text-primary font-semibold text-center">
                 Get a free consultation
               </p>
             </div>
@@ -214,8 +214,8 @@ const Blog26 = () => {
 
           {/* SECTION: Our Problem-Solving Approach */}
           <section id="problem-solving-approach" className="scroll-mt-24">
-            <h2 className="text-2xl font-bold text-white mb-4">Our Problem-Solving Approach</h2>
-            <ul className="list-disc ml-6 text-white/80 mb-10 space-y-4">
+            <h2 className="text-2xl font-bold text-primary mb-4">Our Problem-Solving Approach</h2>
+            <ul className="list-disc ml-6 text-primary/80 mb-10 space-y-4">
               <li>
                 <strong>Strategy & Consulting:</strong> Assess your current operations and future objectives to craft a targeted AI transformation plan.
               </li>
@@ -233,46 +233,46 @@ const Blog26 = () => {
 
           {/* SECTION: AI Consulting for Businesses */}
           <section id="ai-consulting-for-businesses" className="scroll-mt-24">
-            <h2 className="text-2xl font-bold text-white mb-4">AI Consulting for Businesses</h2>
-            <p className="text-white/80 leading-relaxed mb-10">
+            <h2 className="text-2xl font-bold text-primary mb-4">AI Consulting for Businesses</h2>
+            <p className="text-primary/80 leading-relaxed mb-10">
               Codework helps you build scalable, intelligent solutions that meet both business targets and customer expectations—with a focus on clean design and reliable development.
             </p>
           </section>
 
           {/* SECTION: Technology Consulting */}
           <section id="technology-consulting" className="scroll-mt-24">
-            <h2 className="text-2xl font-bold text-white mb-4">Technology Consulting</h2>
-            <p className="text-white/80 leading-relaxed mb-10">
+            <h2 className="text-2xl font-bold text-primary mb-4">Technology Consulting</h2>
+            <p className="text-primary/80 leading-relaxed mb-10">
               Our AI and tech specialists guide you in selecting cost-effective, scalable technologies that fast-track innovation and improve your services—quickly and efficiently.
             </p>
           </section>
 
           {/* SECTION: AI Integration Support */}
           <section id="ai-integration-support" className="scroll-mt-24">
-            <h2 className="text-2xl font-bold text-white mb-4">AI Integration Support</h2>
-            <p className="text-white/80 leading-relaxed mb-10">
+            <h2 className="text-2xl font-bold text-primary mb-4">AI Integration Support</h2>
+            <p className="text-primary/80 leading-relaxed mb-10">
               We help design AI adoption roadmaps and build Proofs-of-Concept to evaluate feasibility. From planning to execution, Codework is your partner throughout the AI journey.
             </p>
           </section>
 
           {/* SECTION: UI/UX Design Excellence */}
           <section id="ui-ux-design-excellence" className="scroll-mt-24">
-            <h2 className="text-2xl font-bold text-white mb-4">UI/UX Design Excellence</h2>
-            <p className="text-white/80 leading-relaxed mb-10">
+            <h2 className="text-2xl font-bold text-primary mb-4">UI/UX Design Excellence</h2>
+            <p className="text-primary/80 leading-relaxed mb-10">
               Partner with our UI/UX experts to craft immersive and engaging digital experiences that leave a lasting impression. We combine user research, competitive analysis, and modern design principles to craft intuitive, impactful digital products[71][72].
             </p>
           </section>
 
           {/* SECTION: Conclusion */}
           <section id="conclusion" className="scroll-mt-24">
-            <h2 className="text-2xl font-bold text-white mb-4">Conclusion:</h2>
-            <p className="text-white/80 leading-relaxed mb-4">
+            <h2 className="text-2xl font-bold text-primary mb-4">Conclusion:</h2>
+            <p className="text-primary/80 leading-relaxed mb-4">
               We don't just build AI solutions—we build long-term partnerships that drive transformation, innovation, and measurable results. Whether you're launching a new AI product, enhancing an existing system, or exploring the possibilities of digital intelligence, our end-to-end consulting services are here to guide you every step of the way.
             </p>
-            <p className="text-white/80 leading-relaxed mb-4">
+            <p className="text-primary/80 leading-relaxed mb-4">
               We combine deep technical expertise with business insight to deliver custom AI solutions that scale with your goals and stay ahead of market demands.
             </p>
-            <p className="text-white/80 leading-relaxed mb-10">
+            <p className="text-primary/80 leading-relaxed mb-10">
               From strategy and development to integration and user experience, Codework ensures your journey into AI is smooth, impactful, and future-ready.
             </p>
           </section>
@@ -281,10 +281,10 @@ const Blog26 = () => {
 
       <style jsx global>{`
         .drop-shadow-glow {
-          text-shadow: 0 0 12px #1ddfea66, 0 0 2px #223044;
+          text-shadow: 0 0 12px rgba(255, 255, 255, 0.4), 0 0 2px rgba(0, 0, 0, 0.3);
         }
         .shadow-glow {
-          box-shadow: 0 0 32px #1ddfea22, 0 0 8px #22304426;
+          box-shadow: 0 0 32px rgba(255, 255, 255, 0.12), 0 0 8px rgba(0, 0, 0, 0.15);
         }
         .scroll-mt-24 {
           scroll-margin-top: 6rem;
@@ -302,26 +302,26 @@ const Blog26 = () => {
         }
 
         ::-webkit-scrollbar-track {
-          background: rgba(34, 48, 68, 0.3);
+          background: rgba(0, 0, 0, 0.3);
         }
 
         ::-webkit-scrollbar-thumb {
-          background: #1ddfea;
+          background: #ffffff;
           border-radius: 2px;
         }
 
         ::-webkit-scrollbar-thumb:hover {
-          background: rgba(29, 223, 234, 0.8);
+          background: rgba(255, 255, 255, 0.8);
         }
 
         ::-webkit-scrollbar-corner {
-          background: rgba(34, 48, 68, 0.3);
+          background: rgba(0, 0, 0, 0.3);
         }
 
         /* Firefox */
         * {
           scrollbar-width: thin;
-          scrollbar-color: #1ddfea rgba(34, 48, 68, 0.3);
+          scrollbar-color: #ffffff rgba(0, 0, 0, 0.3);
         }
       `}</style>
     </div>

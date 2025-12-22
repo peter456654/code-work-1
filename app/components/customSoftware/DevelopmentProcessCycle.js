@@ -60,7 +60,7 @@ const DevelopmentProcessCycle = () => {
 
       {/* Central logo/text */}
       <div className="absolute w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-primary/90 backdrop-blur-sm border-2 border-secondary flex items-center justify-center z-10">
-        <span className="text-secondary font-bold text-xs sm:text-sm">DP</span>
+        <span className="text-primary font-bold text-xs sm:text-sm">DP</span>
       </div>
 
       {/* Rotating container for all icons */}
@@ -74,11 +74,11 @@ const DevelopmentProcessCycle = () => {
               style={{ left, top, transform: `rotate(${angle}rad) translate(0, 0)` }}
             >
               <div
-                className="flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 bg-primary/90 backdrop-blur-xl border-3 border-secondary rounded-full shadow-lg cursor-pointer transition-all duration-500 hover:scale-110 hover:rotate-12 hover:bg-secondary hover:border-primary hover:shadow-[0_0_25px_rgba(29,223,234,0.8)] group -translate-x-1/2 -translate-y-1/2"
+                className="flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full border-2 border-secondary cursor-pointer transition-transform duration-500 hover:scale-110 hover:rotate-12 group -translate-x-1/2 -translate-y-1/2"
                 style={{ transform: `rotate(${-angle}rad)` }}
                 title={label}
               >
-                <div className="text-secondary group-hover:text-primary transition-colors duration-300">
+                <div className="text-primary group-hover:text-primary transition-colors duration-300">
                   {icon}
                 </div>
                 {/* Floating label */}
@@ -97,7 +97,7 @@ const DevelopmentProcessCycle = () => {
       <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ zIndex: -1 }}>
         <defs>
           <linearGradient id="devLineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#1ddfea" stopOpacity="0.3" />
+            <stop offset="0%" stopColor="#ffffff" stopOpacity="0.25" />
             <stop offset="100%" stopColor="#050c25" stopOpacity="0.1" />
           </linearGradient>
         </defs>
@@ -146,7 +146,7 @@ const DevelopmentProcessCycle = () => {
           animation: spin-icons 25s linear infinite;
         }
         .shadow-glow {
-          box-shadow: 0 0 60px rgba(29, 223, 234, 0.3);
+          box-shadow: 0 0 60px rgba(255, 255, 255, 0.2);
         }
       `}</style>
     </div>

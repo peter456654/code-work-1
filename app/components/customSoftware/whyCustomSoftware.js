@@ -26,7 +26,7 @@ const WhyCustomSoftware = () => {
   ];
 
   return (
-    <div className="container mx-auto bg-primary py-24 px-14 relative overflow-hidden">
+    <div className="container max-w-full bg-secondary py-24 px-14 relative overflow-hidden">
       {/* Background animated particles */}
       <div className="absolute inset-0 opacity-10">
         <div className="floating-particles"></div>
@@ -36,15 +36,12 @@ const WhyCustomSoftware = () => {
         {/* Left side - Title and subtitle */}
         <div className="md:w-1/3">
          <h2
-  className="text-4xl font-bold text-secondary mb-6"
-  style={{
-    textShadow: "0 0 6px #1ddfea44, 0 0 10px #1ddfea33, 0 0 2px #050c25aa"
-  }}
+  className="text-4xl font-bold text-primary mb-6"
 >
   Why Choose Custom Software Development?
 </h2>
 
-          <p className="text-white/80 text-lg leading-relaxed animate-fade-in-left-delay">
+          <p className="text-primary text-lg leading-relaxed animate-fade-in-left-delay">
             A custom solution provides:
           </p>
         </div>
@@ -54,7 +51,7 @@ const WhyCustomSoftware = () => {
           {benefits.map(({ title, hoverText }, index) => (
             <div 
               key={index} 
-              className="rounded-xl p-6 bg-gradient-to-br from-secondary/30 via-secondary/10 to-primary/50 text-white shadow-glow transition-all duration-500 relative overflow-hidden group h-[120px] border border-secondary/20 cursor-pointer hover:scale-105 hover:rotate-1 animate-fade-in-up"
+              className="rounded-xl p-6 bg-gradient-to-br from-secondary/30 via-secondary/10 to-primary/50 text-primary shadow-glow transition-all duration-500 relative overflow-hidden group h-[120px] border border-secondary/20 cursor-pointer hover:scale-105 hover:rotate-1 animate-fade-in-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Static gradient overlay */}
@@ -76,12 +73,12 @@ const WhyCustomSoftware = () => {
               {/* Content */}
               <div className="relative z-10 flex flex-col justify-center h-full">
                 {/* Default title text */}
-                <p className="font-bold text-lg group-hover:opacity-0 transition-opacity duration-300 absolute top-0 left-0 text-secondary drop-shadow-sm">
+                <p className="font-bold text-lg group-hover:opacity-0 transition-opacity duration-300 absolute top-0 left-0 text-primary drop-shadow-sm">
                   {title}
                 </p>
                 
                 {/* Hover text */}
-                <p className="font-medium text-white/90 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute top-0 left-0 right-0 leading-relaxed">
+                <p className="font-medium text-primary text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute top-0 left-0 right-0 leading-relaxed">
                   {hoverText}
                 </p>
               </div>
@@ -92,10 +89,10 @@ const WhyCustomSoftware = () => {
       
       <style jsx>{`
         .shadow-glow {
-          box-shadow: 0 0 50px rgba(29, 223, 234, 0.25), 0 0 20px rgba(29, 223, 234, 0.15);
+          box-shadow: 0 0 50px rgba(255, 255, 255, 0.25), 0 0 20px rgba(255, 255, 255, 0.15);
         }
         .drop-shadow-glow {
-          text-shadow: 0 0 20px #1ddfea, 0 0 40px #1ddfea, 0 0 4px #050c25;
+          text-shadow: 0 0 20px #ffffff, 0 0 40px #ffffff, 0 0 4px #050c25;
         }
         
         @keyframes spin-slow {
@@ -144,9 +141,9 @@ const WhyCustomSoftware = () => {
           width: 100%;
           height: 100%;
           background-image: 
-            radial-gradient(circle at 20% 50%, rgba(29, 223, 234, 0.1) 1px, transparent 1px),
-            radial-gradient(circle at 80% 20%, rgba(29, 223, 234, 0.1) 1px, transparent 1px),
-            radial-gradient(circle at 40% 80%, rgba(29, 223, 234, 0.1) 1px, transparent 1px);
+            radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+            radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+            radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
           animation: floating 6s ease-in-out infinite;
         }
       `}</style>

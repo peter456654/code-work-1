@@ -58,7 +58,7 @@ const ItStaffLanding = () => {
   };
 
   return (
-    <section className="relative w-full min-h-screen bg-primary overflow-hidden">
+    <section className="relative w-full min-h-screen bg-secondary overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-40 h-40 bg-secondary/20 rounded-full"></div>
@@ -82,14 +82,14 @@ const ItStaffLanding = () => {
           {/* Left Side - Main Content (Takes 2 columns) */}
           <div className="lg:col-span-2 text-left">
             {/* Section Badge */}
-            <div className="inline-flex items-center border border-secondary/30 bg-white/5 backdrop-blur-sm text-secondary px-6 py-3 rounded-full text-sm font-medium mb-8">
+            <div className="inline-flex items-center border border-secondary/30 bg-secondary/10 backdrop-blur-sm text-primary px-6 py-3 rounded-full text-sm font-medium mb-8">
               <span className="w-2 h-2 bg-secondary rounded-full mr-2 animate-pulse"></span>
               IT Staff Augmentation Services
             </div>
 
             <div className="heading-container mb-8">
-              <h1 className="text-4xl sm:text-5xl lg:text-5xl font-bold text-white leading-tight mb-6">
-                IT Staff Augmentation - <span className="bg-gradient-to-r from-secondary via-cyan-400 to-secondary bg-clip-text text-transparent">Simplifying IT</span> for Business Growth
+              <h1 className="text-4xl sm:text-5xl lg:text-5xl font-bold text-primary leading-tight mb-6">
+                IT Staff Augmentation - <span className="text-primary">Simplifying IT</span> for Business Growth
               </h1>
               
               {/* Decorative underline */}
@@ -97,22 +97,22 @@ const ItStaffLanding = () => {
             </div>
 
             <div className="paragraph-container mb-8 max-w-3xl">
-              <p className="text-lg text-white/90 leading-relaxed pl-4 border-l-4 border-secondary/40">
-                The core of <span className="text-secondary font-medium">Codework</span> IT Staff Augmentation involves strategically expanding your team with skilled professionals who integrate seamlessly into your existing operations. Every placement is crafted to fill critical skill gaps and accelerate project delivery. Whether you need specialized developers, DevOps engineers, or technical consultants, our expert professionals ensure enhanced productivity and successful project outcomes.
+              <p className="text-lg text-primary leading-relaxed pl-4 border-l-4 border-secondary/40">
+                The core of <span className="text-primary font-medium">Codework</span> IT Staff Augmentation involves strategically expanding your team with skilled professionals who integrate seamlessly into your existing operations. Every placement is crafted to fill critical skill gaps and accelerate project delivery. Whether you need specialized developers, DevOps engineers, or technical consultants, our expert professionals ensure enhanced productivity and successful project outcomes.
               </p>
               
               <div className="mt-6">
-                <h3 className="text-lg font-semibold text-secondary mb-4">Scale your team efficiently with expert IT professionals who drive innovation and success.</h3>
+                <h3 className="text-lg font-semibold text-primary mb-4">Scale your team efficiently with expert IT professionals who drive innovation and success.</h3>
               </div>
             </div>
           </div>
 
           {/* Right Side - Services Navigation */}
           <div className="lg:col-span-1">
-            <div className="bg-primary/70 backdrop-blur-xl rounded-3xl border border-white/20 shadow-2xl p-8 sticky top-8">
+            <div className="bg-secondary/70 backdrop-blur-xl rounded-3xl border border-secondary/30 shadow-2xl p-8 sticky top-8">
               <div className="flex items-center mb-6">
                 <div className="w-3 h-3 bg-secondary rounded-full mr-3 animate-pulse"></div>
-                <h3 className="text-xl font-bold text-white">Our Services</h3>
+                <h3 className="text-xl font-bold text-primary">Our Services</h3>
               </div>
               
               <div className="space-y-2">
@@ -122,12 +122,12 @@ const ItStaffLanding = () => {
                     <div 
                       className={`px-4 py-3 text-sm font-medium rounded-xl transition-all duration-300 border-l-4 group relative overflow-hidden ${
                         isActiveLink(service.link) || isDropdownActive(service)
-                          ? 'bg-secondary/20 text-secondary border-secondary font-bold shadow-lg backdrop-blur-sm'
-                          : 'text-white/80 hover:text-white hover:bg-white/10 border-transparent hover:border-secondary/50 hover:shadow-md'
+                          ? 'bg-secondary/20 text-primary border-secondary font-bold shadow-lg backdrop-blur-sm'
+                          : 'text-primary hover:text-primary hover:bg-secondary/10 border-transparent hover:border-secondary/50 hover:shadow-md'
                       }`}
                     >
                       {/* Hover background effect */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-secondary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      <div className="absolute inset-0 bg-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                       
                       <div className="relative z-10 flex items-center justify-between">
                         <Link href={service.link} className="flex-1">
@@ -138,7 +138,7 @@ const ItStaffLanding = () => {
                           <div className={`w-2 h-2 rounded-full transition-all duration-300 ${
                             isActiveLink(service.link) || isDropdownActive(service)
                               ? 'bg-secondary animate-pulse' 
-                              : 'bg-white/30 group-hover:bg-secondary/60'
+                              : 'bg-secondary/30 group-hover:bg-secondary/60'
                           }`}></div>
                           
                           {/* Dropdown Arrow */}
@@ -154,7 +154,7 @@ const ItStaffLanding = () => {
                                 className={`w-4 h-4 transition-transform duration-200 ${
                                   openDropdown === index ? 'rotate-180' : ''
                                 } ${
-                                  isDropdownActive(service) ? 'text-secondary' : 'text-white/60'
+                                  isDropdownActive(service) ? 'text-secondary' : 'text-primary/60'
                                 }`} 
                                 fill="none" 
                                 viewBox="0 0 24 24" 
@@ -180,8 +180,8 @@ const ItStaffLanding = () => {
                               href={dropdownItem.link}
                               className={`block px-3 py-2 text-xs font-medium rounded-lg transition-all duration-200 ${
                                 isActiveLink(dropdownItem.link)
-                                  ? 'bg-secondary/15 text-secondary border-l-2 border-secondary'
-                                  : 'text-white/70 hover:text-secondary hover:bg-white/5'
+                                  ? 'bg-secondary/15 text-primary border-l-2 border-secondary'
+                                  : 'text-primary hover:text-primary hover:bg-secondary/10'
                               }`}
                             >
                               {dropdownItem.title}
@@ -195,8 +195,8 @@ const ItStaffLanding = () => {
               </div>
 
               {/* Bottom decoration in services card */}
-              <div className="mt-6 pt-6 border-t border-white/10">
-                <div className="flex items-center text-white/60 text-xs">
+              <div className="mt-6 pt-6 border-t border-secondary/20">
+                <div className="flex items-center text-primary text-xs">
                   <div className="w-1 h-1 bg-secondary rounded-full mr-2"></div>
                   <span>Navigate through our services</span>
                 </div>

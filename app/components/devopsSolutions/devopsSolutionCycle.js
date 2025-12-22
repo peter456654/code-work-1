@@ -33,21 +33,21 @@ const DevopsSolutionCycle = () => {
   }, []);
 
   const icons = [
-    { icon: <AiOutlineFileSearch size={40} />, borderColor: "border-cyan-100", textColor: "text-blue-900" },
-    { icon: <VscNote size={40} />,             borderColor: "border-cyan-100", textColor: "text-blue-900" },
-    { icon: <BsTools size={40} />,             borderColor: "border-cyan-100", textColor: "text-blue-900" },
-    { icon: <TbAdjustmentsCode size={40} />,   borderColor: "border-cyan-100", textColor: "text-blue-900" },
-    { icon: <FaAward size={40} />,             borderColor: "border-cyan-100", textColor: "text-blue-900" },
-    { icon: <GoRocket size={40} />,            borderColor: "border-cyan-100", textColor: "text-blue-900" },
+    { icon: <AiOutlineFileSearch size={40} /> },
+    { icon: <VscNote size={40} /> },
+    { icon: <BsTools size={40} /> },
+    { icon: <TbAdjustmentsCode size={40} /> },
+    { icon: <FaAward size={40} /> },
+    { icon: <GoRocket size={40} /> },
   ];
 
   return (
     <div className="relative w-[240px] sm:w-[340px] h-[240px] sm:h-[340px] mx-auto flex items-center justify-center">
-      <div className="absolute w-full h-full rounded-full border-dashed border-2 border-blue-900 animate-spin" style={{ animationDuration: '20s' }}>
-        {icons.map(({ icon, borderColor, textColor }, index) => (
+      <div className="absolute w-full h-full rounded-full border-dashed border-2 border-secondary animate-spin" style={{ animationDuration: '20s' }}>
+        {icons.map(({ icon }, index) => (
           <div
             key={index}
-            className={`absolute flex items-center justify-center bg-white border-4 p-3 sm:p-5 rounded-full ${borderColor} ${textColor} transition-all duration-300 hover:bg-gradient-to-r hover:from-cyan-300 hover:to-purple-400 hover:text-white`}
+            className={`absolute flex items-center justify-center rounded-full border-2 border-secondary p-3 sm:p-5 text-primary transition-all duration-300`}
             style={positions[index] || { visibility: "hidden" }}
           >
             {icon}

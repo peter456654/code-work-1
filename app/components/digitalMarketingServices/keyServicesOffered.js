@@ -91,32 +91,21 @@ export default function KeyServicesOffered() {
   }, []);
 
   return (
-    <div className="relative bg-primary min-h-screen overflow-hidden py-20 px-4 sm:px-6 lg:px-20">
+    <div className="relative bg-secondary min-h-screen overflow-hidden py-20 px-4 sm:px-6 lg:px-20">
       {/* Background Decorative Elements */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-20 w-40 h-40 bg-secondary/20 rounded-full"></div>
-        <div className="absolute top-1/3 right-24 w-24 h-24 bg-secondary/15 rounded-full"></div>
-        <div className="absolute bottom-40 left-1/3 w-48 h-48 bg-secondary/25 rounded-full"></div>
-        <div className="absolute top-2/3 right-1/3 w-32 h-32 bg-secondary/12 rounded-full"></div>
-      </div>
+     
 
-      {/* Floating Dots */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-28 left-16 w-2 h-2 bg-secondary rounded-full animate-pulse"></div>
-        <div className="absolute top-48 right-20 w-2 h-2 bg-white/60 rounded-full animate-bounce"></div>
-        <div className="absolute bottom-56 left-1/4 w-3 h-3 bg-secondary/80 rounded-full animate-ping"></div>
-        <div className="absolute top-3/4 right-4 w-1 h-1 bg-white/40 rounded-full animate-pulse"></div>
-      </div>
+      
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header Section */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center border border-secondary/30 bg-white/5 backdrop-blur-sm text-secondary px-6 py-3 rounded-full text-sm font-medium mb-8">
+          <div className="inline-flex items-center border border-secondary/30 bg-secondary/10 backdrop-blur-sm text-primary px-6 py-3 rounded-full text-sm font-medium mb-8">
             <span className="w-2 h-2 bg-secondary rounded-full mr-2 animate-pulse"></span>
             Digital Marketing Services
           </div>
-          <h2 className="text-5xl font-bold text-white mb-6">
-            Key Services <span className="bg-gradient-to-r from-secondary via-cyan-400 to-secondary bg-clip-text text-transparent">Offered</span>
+          <h2 className="text-5xl font-bold text-primary mb-6">
+            Key Services <span className="text-primary">Offered</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-secondary to-transparent rounded-full mx-auto"></div>
         </div>
@@ -149,7 +138,7 @@ export default function KeyServicesOffered() {
                   className="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4"
                 >
                   <div
-                    className={`bg-primary/70 backdrop-blur-xl rounded-3xl border border-white/20 shadow-2xl overflow-hidden h-full transition-all duration-500 hover:bg-primary/80 hover:-translate-y-2 hover:shadow-3xl transform ${transformClasses} group`}
+                    className={`bg-secondary/70 backdrop-blur-xl rounded-3xl border border-secondary/30 shadow-2xl overflow-hidden h-full transition-all duration-500 hover:bg-secondary/80 hover:-translate-y-2 hover:shadow-3xl transform ${transformClasses} group`}
                   >
                     {/* Header with React icon and gradient */}
                     <div className={`bg-gradient-to-r ${card.gradient} p-8 relative overflow-hidden`}>
@@ -167,8 +156,8 @@ export default function KeyServicesOffered() {
                     </div>
 
                     {/* Body */}
-                    <div className="p-8 text-white/90 text-sm leading-relaxed flex-1 relative">
-                      <p className="group-hover:text-white transition-colors duration-300">
+                    <div className="p-8 text-primary text-sm leading-relaxed flex-1 relative">
+                      <p className="group-hover:text-primary transition-colors duration-300">
                         {card.text}
                       </p>
                       
@@ -180,7 +169,7 @@ export default function KeyServicesOffered() {
                             style={{ width: `${((idx + 1) / cards.length) * 100}%` }}
                           ></div>
                         </div>
-                        <span className="ml-3 text-secondary font-bold text-xs">
+                        <span className="ml-3 text-primary font-bold text-xs">
                           {String(idx + 1).padStart(2, '0')}
                         </span>
                       </div>
@@ -231,7 +220,7 @@ export default function KeyServicesOffered() {
                   className={`rounded-full transition-all duration-300 ${
                     page === currentPage
                       ? "bg-secondary w-8 h-3 shadow-lg"
-                      : "bg-white/30 w-3 h-3 hover:bg-white/50"
+                      : "bg-secondary/30 w-3 h-3 hover:bg-secondary/50"
                   }`}
                   aria-label={`Go to slide ${page + 1}`}
                 />

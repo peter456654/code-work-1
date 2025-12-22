@@ -50,12 +50,12 @@ const Blog22 = () => {
   }, []);
 
   return (
-    <div className="bg-primary py-12 pt-40 min-h-screen">
+    <div className="bg-secondary py-12 pt-40 min-h-screen">
       <div className="max-w-screen-xl mx-auto px-4 flex gap-8">
         {/* LEFT SIDEBAR - TABLE OF CONTENTS */}
         <div className="hidden lg:block w-64 sticky top-24 h-fit">
           <div className="bg-primary/60 backdrop-blur-sm rounded-xl border border-secondary/20 p-6 shadow-glow">
-            <h3 className="text-lg font-bold text-secondary mb-4 flex items-center">
+            <h3 className="text-lg font-bold text-primary mb-4 flex items-center">
               <FiList className="mr-2" />
               Table of Contents
             </h3>
@@ -69,8 +69,8 @@ const Blog22 = () => {
                   onClick={() => scrollToSection(item.id)}
                   className={`block w-full text-left px-3 py-2 rounded-lg text-sm transition-all duration-200 ${
                     activeSection === item.id
-                      ? "bg-secondary/20 text-secondary border-l-4 border-secondary"
-                      : "text-white/70 hover:text-white hover:bg-white/5"
+                      ? "bg-primary/20 text-primary border-l-4 border-primary"
+                      : "text-primary hover:text-primary/80 hover:bg-primary/5"
                   }`}
                 >
                   {index + 1}. {item.title}
@@ -90,9 +90,9 @@ const Blog22 = () => {
 
         {/* MOBILE TOC OVERLAY */}
         {isTocOpen && (
-          <div className="lg:hidden fixed inset-0 z-40 bg-black/50" onClick={() => setIsTocOpen(false)}>
+          <div className="lg:hidden fixed inset-0 z-40 bg-secondary/50" onClick={() => setIsTocOpen(false)}>
             <div className="bg-primary w-80 h-full overflow-y-auto p-6 shadow-xl" onClick={e => e.stopPropagation()}>
-              <h3 className="text-lg font-bold text-secondary mb-4 flex items-center">
+              <h3 className="text-lg font-bold text-primary mb-4 flex items-center">
                 <FiList className="mr-2" />
                 Table of Contents
               </h3>
@@ -106,8 +106,8 @@ const Blog22 = () => {
                     }}
                     className={`block w-full text-left px-3 py-2 rounded-lg text-sm transition-all duration-200 ${
                       activeSection === item.id
-                        ? "bg-secondary/20 text-secondary border-l-4 border-secondary"
-                        : "text-white/70 hover:text-white hover:bg-white/5"
+                        ? "bg-primary/20 text-primary border-l-4 border-primary"
+                        : "text-primary hover:text-primary/80 hover:bg-primary/5"
                     }`}
                   >
                     {index + 1}. {item.title}
@@ -121,12 +121,12 @@ const Blog22 = () => {
         {/* MAIN CONTENT */}
         <div className="flex-1 max-w-4xl">
           {/* TITLE */}
-          <h1 className="text-5xl font-extrabold text-secondary mb-8 drop-shadow-glow">
+          <h1 className="text-5xl font-extrabold text-primary mb-8 drop-shadow-glow">
             What is CI/CD?
           </h1>
 
           {/* FEATURE IMAGE */}
-          <div className="relative w-full h-[400px] border-4 border-secondary border-t-0 border-l-0 rounded-lg overflow-hidden mb-8 shadow-glow">
+          <div className="relative w-full h-[400px] border-4 border-primary border-t-0 border-l-0 rounded-lg overflow-hidden mb-8 shadow-glow">
             <Image
               src="/blog/blog22.jpg"
               alt="What is CI/CD"
@@ -137,43 +137,43 @@ const Blog22 = () => {
           </div>
 
           {/* META */}
-          <div className="flex items-center text-sm text-white mb-10 space-x-3">
-            <div className="w-8 h-8 rounded-full bg-cyan-400/20 flex items-center justify-center text-cyan-400 font-extrabold drop-shadow-glow">
+          <div className="flex items-center text-sm text-primary mb-10 space-x-3">
+            <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-extrabold drop-shadow-glow">
               F
             </div>
             <span className="uppercase tracking-wide font-semibold">Felista</span>
             <span>•</span>
             <div className="flex items-center">
-              <FiClock className="mr-1 text-cyan-400" />
+              <FiClock className="mr-1 text-primary" />
               <span>16 July 2025</span>
             </div>
           </div>
 
           {/* SECTION: What is CI/CD? */}
           <section id="what-is-cicd" className="scroll-mt-24">
-            <p className="text-white/80 text-xl leading-relaxed mb-10">
+            <p className="text-primary/80 text-xl leading-relaxed mb-10">
               CI/CD refers to Continuous Integration and Continuous Deployment (or Delivery). It's a modern approach to software development that enables teams to automate workflows, allowing them to release code changes more frequently and with greater reliability. CI/CD pipelines streamline the process of building, testing, and deploying code, helping teams respond quickly to business needs, fix bugs faster, and improve overall software quality.
             </p>
           </section>
 
           {/* SECTION: Understanding the CI/CD Pipeline? */}
           <section id="understanding-the-cicd-pipeline" className="scroll-mt-24">
-            <h2 className="text-2xl font-bold text-white mb-4">Understanding the CI/CD Pipeline?</h2>
-            <p className="text-white/80 leading-relaxed mb-4">
+            <h2 className="text-2xl font-bold text-primary mb-4">Understanding the CI/CD Pipeline?</h2>
+            <p className="text-primary/80 leading-relaxed mb-4">
               A CI/CD pipeline is a set of automated steps that software projects go through, from writing code to deploying it in production. These steps typically include code integration, automated testing, staging, and final deployment.
             </p>
-            <p className="text-white/80 leading-relaxed mb-10">
+            <p className="text-primary/80 leading-relaxed mb-10">
               The goal of this pipeline is to reduce manual intervention, minimize errors, and accelerate the release cycle, allowing developers to push updates or new features into production faster and more safely.
             </p>
           </section>
 
           {/* SECTION: Why Use CI/CD? – Key Advantages */}
           <section id="why-use-cicd-key-advantages" className="scroll-mt-24">
-            <h2 className="text-2xl font-bold text-white mb-4">Why Use CI/CD? – Key Advantages</h2>
-            <p className="text-white/80 leading-relaxed mb-4">
+            <h2 className="text-2xl font-bold text-primary mb-4">Why Use CI/CD? – Key Advantages</h2>
+            <p className="text-primary/80 leading-relaxed mb-4">
               Implementing CI/CD offers several benefits:
             </p>
-            <ul className="list-disc ml-6 text-white/80 mb-10 space-y-2">
+            <ul className="list-disc ml-6 text-primary/80 mb-10 space-y-2">
               <li><strong>Faster Release Cycles:</strong> Automated processes mean updates can be released more quickly.</li>
               <li><strong>Improved Code Quality:</strong> Automated testing verifies that only code meeting predefined standards proceeds further in the pipeline.</li>
               <li><strong>Reduced Risk:</strong> Smaller, incremental updates reduce the risk of major failures.</li>
@@ -184,11 +184,11 @@ const Blog22 = () => {
 
           {/* SECTION: Inside a Typical CI/CD Workflow */}
           <section id="inside-a-typical-workflow" className="scroll-mt-24">
-            <h2 className="text-2xl font-bold text-white mb-4">Inside a Typical CI/CD Workflow</h2>
-            <p className="text-white/80 leading-relaxed mb-4">
+            <h2 className="text-2xl font-bold text-primary mb-4">Inside a Typical CI/CD Workflow</h2>
+            <p className="text-primary/80 leading-relaxed mb-4">
               A typical CI/CD pipeline involves the following steps:
             </p>
-            <ul className="list-disc ml-6 text-white/80 mb-6 space-y-2">
+            <ul className="list-disc ml-6 text-primary/80 mb-6 space-y-2">
               <li><strong>Code Commit:</strong> A developer writes code and pushes it to a shared repository like GitHub or GitLab.</li>
               <li><strong>Continuous Integration (CI):</strong> Automated build and test processes are triggered every time code is pushed. It helps the code merge seamlessly with the main codebase without issues.</li>
               <li><strong>Testing:</strong> Various levels of automated tests (unit, integration, functional) are run to validate the code.</li>
@@ -203,19 +203,19 @@ const Blog22 = () => {
 
           {/* SECTION: Machine Learning Pipeline */}
           <section id="machine-learning-pipeline" className="scroll-mt-24">
-            <h2 className="text-2xl font-bold text-white mb-4">Machine Learning Pipeline</h2>
-            <p className="text-white/80 leading-relaxed mb-4">
+            <h2 className="text-2xl font-bold text-primary mb-4">Machine Learning Pipeline</h2>
+            <p className="text-primary/80 leading-relaxed mb-4">
               A machine learning pipeline resembles a CI/CD pipeline but is specifically designed for ML processes. It includes steps like data ingestion, data preprocessing, model training, validation, and deployment.
             </p>
-            <p className="text-white/80 leading-relaxed mb-10">
+            <p className="text-primary/80 leading-relaxed mb-10">
               Incorporating CI/CD practices into ML pipelines helps maintain consistent results, automate training jobs, and deploy models efficiently.
             </p>
           </section>
 
           {/* SECTION: Key Stages in the CI/CD Lifecycle */}
           <section id="key-stages-in-the-lifecycle" className="scroll-mt-24">
-            <h2 className="text-2xl font-bold text-white mb-4">Key Stages in the CI/CD Lifecycle</h2>
-            <ul className="list-disc ml-6 text-white/80 mb-10 space-y-2">
+            <h2 className="text-2xl font-bold text-primary mb-4">Key Stages in the CI/CD Lifecycle</h2>
+            <ul className="list-disc ml-6 text-primary/80 mb-10 space-y-2">
               <li><strong>Source Stage:</strong> Triggers the pipeline based on code changes.</li>
               <li><strong>Build Stage:</strong> Compiles the code and packages the application.</li>
               <li><strong>Test Stage:</strong> Runs unit tests and other automated tests.</li>
@@ -226,28 +226,28 @@ const Blog22 = () => {
 
           {/* SECTION: Popular CI/CD Tools and Setup */}
           <section id="popular-tools-and-setup" className="scroll-mt-24">
-            <h2 className="text-2xl font-bold text-white mb-4">Popular CI/CD Tools and Setup</h2>
-            <p className="text-white/80 leading-relaxed mb-4">
+            <h2 className="text-2xl font-bold text-primary mb-4">Popular CI/CD Tools and Setup</h2>
+            <p className="text-primary/80 leading-relaxed mb-4">
               A wide range of tools can be used to set up and manage CI/CD pipelines:
             </p>
-            <ul className="list-disc ml-6 text-white/80 mb-6 space-y-2">
+            <ul className="list-disc ml-6 text-primary/80 mb-6 space-y-2">
               <li><strong>Jenkins:</strong> Open-source automation server.</li>
               <li><strong>GitHub Actions:</strong> Built-in CI/CD for GitHub repositories.</li>
               <li><strong>GitLab CI/CD:</strong> Integrated with GitLab for seamless automation.</li>
               <li><strong>CircleCI, Travis CI, Bitbucket Pipelines, and Azure DevOps</strong> are also widely used.</li>
             </ul>
-            <p className="text-white/80 leading-relaxed mb-10">
+            <p className="text-primary/80 leading-relaxed mb-10">
               Configuration typically involves defining pipeline steps using YAML or other configuration files.
             </p>
           </section>
 
           {/* SECTION: Keeping CI/CD Secure */}
           <section id="keeping-cicd-secure" className="scroll-mt-24">
-            <h2 className="text-2xl font-bold text-white mb-4">Keeping CI/CD Secure</h2>
-            <p className="text-white/80 leading-relaxed mb-4">
+            <h2 className="text-2xl font-bold text-primary mb-4">Keeping CI/CD Secure</h2>
+            <p className="text-primary/80 leading-relaxed mb-4">
               Security in CI/CD is critical. Key practices include:
             </p>
-            <ul className="list-disc ml-6 text-white/80 mb-10 space-y-2">
+            <ul className="list-disc ml-6 text-primary/80 mb-10 space-y-2">
               <li><strong>Secret Management:</strong> Secure handling of credentials and tokens.</li>
               <li><strong>Static Code Analysis:</strong> Identify vulnerabilities before deployment.</li>
               <li><strong>Role-Based Access Control (RBAC):</strong> Limit who can modify pipelines or trigger deployments.</li>
@@ -257,28 +257,28 @@ const Blog22 = () => {
 
           {/* SECTION: Real-World Use Case: E-Commerce Deployment */}
           <section id="realworld-use-case" className="scroll-mt-24">
-            <h2 className="text-2xl font-bold text-white mb-4">Real-World Use Case: E-Commerce Deployment</h2>
-            <p className="text-white/80 leading-relaxed mb-4">
+            <h2 className="text-2xl font-bold text-primary mb-4">Real-World Use Case: E-Commerce Deployment</h2>
+            <p className="text-primary/80 leading-relaxed mb-4">
               Imagine a team developing an e-commerce website. A developer pushes a new feature, such as "wishlist", to GitHub.
             </p>
-            <p className="text-white/80 leading-relaxed mb-4">
+            <p className="text-primary/80 leading-relaxed mb-4">
               The CI/CD pipeline kicks in:
             </p>
-            <ul className="list-disc ml-6 text-white/80 mb-6 space-y-2">
+            <ul className="list-disc ml-6 text-primary/80 mb-6 space-y-2">
               <li>Jenkins builds the updated code.</li>
               <li>Automated tests run to ensure it does not break the cart or checkout.</li>
               <li>If all tests pass, the code is automatically deployed to a staging server.</li>
               <li>After review, it is deployed to the production environment without downtime.</li>
             </ul>
-            <p className="text-white/80 leading-relaxed mb-10">
+            <p className="text-primary/80 leading-relaxed mb-10">
               Thanks to CI/CD, the feature goes live within hours, not days, without disrupting users.
             </p>
           </section>
 
           {/* SECTION: Conclusion */}
           <section id="conclusion" className="scroll-mt-24">
-            <h2 className="text-2xl font-bold text-white mb-4">Conclusion</h2>
-            <p className="text-white/80 leading-relaxed mb-10">
+            <h2 className="text-2xl font-bold text-primary mb-4">Conclusion</h2>
+            <p className="text-primary/80 leading-relaxed mb-10">
               CI/CD is revolutionizing software delivery by making it faster, safer, and more reliable. Whether you are developing web apps, mobile software, or machine learning models, a robust CI/CD pipeline ensures smooth, continuous progress from code to customer.
             </p>
           </section>
@@ -287,10 +287,10 @@ const Blog22 = () => {
 
       <style jsx global>{`
         .drop-shadow-glow {
-          text-shadow: 0 0 12px #1ddfea66, 0 0 2px #223044;
+          text-shadow: 0 0 12px rgba(255, 255, 255, 0.4), 0 0 2px rgba(0, 0, 0, 0.3);
         }
         .shadow-glow {
-          box-shadow: 0 0 32px #1ddfea22, 0 0 8px #22304426;
+          box-shadow: 0 0 32px rgba(255, 255, 255, 0.12), 0 0 8px rgba(0, 0, 0, 0.15);
         }
         .scroll-mt-24 {
           scroll-margin-top: 6rem;
@@ -308,26 +308,26 @@ const Blog22 = () => {
         }
 
         ::-webkit-scrollbar-track {
-          background: rgba(34, 48, 68, 0.3);
+          background: rgba(0, 0, 0, 0.3);
         }
 
         ::-webkit-scrollbar-thumb {
-          background: #1ddfea;
+          background: #ffffff;
           border-radius: 2px;
         }
 
         ::-webkit-scrollbar-thumb:hover {
-          background: rgba(29, 223, 234, 0.8);
+          background: rgba(255, 255, 255, 0.8);
         }
 
         ::-webkit-scrollbar-corner {
-          background: rgba(34, 48, 68, 0.3);
+          background: rgba(0, 0, 0, 0.3);
         }
 
         /* Firefox */
         * {
           scrollbar-width: thin;
-          scrollbar-color: #1ddfea rgba(34, 48, 68, 0.3);
+          scrollbar-color: #ffffff rgba(0, 0, 0, 0.3);
         }
       `}</style>
     </div>

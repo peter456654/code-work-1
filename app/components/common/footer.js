@@ -4,17 +4,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import {
-  FaPhone,
-  FaEnvelope,
-  FaMapMarkerAlt,
   FaLinkedin,
-  FaArrowRight,
   FaFacebook,
   FaInstagram,
   FaYoutube,
 } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
-import { BsGlobe2 } from "react-icons/bs";
 
 const Footer = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -100,7 +95,7 @@ const Footer = () => {
   }, [pathname]);
 
   return (
-    <footer className="w-full bg-primary text-white relative overflow-hidden">
+    <footer className="w-full bg-secondary text-primary relative overflow-hidden">
       {/* Background Decorative Elements */}
       {/* <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-20 w-40 h-40 bg-secondary/20 rounded-full animate-blob"></div>
@@ -117,12 +112,12 @@ const Footer = () => {
       </div> */}
 
       {/* Main Footer Content */}
-      <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-6 sm:py-8 relative z-10">
+      <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-12 sm:py-16 relative z-10">
         {/* Top Row */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8 items-start">
           {/* Quick Links */}
           <div>
-            <h3 className="text-base sm:text-lg font-semibold mb-1 sm:mb-2 text-secondary">
+            <h3 className="text-base sm:text-lg font-semibold mb-1 sm:mb-2 text-primary">
               Quick Links
             </h3>
             <ul className="max-sm:grid max-sm:grid-cols-3 max-sm:gap-2 max-sm:grid-rows-3 sm:space-y-2">
@@ -130,10 +125,10 @@ const Footer = () => {
                 <li key={`${item.href}-${item.label}`}>
                   <Link
                     href={item.href}
-                    className={`hover:text-secondary transition duration-300 text-xs sm:text-sm ${
+                    className={`hover:text-primary transition duration-300 text-xs sm:text-sm ${
                       pathname === item.href
-                        ? "text-secondary"
-                        : "text-white/90"
+                        ? "text-primary"
+                        : "text-primary/90"
                     }`}
                   >
                     {item.label}
@@ -150,10 +145,10 @@ const Footer = () => {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className={`hover:text-secondary transition duration-300 text-xs sm:text-sm ${
+                    className={`hover:text-primary transition duration-300 text-xs sm:text-sm ${
                       pathname === item.href
-                        ? "text-secondary"
-                        : "text-white/90"
+                        ? "text-primary"
+                        : "text-primary/90"
                     }`}
                   >
                     {item.label}
@@ -170,10 +165,10 @@ const Footer = () => {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className={`hover:text-secondary transition duration-300 text-xs sm:text-sm ${
+                    className={`hover:text-primary transition duration-300 text-xs sm:text-sm ${
                       pathname === item.href
-                        ? "text-secondary"
-                        : "text-white/90"
+                        ? "text-primary"
+                        : "text-primary/90"
                     }`}
                   >
                     {item.label}
@@ -190,10 +185,10 @@ const Footer = () => {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className={`hover:text-secondary transition duration-300 text-xs sm:text-sm ${
+                    className={`hover:text-primary transition duration-300 text-xs sm:text-sm ${
                       pathname === item.href
-                        ? "text-secondary"
-                        : "text-white/90"
+                        ? "text-primary"
+                        : "text-primary/90"
                     }`}
                   >
                     {item.label}
@@ -210,10 +205,10 @@ const Footer = () => {
                 <li key={`${item.href}-${item.label}`}>
                   <Link
                     href={item.href}
-                    className={`hover:text-secondary transition duration-300 text-xs sm:text-sm ${
+                    className={`hover:text-primary transition duration-300 text-xs sm:text-sm ${
                       pathname === item.href
-                        ? "text-secondary"
-                        : "text-white/90"
+                        ? "text-primary"
+                        : "text-primary/90"
                     }`}
                   >
                     {item.label}
@@ -228,74 +223,51 @@ const Footer = () => {
         <div className="mt-6 sm:mt-8 flex flex-col items-start sm:flex-row sm:items-center sm:justify-between gap-6 sm:gap-16 w-full text-left">
           {/* Get In Touch */}
           <div>
-            <h3 className="text-base lg:pt-12 sm:pt-0 xl:pt-12 sm:text-lg font-semibold mb-12 sm:mb-12 text-secondary">
+            <h3 className="text-base  sm:text-lg font-semibold mb-12 sm:mb-12 text-primary">
               Get Started
             </h3>
-            <div className="flex items-center space-x-3 sm:space-x-4 mb-3 sm:mb-4">
-              <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-gradient-to-r from-secondary to-secondary/80 flex items-center justify-center shadow-lg">
-                <FaPhone size={14} className="text-primary sm:text-base" />
-              </div>
-              <p className="text-xs sm:text-sm text-white/90">+91 81481 01923</p>
+            <div className="mb-3 sm:mb-4">
+              <p className="text-xs sm:text-sm text-primary/90">+91 81481 01923</p>
             </div>
-            <div className="flex items-center space-x-3 sm:space-x-4 mb-3 sm:mb-4">
-              <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-gradient-to-r from-secondary to-secondary/80 flex items-center justify-center shadow-lg">
-                <FaEnvelope size={14} className="text-primary sm:text-base" />
-              </div>
-              <p className="text-xs sm:text-sm text-white/90">sales@codework.ai</p>
+            <div className="mb-3 sm:mb-4">
+              <p className="text-xs sm:text-sm text-primary/90">info@codework.ai</p>
             </div>
           </div>
 
           {/* India */}
           <div>
-            <h3 className="text-base sm:text-lg pt-6 font-semibold text-secondary">
+            <h3 className="text-base sm:text-lg pt-6 font-semibold text-primary">
               India
             </h3>
-            <div className="flex items-start pt-3 space-x-4">
-              <div className="w-8 h-8 rounded-full bg-gradient-to-r from-secondary to-secondary/80 flex items-center justify-center shadow-lg">
-                <FaMapMarkerAlt size={16} className="text-primary" />
-              </div>
-              <div>
-                <p className="text-xs sm:text-sm text-white/90">
-                  Suite 305, 3rd Floor, Akshaya HQ, OMR, <br />
-                  Kazhipattur, Chennai, <br />
-                  Tamilnadu, 603103.
-                </p>
-              </div>
+            <div className="pt-3">
+              <p className="text-xs sm:text-sm text-primary/90">
+                Suite 305, 3rd Floor, Akshaya HQ, OMR, <br />
+                Kazhipattur, Chennai, <br />
+                Tamilnadu, 603103.
+              </p>
             </div>
-            <div className="flex items-start pt-3 space-x-4">
-              <div className="w-8 h-8 rounded-full bg-gradient-to-r from-secondary to-secondary/80 flex items-center justify-center shadow-lg">
-                <FaMapMarkerAlt size={16} className="text-primary" />
-              </div>
-              <div>
-                <p className="text-xs sm:text-sm text-white/90">
-                  No. 305, 3rd Floor, Alpha Block, <br />
-                  SSPDL Alpha City, Navalur, OMR, <br />
-                  Chennai, Tamil Nadu 600130
-                </p>
-              </div>
+            <div className="pt-3">
+              <p className="text-xs sm:text-sm text-primary/90">
+                No. 305, 3rd Floor, Alpha Block, <br />
+                SSPDL Alpha City, Navalur, OMR, <br />
+                Chennai, Tamil Nadu 600130
+              </p>
             </div>
           </div>
 
           {/* USA */}
           <div>
-            <h3 className="text-base  sm:text-lg font-semibold mb-10  sm:mb-12 text-secondary">
+            <h3 className="text-base  sm:text-lg font-semibold mb-10  sm:mb-12 text-primary">
               USA
             </h3>
-            <div className="flex items-start space-x-4">
-              <div className="w-8 h-8 rounded-full bg-gradient-to-r from-secondary to-secondary/80 flex items-center justify-center shadow-lg">
-                <FaMapMarkerAlt size={16} className="text-primary" />
-              </div>
-              <p className="text-xs sm:text-sm text-white/90">
+            <div>
+              <p className="text-xs sm:text-sm text-primary/90">
                 6, River Oaks Cir W,
                 <br />
                 Buffalo Grove, IL 60089, USA
                 <br />
-                 Call:+13144455064
+                Call:+13144455064
               </p>
-              
-          
-               
-              
             </div>
             <div className="text-sm flex items-center justify-start">
               <a
@@ -311,14 +283,13 @@ const Footer = () => {
 
           {/* Connect With Us */}
           <div>
-            <h3 className="text-base sm:text-lg font-semibold mb-8 text-secondary">
+            <h3 className="text-base sm:text-lg font-semibold mb-8 text-primary">
               Connect With Us
             </h3>
             <Link href="/contact-ai-solutions">
-              <div className="button-bg rounded-full p-0.5 hover:scale-105 transition duration-300 active:scale-100">
-                <button className="px-4 sm:px-6 text-xs sm:text-base py-1.5 sm:py-2  rounded-full font-semibold bg-black  flex items-center space-x-2">
-                  <span className="text-white">Get Started</span>
-                  <FaArrowRight size={14} className="sm:text-base" />
+              <div className="rounded-none p-0.5 hover:scale-105 transition duration-300 active:scale-100">
+                <button className="px-4 sm:px-6 text-xs sm:text-base py-2 sm:py-3 rounded-none font-semibold bg-secondary border border-primary text-primary">
+                  Get Started
                 </button>
               </div>
             </Link>
@@ -326,18 +297,17 @@ const Footer = () => {
               href="https://cplc.codework.ai/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center space-x-2 text-xs sm:text-sm text-secondary hover:text-secondary/80 mt-4 transition-colors duration-300"
+              className="inline-block text-xs sm:text-sm text-primary hover:text-primary/80 mt-4 transition-colors duration-300"
             >
-              <BsGlobe2 className="text-secondary" />
-              <span>Join our AI course</span>
+              Join our AI course
             </a>
           </div>
         </div>
       </div>
 
       {/* Footer Bottom */}
-      <div className="border-t border-secondary/20">
-        <div className="w-full bg-gradient-to-r from-primary via-primary/95 to-primary text-white flex flex-col items-center sm:flex-row sm:items-center sm:justify-between py-6 sm:py-6 px-4 sm:px-6 md:px-6 lg:px-6 xl:px-6 relative">
+      <div className="border-t border-primary/10">
+        <div className="w-full bg-secondary text-primary flex flex-col items-center sm:flex-row sm:items-center sm:justify-between py-10 sm:py-12 px-4 sm:px-6 md:px-6 lg:px-6 xl:px-6 relative">
           {/* Subtle Background Glow */}
           <div className="absolute inset-0 bg-gradient-to-r from-secondary/5 via-transparent to-secondary/5"></div>
 
@@ -378,13 +348,13 @@ const Footer = () => {
 
           {/* Copyright + Privacy */}
           <div className="flex flex-col sm:flex-row items-center sm:items-center space-y-2 sm:space-y-0 sm:space-x-4 mb-4 sm:mb-0 relative z-10">
-            <p className="text-[10px] sm:text-xs text-white/80">
-              2024 PRO CODE WORK IT SOLUTIONS Pvt. Ltd. All rights reserved.
+            <p className="text-[10px] sm:text-xs text-primary/80">
+              2025 PRO CODE WORK IT SOLUTIONS Pvt. Ltd. All rights reserved.
             </p>
-            <span className="hidden sm:inline text-secondary">•</span>
+            <span className="hidden sm:inline text-primary">•</span>
             <Link
               href="/privacy-policy"
-              className="text-[10px] sm:text-xs hover:text-secondary transition duration-300 text-white/80"
+              className="text-[10px] sm:text-xs hover:text-primary transition duration-300 text-primary/80"
             >
               PRIVACY POLICY
             </Link>

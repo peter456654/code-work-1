@@ -48,7 +48,7 @@ const CybersecurityCycle = () => {
   return (
     <div className="relative w-[280px] sm:w-[380px] h-[280px] sm:h-[380px] mx-auto flex items-center justify-center">
       {/* Outer gradient circle with glow */}
-      <div className="absolute w-full h-full rounded-full bg-gradient-to-r from-secondary/20 via-secondary/10 to-primary/20 shadow-glow animate-spin-slow">
+      <div className="absolute w-full h-full rounded-full bg-gradient-to-r from-secondary/20 via-secondary/10 to-secondary/20 animate-spin-slow">
         <div className="w-full h-full rounded-full border-2 border-secondary/30"></div>
       </div>
 
@@ -56,11 +56,11 @@ const CybersecurityCycle = () => {
       <div className="absolute inset-6 rounded-full border-dashed border-2 border-secondary/50 animate-spin-reverse"></div>
 
       {/* Inner glowing center */}
-      <div className="absolute w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-r from-secondary to-primary shadow-glow animate-pulse"></div>
+      <div className="absolute w-16 h-16 sm:w-20 sm:h-20 rounded-full border-2 border-secondary animate-pulse"></div>
 
       {/* Central logo/text */}
-      <div className="absolute w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-primary/90 backdrop-blur-sm border-2 border-secondary flex items-center justify-center z-10">
-        <span className="text-secondary font-bold text-xs sm:text-sm">CS</span>
+      <div className="absolute w-12 h-12 sm:w-16 sm:h-16 rounded-full border-2 border-secondary flex items-center justify-center z-10">
+        <span className="text-primary font-bold text-xs sm:text-sm">CS</span>
       </div>
 
       {/* Rotating container for all icons */}
@@ -74,16 +74,16 @@ const CybersecurityCycle = () => {
               style={{ left, top, transform: `rotate(${angle}rad) translate(0, 0)` }}
             >
               <div
-                className="flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 bg-primary/90 backdrop-blur-xl border-3 border-secondary rounded-full shadow-lg cursor-pointer transition-all duration-500 hover:scale-110 hover:rotate-12 hover:bg-secondary hover:border-primary hover:shadow-[0_0_25px_rgba(29,223,234,0.8)] group -translate-x-1/2 -translate-y-1/2"
+                className="flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full border-2 border-secondary text-primary cursor-pointer transition-all duration-500 hover:scale-110 group -translate-x-1/2 -translate-y-1/2"
                 style={{ transform: `rotate(${-angle}rad)` }}
                 title={label}
               >
-                <div className="text-secondary group-hover:text-primary transition-colors duration-300">
+                <div className="text-primary transition-colors duration-300">
                   {icon}
                 </div>
                 {/* Floating label */}
                 <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  <span className="bg-secondary text-primary px-2 py-1 rounded-md text-xs font-semibold shadow-lg whitespace-nowrap">
+                  <span className="bg-secondary text-primary px-2 py-1 rounded-md text-xs font-semibold whitespace-nowrap">
                     {label}
                   </span>
                 </div>
@@ -97,8 +97,8 @@ const CybersecurityCycle = () => {
       <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ zIndex: -1 }}>
         <defs>
           <linearGradient id="cyberLineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#1ddfea" stopOpacity="0.3" />
-            <stop offset="100%" stopColor="#050c25" stopOpacity="0.1" />
+            <stop offset="0%" stopColor="#000000" stopOpacity="0.15" />
+            <stop offset="100%" stopColor="#000000" stopOpacity="0.05" />
           </linearGradient>
         </defs>
         {positions.map((pos, index) => {

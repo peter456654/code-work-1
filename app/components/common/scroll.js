@@ -12,7 +12,6 @@ const AnimatedRows = () => {
         }
 
         .row {
-          background-color: #0000;
           background-position: 0 0;
           background-size: cover;
           height: 70vh; /* Kept exactly as before */
@@ -31,7 +30,6 @@ const AnimatedRows = () => {
 
         .text {
           transform: translateZ(0);
-          color: #fff;
           white-space: nowrap;
           justify-content: center;
           align-items: center;
@@ -48,35 +46,6 @@ const AnimatedRows = () => {
           text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
         }
 
-        /* Enhanced text styles only */
-        .text-innovation {
-          background: linear-gradient(135deg, #1ad0e1 0%, #00bcd4 50%, #26c6da 100%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-clip: text;
-          font-weight: 800;
-          text-transform: uppercase;
-          letter-spacing: 0.02em;
-        }
-
-        .text-starts {
-          color: #040c26;
-          font-weight: 800;
-          font-style: italic;
-          text-shadow: 0 2px 10px rgba(4, 12, 38, 0.3);
-          letter-spacing: -0.01em;
-        }
-
-        .text-conversation {
-          background: linear-gradient(135deg, #1ad0e1 0%, #00e5ff 50%, #18ffff 100%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-clip: text;
-          font-weight: 800;
-          text-transform: capitalize;
-          letter-spacing: 0.01em;
-        }
-
         /* Responsive typography only */
         @media (max-width: 768px) {
           .text {
@@ -91,21 +60,21 @@ const AnimatedRows = () => {
         }
       `}</style>
       
-      <div className="row" style={{ backgroundColor: '#040c26' }}>
+      <div className="row bg-secondary">
         <div className="text-holder">
-          <div className="text text-innovation">Innovation</div>
+          <div className="text bg-gradient-to-r from-secondary via-primary to-secondary bg-clip-text text-transparent font-extrabold uppercase tracking-wide">Innovation</div>
         </div>
       </div>
       
-      <div className="row" style={{ backgroundColor: '#1ad0e1' }}>
+      <div className="row bg-secondary">
         <div className="text-holder">
-          <div className="text text-starts">Starts with a</div>
+          <div className="text text-primary font-extrabold italic tracking-tight">Starts with a</div>
         </div>
       </div>
       
-      <div className="row">
-        <div className="text-holder" style={{ backgroundColor: '#040c26' }}>
-          <div className="text text-conversation">Conversation</div>
+      <div className="row bg-secondary">
+        <div className="text-holder">
+          <div className="text bg-gradient-to-r from-secondary via-primary to-secondary bg-clip-text text-transparent font-extrabold capitalize tracking-wide">Conversation</div>
         </div>
       </div>
     </>

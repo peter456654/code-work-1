@@ -3,7 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 
 const GetStarted = () => (
-  <section className="relative bg-primary min-h-screen overflow-hidden py-20 px-4 sm:px-6 lg:px-20">
+  <section className="relative bg-secondary min-h-screen overflow-hidden py-20 px-4 sm:px-6 lg:px-20">
     {/* Background Decorative Elements */}
     <div className="absolute inset-0 opacity-10">
       <div className="absolute top-20 left-20 w-40 h-40 bg-secondary/20 rounded-full"></div>
@@ -26,22 +26,22 @@ const GetStarted = () => (
         {/* Text Column */}
         <div className="w-full lg:w-1/2 lg:max-w-2xl">
           {/* Section Badge */}
-          <div className="inline-flex items-center border border-secondary/30 bg-white/5 backdrop-blur-sm text-secondary px-6 py-3 rounded-full text-sm font-medium mb-8">
+          <div className="inline-flex items-center border border-secondary/30 bg-secondary/10 backdrop-blur-sm text-primary px-6 py-3 rounded-full text-sm font-medium mb-8">
             <span className="w-2 h-2 bg-secondary rounded-full mr-2 animate-pulse"></span>
             Start Your AI Journey
           </div>
 
           {/* Heading - Updated to text-5xl */}
-          <h2 className="text-5xl font-bold text-white mb-6 leading-tight">
-            Get Started with <span className="bg-gradient-to-r from-secondary via-cyan-400 to-secondary bg-clip-text text-transparent">AI Model Training</span> Today
+          <h2 className="text-5xl font-bold text-primary mb-6 leading-tight">
+            Get Started with <span className="bg-gradient-to-r from-primary via-primary/80 to-primary/80 bg-clip-text text-transparent">AI Model Training</span> Today
           </h2>
 
           {/* Decorative underline */}
-          <div className="w-20 h-1 bg-gradient-to-r from-secondary to-transparent rounded-full mb-6"></div>
+          <div className="w-20 h-1 bg-secondary rounded-full mb-6"></div>
 
           {/* Description - Updated to larger text */}
-          <p className="text-xl text-white/90 leading-relaxed pl-4 border-l-4 border-secondary/40">
-            Enhance your business operations with AI-powered solutions. Let <span className="text-secondary font-medium">Codework</span> help you build and deploy AI models that drive innovation and efficiency. Contact us today to discuss your AI requirements and take the next step in digital transformation.
+          <p className="text-xl text-primary leading-relaxed pl-4 border-l-4 border-secondary/40">
+            Enhance your business operations with AI-powered solutions. Let <span className="text-primary font-medium">Codework</span> help you build and deploy AI models that drive innovation and efficiency. Contact us today to discuss your AI requirements and take the next step in digital transformation.
           </p>
         </div>
 
@@ -49,7 +49,7 @@ const GetStarted = () => (
         <div className="w-full lg:w-auto lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2 lg:-mr-12 xl:-mr-20 2xl:-mr-20">
           <div className="relative">
             {/* Primary color overlay with low opacity */}
-            <div className="absolute inset-0 bg-primary opacity-20 rounded-2xl"></div>
+            <div className="absolute inset-0 bg-secondary opacity-20 rounded-2xl"></div>
             <Image
               src="/AllServices/servicesModel.svg"
               alt="AI model training illustration"

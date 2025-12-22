@@ -7,7 +7,7 @@ const page = () => {
   return (
     <div>
       <CaseStudiesLanding/>
-      <OurCompany/>
+      {/* <OurCompany/> */}
       <AllCaseStudies/>
     </div>
   )

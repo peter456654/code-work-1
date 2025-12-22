@@ -43,7 +43,7 @@ const AnnotationLanding = () => {
   const toggleDropdown = (i) => setOpenDropdown(openDropdown === i ? null : i);
 
   return (
-    <section className="relative w-full min-h-screen bg-primary overflow-hidden">
+    <section className="relative w-full min-h-screen bg-secondary overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-40 h-40 bg-secondary/20 rounded-full"></div>
@@ -65,43 +65,43 @@ const AnnotationLanding = () => {
           {/* Left Side */}
           <div className="lg:col-span-2 text-left">
             {/* Section Badge */}
-            <div className="inline-flex items-center border border-secondary/30 bg-white/5 backdrop-blur-sm text-secondary px-6 py-3 rounded-full text-sm font-medium mb-8">
+            <div className="inline-flex items-center border border-secondary/30 bg-secondary/10 backdrop-blur-sm text-primary px-6 py-3 rounded-full text-sm font-medium mb-8">
               <span className="w-2 h-2 bg-secondary rounded-full mr-2 animate-pulse"></span>
               AI & Machine Learning
             </div>
             <div className="heading-container mb-8">
-              <h1 className="text-4xl sm:text-5xl lg:text-5xl font-bold text-white leading-tight mb-6">
-                <span className="bg-gradient-to-r from-secondary via-cyan-400 to-secondary bg-clip-text text-transparent">Professional Annotation Services</span> for AI and Machine Learning
+              <h1 className="text-4xl sm:text-5xl lg:text-5xl font-bold text-primary leading-tight mb-6">
+                <span className="text-primary">Professional Annotation Services</span> for AI and Machine Learning
               </h1>
               {/* Decorative underline */}
               <div className="w-20 h-1 bg-gradient-to-r from-secondary to-transparent rounded-full mb-8"></div>
             </div>
             <div className="paragraph-container mb-8 max-w-3xl">
-              <p className="text-lg text-white/90 leading-relaxed pl-4 border-l-4 border-secondary/40">
+              <p className="text-lg text-primary leading-relaxed pl-4 border-l-4 border-secondary/40">
                 Data is the foundation of every successful AI and machine learning model. Without properly labelled data, even the most advanced algorithms fail to perform effectively. At Codework, we specialize in providing Annotation Services that transform raw, unstructured information into structured datasets ready for AI training. Our services are designed to deliver accuracy, scalability, and reliability for businesses across different industries.
               </p>
               <div className="mt-8">
-                <h2 className="text-2xl font-bold text-white mb-4">Why Annotation is Important</h2>
-                <p className="text-lg text-white/90 leading-relaxed mb-6">
+                <h2 className="text-2xl font-bold text-primary mb-4">Why Annotation is Important</h2>
+                <p className="text-lg text-primary leading-relaxed mb-6">
                   Annotation is the key enabler of artificial intelligence. AI systems learn from data, and without correctly labelled datasets, they cannot recognize patterns or make accurate predictions. Whether it is detecting objects in images, analysing customer reviews, or converting speech to text, annotation provides the ground truth that trains machine learning models.
                 </p>
-                <p className="text-lg text-white/90 leading-relaxed mb-4">Some major reasons why annotation is important:</p>
-                <ul className="space-y-3 text-white/90">
+                <p className="text-lg text-primary leading-relaxed mb-4">Some major reasons why annotation is important:</p>
+                <ul className="space-y-3 text-primary">
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-secondary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    <span><strong className="text-secondary">Enhances AI Accuracy</strong> – Properly annotated data improves the quality of predictions and decisions made by AI.</span>
+                    <span><strong className="text-primary">Enhances AI Accuracy</strong> – Properly annotated data improves the quality of predictions and decisions made by AI.</span>
                   </li>
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-secondary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    <span><strong className="text-secondary">Supports Industry Growth</strong> – From healthcare to retail, annotation drives innovation in real-world applications.</span>
+                    <span><strong className="text-primary">Supports Industry Growth</strong> – From healthcare to retail, annotation drives innovation in real-world applications.</span>
                   </li>
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-secondary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    <span><strong className="text-secondary">Speeds Up AI Adoption</strong> – Well-prepared data reduces errors and makes AI deployment faster.</span>
+                    <span><strong className="text-primary">Speeds Up AI Adoption</strong> – Well-prepared data reduces errors and makes AI deployment faster.</span>
                   </li>
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-secondary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    <span><strong className="text-secondary">Customizable for Every Use Case</strong> – Annotation adapts to any domain, ensuring industry-specific solutions.</span>
+                    <span><strong className="text-primary">Customizable for Every Use Case</strong> – Annotation adapts to any domain, ensuring industry-specific solutions.</span>
                   </li>
                 </ul>
               </div>
@@ -109,10 +109,10 @@ const AnnotationLanding = () => {
           </div>
           {/* Right Side - Services Navigation */}
           <div className="lg:col-span-1">
-            <div className="bg-primary/70 backdrop-blur-xl rounded-3xl border border-white/20 shadow-2xl p-8 sticky top-8">
+            <div className="bg-secondary/70 backdrop-blur-xl rounded-3xl border border-secondary/30 shadow-2xl p-8 sticky top-8">
               <div className="flex items-center mb-6">
                 <div className="w-3 h-3 bg-secondary rounded-full mr-3 animate-pulse"></div>
-                <h3 className="text-xl font-bold text-white">Our Services</h3>
+                <h3 className="text-xl font-bold text-primary">Our Services</h3>
               </div>
               <div className="space-y-2">
                 {services.map((service, index) => (
@@ -120,26 +120,26 @@ const AnnotationLanding = () => {
                     <div 
                       className={`px-4 py-3 text-sm font-medium rounded-xl transition-all duration-300 border-l-4 group relative overflow-hidden ${
                         isActiveLink(service.link) || isDropdownActive(service)
-                          ? 'bg-secondary/20 text-secondary border-secondary font-bold shadow-lg backdrop-blur-sm'
-                          : 'text-white/80 hover:text-white hover:bg-white/10 border-transparent hover:border-secondary/50 hover:shadow-md'
+                          ? 'bg-secondary/20 text-primary border-secondary font-bold shadow-lg backdrop-blur-sm'
+                          : 'text-primary hover:text-primary hover:bg-secondary/10 border-transparent hover:border-secondary/50 hover:shadow-md'
                       }`}
                     >
                       {/* Hover background effect */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-secondary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      <div className="absolute inset-0 bg-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                       <div className="relative z-10 flex items-center justify-between">
                         <Link href={service.link} className="flex-1">
                           <span>{service.title}</span>
                         </Link>
                         <div className="flex items-center space-x-2">
-                          <div className={`w-2 h-2 rounded-full transition-all duration-300 ${isActiveLink(service.link) || isDropdownActive(service) ? 'bg-secondary animate-pulse' : 'bg-white/30 group-hover:bg-secondary/60'}`}></div>
+                          <div className={`w-2 h-2 rounded-full transition-all duration-300 ${isActiveLink(service.link) || isDropdownActive(service) ? 'bg-secondary animate-pulse' : 'bg-secondary/30 group-hover:bg-secondary/60'}`}></div>
                         </div>
                       </div>
                     </div>
                   </div>
                 ))}
               </div>
-              <div className="mt-6 pt-6 border-t border-white/10">
-                <div className="flex items-center text-white/60 text-xs">
+              <div className="mt-6 pt-6 border-t border-secondary/20">
+                <div className="flex items-center text-primary text-xs">
                   <div className="w-1 h-1 bg-secondary rounded-full mr-2"></div>
                   <span>Navigate through our services</span>
                 </div>

@@ -3,7 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 
 const DigitalSolution = () => (
-  <section className="relative bg-primary min-h-screen overflow-hidden py-20 px-4 sm:px-6 lg:px-20">
+  <section className="relative bg-secondary min-h-screen overflow-hidden py-20 px-4 sm:px-6 lg:px-20">
     {/* Background Decorative Elements */}
     <div className="absolute inset-0 opacity-10">
       <div className="absolute top-20 left-20 w-40 h-40 bg-secondary/20 rounded-full"></div>
@@ -26,21 +26,21 @@ const DigitalSolution = () => (
         {/* Text Column */}
         <div className="w-full lg:w-1/2 lg:max-w-2xl">
           {/* Section Badge */}
-          <div className="inline-flex items-center border border-secondary/30 bg-white/5 backdrop-blur-sm text-secondary px-6 py-3 rounded-full text-sm font-medium mb-8">
+          <div className="inline-flex items-center border border-secondary/30 bg-secondary/10 backdrop-blur-sm text-primary px-6 py-3 rounded-full text-sm font-medium mb-8">
             <span className="w-2 h-2 bg-secondary rounded-full mr-2 animate-pulse"></span>
             Digital Solutions
           </div>
 
           {/* Heading - Updated to text-5xl */}
-          <h2 className="text-5xl font-bold text-white mb-6 leading-tight">
-            <span className="bg-gradient-to-r from-secondary via-cyan-400 to-secondary bg-clip-text text-transparent">Boost Your Online Presence</span> Today
+          <h2 className="text-5xl font-bold text-primary mb-6 leading-tight">
+            <span className="text-primary">Boost Your Online Presence</span> Today
           </h2>
 
           {/* Decorative underline */}
           <div className="w-20 h-1 bg-gradient-to-r from-secondary to-transparent rounded-full mb-6"></div>
 
           {/* Description - Updated to larger text */}
-          <p className="text-xl text-white/90 leading-relaxed pl-4 border-l-4 border-secondary/40">
+          <p className="text-xl text-primary leading-relaxed pl-4 border-l-4 border-secondary/40">
             Elevate Your Online Footprint with AI Reach out to our specialists today and see how tomorrow’s marketing reshapes your digital strategy.
           </p>
         </div>
@@ -49,7 +49,7 @@ const DigitalSolution = () => (
         <div className="w-full lg:w-auto lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2 lg:-mr-12 xl:-mr-20 2xl:-mr-20">
           <div className="relative">
             {/* Primary color overlay with low opacity */}
-            <div className="absolute inset-0 bg-primary opacity-20 rounded-2xl"></div>
+            <div className="absolute inset-0 bg-secondary opacity-20 rounded-2xl"></div>
             <Image
               src="/AllServices/Cybersecurity.svg"
               alt="Digital solutions illustration"

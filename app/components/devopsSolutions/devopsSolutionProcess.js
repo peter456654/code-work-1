@@ -51,8 +51,8 @@ const DevopsSolutionProcess = () => {
   const indentTitles = ['Model Training and Evaluation', 'Deployment and Optimization']
 
   return (
-    <div className="p-20 bg-gradient-to-b from-[#FBF8E6] to-[#ebf9ff]">
-      <h2 className="text-4xl font-bold text-black mb-6">
+    <div className="p-20 bg-secondary">
+      <h2 className="text-4xl font-bold text-primary mb-6">
       DevOps Implementation Approach
       </h2>
       <div className="flex flex-col  pt-24 md:flex-row gap-8">
@@ -80,10 +80,10 @@ const DevopsSolutionProcess = () => {
                   }}
                 >
                   <div className={`p-7 ${needsIndent ? 'pl-16' : ''}`}>
-                    <h3 className="text-2xl w-3/4 text-gray-800 font-semibold mb-2">
+                    <h3 className="text-2xl w-3/4 text-primary font-semibold mb-2">
                       {step.title}
                     </h3>
-                    <p className="text-gray-700 w-3/4">{step.description}</p>
+                    <p className="text-primary w-3/4">{step.description}</p>
                   </div>
                 </div>
               )

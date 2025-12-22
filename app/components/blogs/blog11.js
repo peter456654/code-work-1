@@ -53,7 +53,7 @@ const Blog11 = () => {
         {/* LEFT SIDEBAR - TABLE OF CONTENTS */}
         <div className="hidden lg:block w-64 sticky top-24 h-fit">
           <div className="bg-primary/60 backdrop-blur-sm rounded-xl border border-secondary/20 p-6 shadow-glow">
-            <h3 className="text-lg font-bold text-secondary mb-4 flex items-center">
+            <h3 className="text-lg font-bold text-primary mb-4 flex items-center">
               <FiList className="mr-2" />
               Table of Contents
             </h3>
@@ -67,8 +67,8 @@ const Blog11 = () => {
                   onClick={() => scrollToSection(item.id)}
                   className={`block w-full text-left px-3 py-2 rounded-lg text-sm transition-all duration-200 ${
                     activeSection === item.id
-                      ? "bg-secondary/20 text-secondary border-l-4 border-secondary"
-                      : "text-white/70 hover:text-white hover:bg-white/5"
+                      ? "bg-secondary/20 text-primary border-l-4 border-primary"
+                      : "text-primary/70 hover:text-primary hover:bg-secondary/10"
                   }`}
                 >
                   {index + 1}. {item.title}
@@ -88,9 +88,9 @@ const Blog11 = () => {
 
         {/* MOBILE TOC OVERLAY */}
         {isTocOpen && (
-          <div className="lg:hidden fixed inset-0 z-40 bg-black/50" onClick={() => setIsTocOpen(false)}>
+          <div className="lg:hidden fixed inset-0 z-40 bg-secondary/50" onClick={() => setIsTocOpen(false)}>
             <div className="bg-primary w-80 h-full overflow-y-auto p-6 shadow-xl" onClick={e => e.stopPropagation()}>
-              <h3 className="text-lg font-bold text-secondary mb-4 flex items-center">
+              <h3 className="text-lg font-bold text-primary mb-4 flex items-center">
                 <FiList className="mr-2" />
                 Table of Contents
               </h3>
@@ -104,8 +104,8 @@ const Blog11 = () => {
                     }}
                     className={`block w-full text-left px-3 py-2 rounded-lg text-sm transition-all duration-200 ${
                       activeSection === item.id
-                        ? "bg-secondary/20 text-secondary border-l-4 border-secondary"
-                        : "text-white/70 hover:text-white hover:bg-white/5"
+                        ? "bg-secondary/20 text-primary border-l-4 border-primary"
+                        : "text-primary/70 hover:text-primary hover:bg-secondary/10"
                     }`}
                   >
                     {index + 1}. {item.title}
@@ -119,12 +119,12 @@ const Blog11 = () => {
         {/* MAIN CONTENT */}
         <div className="flex-1 max-w-4xl">
           {/* TITLE */}
-          <h1 className="text-5xl md:text-5xl font-extrabold text-secondary mb-8 drop-shadow-glow">
+          <h1 className="text-5xl md:text-5xl font-extrabold text-primary mb-8 drop-shadow-glow">
             The New Era of AI: How Digital Marketing Will Never Be the Same Again
           </h1>
 
           {/* FEATURE IMAGE */}
-          <div className="relative w-full h-[400px] border-4 border-secondary border-t-0 border-l-0 rounded-lg overflow-hidden mb-8 shadow-glow">
+          <div className="relative w-full h-[400px] border-4 border-primary border-t-0 border-l-0 rounded-lg overflow-hidden mb-8 shadow-glow">
             <Image
               src="/blog/blog11.jpg"
               alt="AI in Digital Marketing"
@@ -277,26 +277,26 @@ const Blog11 = () => {
         }
 
         ::-webkit-scrollbar-track {
-          background: rgba(34, 48, 68, 0.3);
+          background: rgba(0, 0, 0, 0.3);
         }
 
         ::-webkit-scrollbar-thumb {
-          background: #1ddfea;
+          background: #000000;
           border-radius: 2px;
         }
 
         ::-webkit-scrollbar-thumb:hover {
-          background: rgba(29, 223, 234, 0.8);
+          background: rgba(0, 0, 0, 0.8);
         }
 
         ::-webkit-scrollbar-corner {
-          background: rgba(34, 48, 68, 0.3);
+          background: rgba(0, 0, 0, 0.3);
         }
 
         /* Firefox */
         * {
           scrollbar-width: thin;
-          scrollbar-color: #1ddfea rgba(34, 48, 68, 0.3);
+          scrollbar-color: #000000 rgba(0, 0, 0, 0.3);
         }
       `}</style>
     </div>

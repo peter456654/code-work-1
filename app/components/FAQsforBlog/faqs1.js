@@ -80,9 +80,9 @@ const Faqs1 = () => {
   };
 
   return (
-    <div className="bg-primary py-16 px-4">
+    <div className="bg-secondary py-16 px-4">
       <div className="max-w-4xl mx-auto">
-        <h3 className="text-4xl md:text-5xl font-extrabold text-center mb-16 text-secondary drop-shadow-glow">
+        <h3 className="text-4xl md:text-5xl font-extrabold text-center mb-16 text-primary drop-shadow-glow">
           Frequently Asked Questions
         </h3>
         
@@ -90,18 +90,18 @@ const Faqs1 = () => {
           {faqs.map((faq, idx) => (
             <div 
               key={faq.question} 
-              className="bg-primary border border-secondary/30 rounded-xl overflow-hidden shadow-glow transition-all duration-300 hover:shadow-lg hover:border-secondary/50"
+              className="bg-secondary border border-primary/30 rounded-xl overflow-hidden shadow-glow transition-all duration-300 hover:shadow-lg hover:border-primary/50"
             >
               <button
-                className="w-full flex items-center justify-between px-6 py-5 focus:outline-none group transition-all duration-200 hover:bg-secondary/5"
+                className="w-full flex items-center justify-between px-6 py-5 focus:outline-none group transition-all duration-200 hover:bg-primary/5"
                 onClick={() => toggle(idx)}
               >
-                <span className="text-white font-semibold text-left pr-4 group-hover:text-secondary transition-colors duration-200">
+                <span className="text-primary font-semibold text-left pr-4 group-hover:text-primary transition-colors duration-200">
                   {faq.question}
                 </span>
                 <div className="flex-shrink-0">
                   <svg
-                    className={`h-6 w-6 text-secondary transform transition-all duration-300 ${
+                    className={`h-6 w-6 text-primary transform transition-all duration-300 ${
                       openIndex === idx ? "rotate-180 scale-110" : "group-hover:scale-110"
                     }`}
                     fill="none"
@@ -121,12 +121,12 @@ const Faqs1 = () => {
               <div className={`overflow-hidden transition-all duration-300 ease-in-out ${
                 openIndex === idx ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
               }`}>
-                <div className="px-6 pb-6 pt-2 border-t border-secondary/20">
-                  <div className="text-white/90 space-y-2">
+                <div className="px-6 pb-6 pt-2 border-t border-primary/20">
+                  <div className="text-primary/90 space-y-2">
                     {faq.answer.map((line, lineIdx) => (
                       <div key={lineIdx} className="leading-relaxed">
                         {line.includes('<activity') ? (
-                          <pre className="bg-gray-900 text-cyan-300 p-3 rounded-lg mt-2 text-sm overflow-x-auto border border-secondary/30">
+                          <pre className="bg-secondary/20 text-primary p-3 rounded-lg mt-2 text-sm overflow-x-auto border border-primary/30">
                             {line}
                           </pre>
                         ) : (

@@ -61,7 +61,7 @@ const AgileSoftwareProcess = () => {
   }, []);
 
   return (
-    <div className="relative bg-primary min-h-screen overflow-hidden py-20 px-4 sm:px-6 lg:px-20">
+    <div className="relative bg-secondary min-h-screen overflow-hidden py-20 px-4 sm:px-6 lg:px-20">
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-40 h-40 bg-secondary/20 rounded-full"></div>
@@ -81,15 +81,15 @@ const AgileSoftwareProcess = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-16" data-aos="fade-up">
-          <div className="inline-flex items-center border border-secondary/30 bg-white/5 backdrop-blur-sm text-secondary px-6 py-3 rounded-full text-sm font-medium mb-8">
+          <div className="inline-flex items-center border border-secondary/30 bg-secondary/10 backdrop-blur-sm text-primary px-6 py-3 rounded-full text-sm font-medium mb-8">
             <span className="w-2 h-2 bg-secondary rounded-full mr-2 animate-pulse"></span>
             Development Process
           </div>
-          <h2 className="text-5xl sm:text-6xl font-bold text-white mb-6">
-            Agile Software <span className="bg-gradient-to-r from-secondary via-cyan-400 to-secondary bg-clip-text text-transparent">Process</span>
+          <h2 className="text-5xl sm:text-6xl font-bold text-primary mb-6">
+            Agile Software <span className="text-primary">Process</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-secondary to-transparent rounded-full mx-auto mb-6"></div>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+          <div className="w-20 h-1 bg-secondary rounded-full mx-auto mb-6"></div>
+          <p className="text-xl text-primary max-w-3xl mx-auto leading-relaxed">
             Our streamlined approach to AI development ensures quality, efficiency, and measurable business outcomes through iterative excellence.
           </p>
         </div>
@@ -118,7 +118,7 @@ const AgileSoftwareProcess = () => {
                   <div className="relative z-20 flex-shrink-0 mb-8 lg:mb-0">
                     <div className="w-24 h-24 bg-gradient-to-br from-secondary to-secondary/80 rounded-full flex items-center justify-center shadow-2xl border-4 border-primary relative">
                       <Icon className="text-3xl text-primary" />
-                      <div className="absolute -top-3 -right-3 w-10 h-10 bg-gradient-to-br from-primary to-primary/90 rounded-full flex items-center justify-center text-secondary font-bold text-sm border-2 border-secondary/30">
+                      <div className="absolute -top-3 -right-3 w-10 h-10 bg-gradient-to-br from-primary to-primary/90 rounded-full flex items-center justify-center text-primary font-bold text-sm border-2 border-secondary/30">
                         {step.number}
                       </div>
                       {/* Pulse Animation */}
@@ -128,7 +128,7 @@ const AgileSoftwareProcess = () => {
 
                   {/* Content Card */}
                   <div className={`flex-1 max-w-lg lg:max-w-xl ${isEven ? 'lg:ml-12' : 'lg:mr-12'}`}>
-                    <div className="bg-primary/70 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl hover:bg-primary/80 transition-all duration-500 transform hover:-translate-y-2 relative overflow-hidden">
+                  <div className="bg-secondary/70 backdrop-blur-xl rounded-3xl p-8 border border-secondary/30 shadow-2xl hover:bg-secondary/80 transition-all duration-500 transform hover:-translate-y-2 relative overflow-hidden">
                       {/* Card Background Gradient */}
                       <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-3xl"></div>
                       
@@ -137,14 +137,14 @@ const AgileSoftwareProcess = () => {
                         {/* Icon in card header */}
                         <div className="flex items-center mb-4">
                           <div className="w-12 h-12 bg-secondary/20 rounded-xl flex items-center justify-center mr-4">
-                            <Icon className="text-xl text-secondary" />
+                            <Icon className="text-xl text-primary" />
                           </div>
-                          <h3 className="text-2xl lg:text-3xl font-bold text-white leading-tight">
+                          <h3 className="text-2xl lg:text-3xl font-bold text-primary leading-tight">
                             {step.title}
                           </h3>
                         </div>
                         
-                        <p className="text-white/90 leading-relaxed text-lg">
+                        <p className="text-primary leading-relaxed text-lg">
                           {step.description}
                         </p>
                         
@@ -156,15 +156,15 @@ const AgileSoftwareProcess = () => {
                               style={{ width: `${((index + 1) / steps.length) * 100}%` }}
                             ></div>
                           </div>
-                          <span className="ml-4 text-secondary font-bold text-sm">
+                          <span className="ml-4 text-primary font-bold text-sm">
                             {Math.round(((index + 1) / steps.length) * 100)}%
                           </span>
                         </div>
                       </div>
 
                       {/* Decorative Corner Elements */}
-                      <div className="absolute top-4 right-4 w-8 h-8 border-t-2 border-r-2 border-secondary/30 rounded-tr-2xl"></div>
-                      <div className="absolute bottom-4 left-4 w-8 h-8 border-b-2 border-l-2 border-secondary/30 rounded-bl-2xl"></div>
+                      <div className="absolute top-4 right-4 w-8 h-8 border-t-2 border-r-2 border-secondary rounded-tr-2xl"></div>
+                      <div className="absolute bottom-4 left-4 w-8 h-8 border-b-2 border-l-2 border-secondary rounded-bl-2xl"></div>
                     </div>
                   </div>
 
@@ -178,20 +178,20 @@ const AgileSoftwareProcess = () => {
 
         {/* Bottom CTA Section */}
         <div className="text-center mt-20" data-aos="fade-up" data-aos-delay="600">
-          <div className="bg-gradient-to-r from-primary/90 via-secondary/10 to-primary/90 rounded-3xl p-12 border border-secondary/20 shadow-2xl backdrop-blur-xl relative overflow-hidden">
+          <div className="bg-secondary/70 rounded-3xl p-12 border border-secondary/30 shadow-2xl backdrop-blur-xl relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent"></div>
             <div className="relative z-10">
-              <h3 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-                Ready to Transform Your <span className="text-secondary">Business?</span>
+              <h3 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
+                Ready to Transform Your <span className="text-primary">Business?</span>
               </h3>
-              <p className="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
+              <p className="text-primary text-lg mb-8 max-w-2xl mx-auto">
                 Our agile process ensures your AI implementation is successful, scalable, and delivers real business value from day one.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/contact-ai-solutions" className="bg-gradient-to-r from-secondary to-secondary/80 text-primary font-bold px-8 py-4 rounded-xl hover:from-secondary/90 hover:to-secondary hover:scale-105 transition-all duration-300 shadow-lg inline-block text-center">
                   Start Your Project
                 </Link>
-                <Link href="/ai-services" className="border-2 border-secondary/50 text-white font-bold px-8 py-4 rounded-xl hover:bg-secondary/10 hover:border-secondary transition-all duration-300 inline-block text-center">
+                <Link href="/ai-services" className="border-2 border-secondary/50 text-primary font-bold px-8 py-4 rounded-xl hover:bg-secondary/10 hover:border-secondary transition-all duration-300 inline-block text-center">
                   Learn More
                 </Link>
               </div>

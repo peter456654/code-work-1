@@ -3,7 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 
 const PartnerWithCodework = () => (
-  <section className="relative bg-primary min-h-screen overflow-hidden py-20 px-4 sm:px-6 lg:px-20">
+  <section className="relative bg-secondary min-h-screen overflow-hidden py-20 px-4 sm:px-6 lg:px-20">
     {/* Background Decorative Elements */}
     <div className="absolute inset-0 opacity-10">
       <div className="absolute top-20 left-20 w-40 h-40 bg-secondary/20 rounded-full"></div>
@@ -26,14 +26,14 @@ const PartnerWithCodework = () => (
         {/* Text Column */}
         <div className="w-full lg:w-1/2 lg:max-w-2xl">
           {/* Section Badge */}
-          <div className="inline-flex items-center border border-secondary/30 bg-white/5 backdrop-blur-sm text-secondary px-6 py-3 rounded-full text-sm font-medium mb-8">
+          <div className="inline-flex items-center border border-secondary/30 bg-secondary/10 backdrop-blur-sm text-primary px-6 py-3 rounded-full text-sm font-medium mb-8">
             <span className="w-2 h-2 bg-secondary rounded-full mr-2 animate-pulse"></span>
             Partnership Excellence
           </div>
 
           {/* Heading */}
-          <h2 className="text-5xl font-bold text-white mb-6 leading-tight">
-            Why Partner with <span className="bg-gradient-to-r from-secondary via-cyan-400 to-secondary bg-clip-text text-transparent">Codework?</span>
+          <h2 className="text-5xl font-bold text-primary mb-6 leading-tight">
+            Why Partner with <span className="text-primary">Codework?</span>
           </h2>
 
           {/* Decorative underline */}
@@ -41,11 +41,11 @@ const PartnerWithCodework = () => (
 
           {/* Description */}
           <div className="space-y-6">
-            <p className="text-xl text-white/90 leading-relaxed pl-4 border-l-4 border-secondary/40">
+            <p className="text-xl text-primary leading-relaxed pl-4 border-l-4 border-secondary/40">
               We don't just label data—we ensure your datasets are high-quality, consistent, and ready for AI adoption. Our secure processes, skilled workforce, and advanced tools make us a trusted partner for businesses seeking reliable Annotation Services.
             </p>
             
-            <p className="text-xl text-white/90 leading-relaxed pl-4 border-l-4 border-secondary/40">
+            <p className="text-xl text-primary leading-relaxed pl-4 border-l-4 border-secondary/40">
               With Codework, you get more than data annotation—you get the foundation for building smarter, future-ready AI solutions.
             </p>
           </div>
@@ -55,7 +55,7 @@ const PartnerWithCodework = () => (
         <div className="w-full lg:w-auto lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2 lg:-mr-12 xl:-mr-20 2xl:-mr-20">
           <div className="relative">
             {/* Primary color overlay with low opacity */}
-            <div className="absolute inset-0 bg-primary opacity-20 rounded-2xl"></div>
+            <div className="absolute inset-0 bg-secondary opacity-20 rounded-2xl"></div>
             <Image
               src="/AllServices/Cybersecurity.svg"
               alt="Professional annotation services illustration"

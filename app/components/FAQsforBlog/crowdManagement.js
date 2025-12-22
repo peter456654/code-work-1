@@ -42,14 +42,14 @@ const CrowdManagement = () => {
   };
 
   return (
-    <div className="bg-primary py-16">
+    <div className="bg-secondary py-16">
       <div className="max-w-4xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <h3 className="text-4xl md:text-5xl font-extrabold text-secondary mb-4 drop-shadow-glow">
+          <h3 className="text-4xl md:text-5xl font-extrabold text-primary mb-4 drop-shadow-glow">
             Frequently Asked Questions
           </h3>
-          <p className="text-white/70 text-lg">
+          <p className="text-primary/70 text-lg">
             Crowd Management: Ensuring Safety and Order in Large Gatherings
           </p>
         </div>
@@ -59,18 +59,18 @@ const CrowdManagement = () => {
           {faqs.map((faq, idx) => (
             <div
               key={faq.question}
-              className="bg-primary/80 border border-secondary/30 rounded-xl overflow-hidden hover:border-secondary/50 transition-all duration-300 shadow-lg hover:shadow-glow"
+              className="bg-secondary/80 border border-primary/30 rounded-xl overflow-hidden hover:border-primary/50 transition-all duration-300 shadow-lg hover:shadow-glow"
             >
               <button
-                className="w-full flex items-center justify-between px-6 py-5 focus:outline-none hover:bg-secondary/5 transition-colors duration-200"
+                className="w-full flex items-center justify-between px-6 py-5 focus:outline-none hover:bg-secondary/10 transition-colors duration-200"
                 onClick={() => toggle(idx)}
               >
-                <span className="text-white font-semibold text-left pr-4 leading-relaxed">
+                <span className="text-primary font-semibold text-left pr-4 leading-relaxed">
                   {faq.question}
                 </span>
                 <div className="flex-shrink-0">
                   <svg
-                    className={`h-6 w-6 text-secondary transform transition-transform duration-300 ${
+                    className={`h-6 w-6 text-primary/60 transform transition-transform duration-300 ${
                       openIndex === idx ? "rotate-180" : ""
                     }`}
                     fill="none"
@@ -91,7 +91,7 @@ const CrowdManagement = () => {
                   openIndex === idx ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
                 }`}
               >
-                <div className="px-6 pb-5 text-white/80 space-y-2 border-t border-secondary/20">
+                <div className="px-6 pb-5 text-primary/70 space-y-2 border-t border-primary/20">
                   {faq.answer.map((line, lineIdx) => (
                     <div key={lineIdx} className="leading-relaxed">
                       {line}
@@ -106,10 +106,10 @@ const CrowdManagement = () => {
       </div>
       <style jsx>{`
         .drop-shadow-glow {
-          text-shadow: 0 0 12px #1ddfea66, 0 0 2px #223044;
+          text-shadow: 0 0 12px rgba(255, 255, 255, 0.4), 0 0 2px rgba(0, 0, 0, 0.3);
         }
         .shadow-glow {
-          box-shadow: 0 0 32px #1ddfea22, 0 0 8px #22304426;
+          box-shadow: 0 0 32px rgba(255, 255, 255, 0.12), 0 0 8px rgba(0, 0, 0, 0.15);
         }
       `}</style>
     </div>

@@ -23,68 +23,51 @@ const Card = ({ card, additionalStyle, index }) => {
   return (
     <div
       onClick={handleCardClick}
-      className={`relative ${card.roundedCorner} overflow-hidden shadow-2xl bg-cover bg-center transition-all duration-700 transform hover:scale-105 hover:-rotate-1 cursor-pointer ${additionalStyle} group h-[220px] sm:h-[320px] md:h-[360px] w-full max-w-[520px] animate-float-up`}
-      style={{ 
+      className={`relative overflow-hidden border border-white/10 shadow-2xl bg-cover bg-center transition-all duration-500 hover:scale-105 cursor-pointer group h-[240px] sm:h-[320px] md:h-[360px] w-full max-w-[520px] animate-float-up`}
+      style={{
         backgroundImage: `url(${card.image})`,
         animationDelay: `${index * 0.2}s`
       }}
     >
-      {/* Enhanced overlay with animated gradient */}
-      <div className="absolute inset-0 transition-all duration-500">
-        {/* Base overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/60 via-primary/40 to-primary/60"></div>
-        {/* Animated gradient overlay on hover */}
-        <div className="absolute inset-0 bg-gradient-to-br from-secondary/70 via-cyan-400/60 to-secondary/70 opacity-0 group-hover:opacity-90 transition-all duration-500"></div>
-        {/* Shimmer effect */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out opacity-0 group-hover:opacity-100"></div>
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-br from-secondary/70 via-secondary/50 to-secondary/30 opacity-50 group-hover:opacity-60 transition-opacity duration-300"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-secondary via-secondary/70 to-secondary opacity-0 group-hover:opacity-40 transition-opacity duration-300"></div>
       </div>
 
-      {/* Default content with enhanced animations */}
-      <div className="absolute bottom-0 w-full p-4 text-white transition-all duration-500 group-hover:opacity-0 group-hover:-translate-y-8">
+      <div className="absolute bottom-0 w-full p-4 text-white transition-all duration-500 group-hover:opacity-0 group-hover:-translate-y-6">
         <div className="flex justify-start ml-4 sm:ml-24 mb-4">
           {IconComponent && (
             <div className="relative">
-              {/* Icon glow effect */}
-              <div className="absolute inset-0 bg-secondary/30 rounded-full blur-xl animate-pulse"></div>
               <IconComponent
-                size={53}
-                className="relative z-10 transition-all duration-500 group-hover:rotate-12 group-hover:scale-110"
+                size={52}
+                className="relative z-10 transition-all duration-300 group-hover:scale-105"
                 style={{ fill: "url(#iconGradient)" }}
               />
             </div>
           )}
         </div>
         <div className="w-full flex items-center ml-4 sm:ml-24 justify-between">
-          <h3 className="text-xl font-bold transition-all duration-700 ease-in-out group-hover:-translate-y-32 group-hover:opacity-0 group-hover:scale-125">
+          <h3 className="text-xl font-bold  text-primary transition-all duration-500 ease-in-out">
             {card.title}
           </h3>
         </div>
-        {/* Enhanced arrow with multiple animations */}
-        <div className="absolute top-1/2 right-4 sm:right-16 md:right-16 lg:right-32 transform -translate-y-1/2 transition-all duration-700 ease-in-out group-hover:translate-x-24 group-hover:opacity-0 group-hover:rotate-45 group-hover:scale-125">
+        <div className="absolute top-1/2 right-4 sm:right-16 md:right-16 lg:right-32 transform -translate-y-1/2 transition-all duration-500 ease-in-out group-hover:translate-x-24 group-hover:opacity-0">
           <div className="relative">
-            <div className="absolute inset-0 bg-secondary/40 rounded-full blur-lg animate-pulse"></div>
             <MdArrowCircleRight size={28} className="relative z-10" style={{ fill: "url(#iconGradient)" }} />
           </div>
         </div>
       </div>
 
-      {/* Enhanced hover content */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-white opacity-0 transition-all duration-500 group-hover:opacity-100 transform group-hover:scale-105">
-        <div className="text-center px-6 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-700 delay-100">
-          <h3 className="text-2xl font-bold mb-4 text-secondary drop-shadow-lg animate-bounce-subtle">{card.title}</h3>
-          <p className="text-lg leading-relaxed font-light max-w-md opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-300">
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-white opacity-0 transition-all duration-300 group-hover:opacity-100">
+        <div className="text-center px-6 transform translate-y-6 group-hover:translate-y-0 transition-transform duration-300">
+          <h3 className="text-2xl font-bold mb-3 text-primary">{card.title}</h3>
+          <p className="text-lg leading-relaxed font-light max-w-md opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             {card.description}
           </p>
         </div>
       </div>
 
-      {/* Floating particles effect */}
-      <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-        <div className="absolute top-4 left-4 w-2 h-2 bg-secondary rounded-full animate-ping animation-delay-200"></div>
-        <div className="absolute top-8 right-8 w-1 h-1 bg-white rounded-full animate-pulse animation-delay-500"></div>
-        <div className="absolute bottom-12 left-8 w-3 h-3 bg-secondary/60 rounded-full animate-bounce animation-delay-1000"></div>
-        <div className="absolute bottom-4 right-4 w-1 h-1 bg-white/80 rounded-full animate-ping animation-delay-800"></div>
-      </div>
+      
     </div>
   );
 };
@@ -97,7 +80,7 @@ const AiCardSection = () => {
       id: 1,
       title: 'AI Consulting',
       description: 'Our AI consulting services deliver tailor-made solutions that align with your business goals, helping organizations identify opportunities for automation and growth.',
-      image: '/AiSolution/aiconsulting.png',
+      image: 'https://codework-ebook.s3.us-east-1.amazonaws.com/codework-media/expertise/AIConsulting.avif',
       roundedCorner: 'rounded-bl-[170px] rounded-tr-[170px]',
       icon: RiBrain2Fill,
       link: '/ai-consulting',
@@ -106,7 +89,7 @@ const AiCardSection = () => {
       id: 2,
       title: 'Generative AI',
       description: 'Creativity meets technology with our Generative AI solutions, boosting productivity and turning your ideas into reality.',
-      image: '/AiSolution/GenerativeAi.png',
+      image: 'https://codework-ebook.s3.us-east-1.amazonaws.com/codework-media/expertise/GenerativeAI.jpg',
       roundedCorner: 'rounded-tl-[170px] rounded-br-[170px]',
       icon: BsStars,
       link: '/generative-ai',
@@ -115,7 +98,7 @@ const AiCardSection = () => {
       id: 3,
       title: 'Machine Learning',
       description: 'Leveraging advanced frameworks like PyTorch and TensorFlow, we enable data-driven decisions and predictive insights.',
-      image: '/AiSolution/ML.png',
+      image: 'https://codework-ebook.s3.us-east-1.amazonaws.com/codework-media/expertise/MachineLearning.avif',
       roundedCorner: 'rounded-tl-[170px] rounded-br-[170px]',
       icon: GiGears,
       link: '/machine-learning',
@@ -124,7 +107,7 @@ const AiCardSection = () => {
       id: 4,
       title: 'Natural Language Processing',
       description: 'Advanced NLP solutions that enhance text analysis, automate customer support, and improve communication.',
-      image: '/AiSolution/NLP.png',
+      image: 'https://codework-ebook.s3.us-east-1.amazonaws.com/codework-media/expertise/NaturalLanguageProcessing.jpg',
       roundedCorner: 'rounded-bl-[170px] rounded-tr-[170px]',
       icon: AiFillMessage,
       link: '/natural-language-processing',
@@ -133,7 +116,7 @@ const AiCardSection = () => {
       id: 5,
       title: 'Data Engineering',
       description: 'Robust data infrastructure services ensuring your data is well-organized, accessible, and efficiently processed.',
-      image: '/AiSolution/DE.png',
+      image: 'https://codework-ebook.s3.us-east-1.amazonaws.com/codework-media/expertise/DataEngineering.avif',
       roundedCorner: 'rounded-bl-[170px] rounded-tr-[170px]',
       icon: FaDatabase,
       link: '/data-engineering',
@@ -142,7 +125,7 @@ const AiCardSection = () => {
       id: 6,
       title: 'Cyber Security',
       description: 'Advanced cybersecurity solutions using cutting-edge technologies to protect your digital assets and infrastructure.',
-      image: '/AiSolution/CS.png',
+      image: 'https://codework-ebook.s3.us-east-1.amazonaws.com/codework-media/expertise/CyberSecurity.jpg',
       roundedCorner: 'rounded-tl-[170px] rounded-br-[170px]',
       icon: MdOutlineSecurity,
       link: '/ai-in-cybersecurity',
@@ -151,7 +134,7 @@ const AiCardSection = () => {
       id: 7,
       title: 'Predictive Analytics',
       description: 'AI-driven forecasting models that analyze trends, predict outcomes, and deliver actionable insights for better planning.',
-      image: '/AiSolution/PA.png',
+      image: 'https://codework-ebook.s3.us-east-1.amazonaws.com/codework-media/expertise/PredictiveAnalytics.jpg',
       roundedCorner: 'rounded-tl-[170px] rounded-br-[170px]',
       icon: BsFillBarChartLineFill,
       link: '/predictive-analytics',
@@ -160,7 +143,7 @@ const AiCardSection = () => {
       id: 8,
       title: 'AI-Chatbots',
       description: 'Intelligent AI chatbots that enhance customer engagement with real-time responses and improved user satisfaction.',
-      image: '/AiSolution/ai.png',
+      image: 'https://codework-ebook.s3.us-east-1.amazonaws.com/codework-media/expertise/chatbot.jpg',
       roundedCorner: 'rounded-bl-[170px] rounded-tr-[170px]',
       icon: FaRobot,
       link: '/ai-chatbots',
@@ -170,7 +153,7 @@ const AiCardSection = () => {
   const displayedCards = showMore ? cardsData : cardsData.slice(0, 4);
 
   return (
-    <div className="relative p-8 bg-primary overflow-hidden">
+    <div className="relative p-8 bg-secondary overflow-hidden">
       {/* Enhanced background with floating elements */}
       {/* <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-40 h-40 bg-secondary/20 rounded-full animate-blob"></div>
@@ -191,26 +174,25 @@ const AiCardSection = () => {
       <svg width="0" height="0" className="absolute">
         <defs>
           <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#1ddfea" />
-            <stop offset="50%" stopColor="#00bcd4" />
-            <stop offset="100%" stopColor="#26c6da" />
+            <stop offset="0%" stopColor="#ffffff" />
+            <stop offset="50%" stopColor="#ffffff" />
+            <stop offset="100%" stopColor="#ffffff" />
           </linearGradient>
           <linearGradient id="buttonGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#1ddfea" />
-            <stop offset="50%" stopColor="#00e5ff" />
-            <stop offset="100%" stopColor="#18ffff" />
+            <stop offset="0%" stopColor="#ffffff" />
+            <stop offset="50%" stopColor="#ffffff" />
+            <stop offset="100%" stopColor="#ffffff" />
           </linearGradient>
         </defs>
       </svg>
 
-      {/* Section Header */}
       <div className="text-center mb-16 relative z-10">
-        <div>
-          <span className="text-secondary text-lg font-medium">— AI Solutions —</span>
+        <div className="inline-flex items-center px-4 py-2 rounded-full border border-secondary/30 bg-white/5 backdrop-blur-sm mb-6">
+          <span className="text-secondary text-sm font-medium">— AI Solutions —</span>
         </div>
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4">
           <span className="text-white"> Our  </span>
-          <span className="bg-gradient-to-r from-secondary via-cyan-400 to-secondary bg-clip-text text-transparent">
+          <span className="text-primary">
           Expertise
           </span>
         </h2>
@@ -229,12 +211,11 @@ const AiCardSection = () => {
         {!showMore && (
           <div className="flex justify-center mt-12">
             <button
-              className="relative px-12 py-4 text-primary font-bold rounded-full transition-all duration-500 bg-gradient-to-r from-secondary to-secondary/80 hover:from-secondary/90 hover:to-secondary hover:shadow-2xl hover:shadow-secondary/25 transform hover:scale-110 overflow-hidden group"
+              className="relative px-12 py-4 text-primary font-bold rounded-full border border-white/20 transition-all hover:bg-white/10 overflow-hidden group"
               onClick={() => setShowMore(true)}
             >
               <span className="relative z-10">View All</span>
-              {/* Button shine effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out"></div>
+              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out"></span>
             </button>
           </div>
         )}

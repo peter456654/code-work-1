@@ -1,14 +1,14 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import { IoArrowForward } from "react-icons/io5";
 
 const AiLandingPage = () => {
   return (
-    <section className="relative w-full h-auto sm:h-[80vh] md:h-screen flex items-center bg-primary overflow-hidden">
+    <section className="relative w-full h-auto sm:h-[80vh] md:h-screen flex items-center bg-secondary text-primary overflow-hidden">
       {/* Background Container with enhanced overlay */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
-        {/* Enhanced overlay with brand colors - made darker */}
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/90 to-primary/95"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/95 to-secondary/95"></div>
       </div>
 
       {/* Background Decorative Elements */}
@@ -30,54 +30,31 @@ const AiLandingPage = () => {
       <div className="relative z-10 w-[80%] mx-auto px-4 pt-16 sm:pt-16 md:pt-20 lg:pt-24 xl:pt-28 text-left">
         
         {/* Section Badge */}
-        <div>
-          <span className="text-secondary text-base sm:text-lg font-medium">— AI Innovation —</span>
-        </div>
 
         {/* Enhanced Heading Container */}
         <div className="heading-container mb-8 sm:mb-10 md:mb-12">
-          <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-tight text-white">
-            <span className="text-white">Empowering </span>
-            <span className="bg-gradient-to-r from-secondary via-cyan-400 to-secondary bg-clip-text text-transparent">
-              Innovation
-            </span>
+          <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-tight text-primary">
+            <span className="text-primary">Empowering </span>
+            <span className="text-primary">Innovation</span>
             <br />
-            <span className="text-white">with </span>
-            <span className="text-secondary">AI Technology</span>
-            
-            {/* Decorative underline */}
-            <div className="w-32 h-1 bg-gradient-to-r from-secondary to-transparent rounded-full mt-6"></div>
+            <span className="text-primary">with </span>
+            <span className="text-primary">AI Technology</span>
+            <div className="w-32 h-1 bg-gradient-to-r from-primary to-transparent rounded-full mt-6"></div>
           </h1>
         </div>
 
         {/* Simplified Paragraph Container */}
         <div className="paragraph-container">
           <div className="relative">
-            <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-secondary to-transparent rounded-full"></div>
-            <p className="text-lg sm:text-xl md:text-xl lg:text-xl xl:text-2xl leading-relaxed text-white/90 font-light max-w-5xl">
-              We deliver <span className="text-secondary font-medium">intelligent solutions</span> powered by AI and advanced technologies. 
-              Our expertise helps businesses <span className="text-secondary font-medium">innovate and grow</span> in the digital landscape.
+            <p className="text-lg sm:text-xl md:text-xl lg:text-xl xl:text-2xl leading-relaxed text-primary/90 font-light max-w-5xl">
+              We deliver intelligent solutions powered by AI and advanced technologies. 
             </p>
           </div>
           {/* Left-aligned CTA */}
           <div className="mt-6 flex justify-start">
-            <Link href="/our-company-case-studies">
-              <button
-                type="button"
-                className="flex justify-center gap-3 sm:gap-4 items-center shadow-xl text-sm bg-transparent backdrop-blur-md font-medium isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-secondary hover:text-primary before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 sm:px-5 md:px-6 lg:px-7 py-2 sm:py-2.5 md:py-3 overflow-hidden border-2 rounded-full group text-white text-xs sm:text-sm md:text-base"
-              >
-                View Case Studies
-                <svg
-                  className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 justify-end group-hover:rotate-90 group-hover:bg-gray-50 text-gray-50 ease-linear duration-300 rounded-full border border-white group-hover:border-none p-0.5 sm:p-1 rotate-45"
-                  viewBox="0 0 16 19"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z"
-                    className="fill-white group-hover:fill-primary"
-                  />
-                </svg>
-              </button>
+            <Link href="/our-company-case-studies" className="flex items-center text-primary hover:text-secondary transition-colors border border-primary px-5 py-3 rounded-none hover:bg-primary">
+              <span className="text-sm sm:text-base md:text-lg">View Case Studies</span>
+              <IoArrowForward className="ml-2" size={20} />
             </Link>
           </div>
         </div>

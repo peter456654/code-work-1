@@ -46,12 +46,12 @@ const Blog13 = () => {
   }, []);
 
   return (
-    <div className="bg-primary py-12 pt-40 min-h-screen">
+    <div className="bg-secondary py-12 pt-40 min-h-screen">
       <div className="max-w-screen-xl mx-auto px-4 flex gap-8">
         {/* LEFT SIDEBAR - TABLE OF CONTENTS */}
         <div className="hidden lg:block w-64 sticky top-24 h-fit">
-          <div className="bg-primary/60 backdrop-blur-sm rounded-xl border border-secondary/20 p-6 shadow-glow">
-            <h3 className="text-lg font-bold text-secondary mb-4 flex items-center">
+          <div className="bg-secondary/60 backdrop-blur-sm rounded-xl border border-primary/20 p-6 shadow-glow">
+            <h3 className="text-lg font-bold text-primary mb-4 flex items-center">
               <FiList className="mr-2" />
               Table of Contents
             </h3>
@@ -65,8 +65,8 @@ const Blog13 = () => {
                   onClick={() => scrollToSection(item.id)}
                   className={`block w-full text-left px-3 py-2 rounded-lg text-sm transition-all duration-200 ${
                     activeSection === item.id
-                      ? "bg-secondary/20 text-secondary border-l-4 border-secondary"
-                      : "text-white/70 hover:text-white hover:bg-white/5"
+                      ? "bg-secondary/20 text-primary border-l-4 border-primary"
+                      : "text-primary/70 hover:text-primary hover:bg-secondary/10"
                   }`}
                 >
                   {index + 1}. {item.title}
@@ -86,9 +86,9 @@ const Blog13 = () => {
 
         {/* MOBILE TOC OVERLAY */}
         {isTocOpen && (
-          <div className="lg:hidden fixed inset-0 z-40 bg-black/50" onClick={() => setIsTocOpen(false)}>
-            <div className="bg-primary w-80 h-full overflow-y-auto p-6 shadow-xl" onClick={e => e.stopPropagation()}>
-              <h3 className="text-lg font-bold text-secondary mb-4 flex items-center">
+          <div className="lg:hidden fixed inset-0 z-40 bg-secondary/50" onClick={() => setIsTocOpen(false)}>
+            <div className="bg-secondary w-80 h-full overflow-y-auto p-6 shadow-xl" onClick={e => e.stopPropagation()}>
+              <h3 className="text-lg font-bold text-primary mb-4 flex items-center">
                 <FiList className="mr-2" />
                 Table of Contents
               </h3>
@@ -102,8 +102,8 @@ const Blog13 = () => {
                     }}
                     className={`block w-full text-left px-3 py-2 rounded-lg text-sm transition-all duration-200 ${
                       activeSection === item.id
-                        ? "bg-secondary/20 text-secondary border-l-4 border-secondary"
-                        : "text-white/70 hover:text-white hover:bg-white/5"
+                        ? "bg-secondary/20 text-primary border-l-4 border-primary"
+                        : "text-primary/70 hover:text-primary hover:bg-secondary/10"
                     }`}
                   >
                     {index + 1}. {item.title}
@@ -117,12 +117,12 @@ const Blog13 = () => {
         {/* MAIN CONTENT */}
         <div className="flex-1 max-w-4xl">
           {/* TITLE */}
-          <h1 className="text-5xl font-extrabold text-secondary mb-8 drop-shadow-glow">
+          <h1 className="text-5xl font-extrabold text-primary mb-8 drop-shadow-glow">
             Code Generation Automation: Revolutionizing Software Development with AI
           </h1>
 
           {/* FEATURE IMAGE */}
-          <div className="relative w-full h-[400px] border-4 border-secondary border-t-0 border-l-0 rounded-lg overflow-hidden mb-8 shadow-glow">
+          <div className="relative w-full h-[400px] border-4 border-primary border-t-0 border-l-0 rounded-lg overflow-hidden mb-8 shadow-glow">
             <Image
               src="/blog/blog13.jpg"
               alt="Code Generation Automation with AI"
@@ -133,7 +133,7 @@ const Blog13 = () => {
           </div>
 
           {/* META */}
-          <div className="flex items-center text-sm text-white mb-10 space-x-3">
+          <div className="flex items-center text-sm text-primary mb-10 space-x-3">
             <div className="w-8 h-8 rounded-full bg-cyan-400/20 flex items-center justify-center text-cyan-400 font-extrabold drop-shadow-glow">
               F
             </div>
@@ -147,48 +147,48 @@ const Blog13 = () => {
 
           {/* INTRODUCTION */}
           <section id="introduction" className="scroll-mt-24 mb-10">
-            <p className="text-white/80 text-xl leading-relaxed mb-4">
+            <p className="text-primary/80 text-xl leading-relaxed mb-4">
               AI-driven automation for code generation in the fast-moving domain of software development is gradually transforming how developers write, test, and optimize code. Equipped with machine learning algorithms, AI generates high-quality code to minimize errors, hence reducing time spent in the development process. This more effectively constitutes one of the important ways in which AI is changing software development.
             </p>
           </section>
 
           {/* SECTION: What is Code Generation Automation */}
           <section id="what-is-code-generation" className="scroll-mt-24 mb-10">
-            <h2 className="text-2xl font-bold text-white mb-4">What is Code Generation Automation?</h2>
-            <p className="text-white/80 leading-relaxed mb-4">
+            <h2 className="text-2xl font-bold text-primary mb-4">What is Code Generation Automation?</h2>
+            <p className="text-primary/80 leading-relaxed mb-4">
               Automation of code generation, therefore, deals with the writing and optimization of code by AI-driven tools with minimal intervention by humans. These AI-powered tools analyze patterns, predict structures of code, and automate repetitive tasks in the software development life cycle.
             </p>
           </section>
 
           {/* SECTION: Key Benefits */}
           <section id="key-benefits" className="scroll-mt-24 mb-10">
-            <h2 className="text-2xl font-bold text-white mb-4">Key Benefits of AI-Powered Code Generation</h2>
+            <h2 className="text-2xl font-bold text-primary mb-4">Key Benefits of AI-Powered Code Generation</h2>
             
             <div className="space-y-4 mb-6">
-              <div className="bg-primary/40 rounded-lg p-4 border border-secondary/20">
-                <h3 className="text-lg font-semibold text-secondary mb-2">✔ Faster Development Cycles</h3>
-                <p className="text-white/80 leading-relaxed">
+              <div className="bg-secondary/40 rounded-lg p-4 border border-primary/20">
+                <h3 className="text-lg font-semibold text-primary mb-2">✔ Faster Development Cycles</h3>
+                <p className="text-primary/80 leading-relaxed">
                   AI automates the coding processes, freeing time for developers to solve complex problems. This reduces the time it takes to develop an application from scratch.
                 </p>
               </div>
 
-              <div className="bg-primary/40 rounded-lg p-4 border border-secondary/20">
-                <h3 className="text-lg font-semibold text-secondary mb-2">✔ Improved Code Quality</h3>
-                <p className="text-white/80 leading-relaxed">
+              <div className="bg-secondary/40 rounded-lg p-4 border border-primary/20">
+                <h3 className="text-lg font-semibold text-primary mb-2">✔ Improved Code Quality</h3>
+                <p className="text-primary/80 leading-relaxed">
                   AI detects bugs, vulnerabilities, and inconsistencies in real time. It enforces standards of coding and best practices that lead to high-quality software.
                 </p>
               </div>
 
-              <div className="bg-primary/40 rounded-lg p-4 border border-secondary/20">
-                <h3 className="text-lg font-semibold text-secondary mb-2">✔ Improved Productivity</h3>
-                <p className="text-white/80 leading-relaxed">
+              <div className="bg-secondary/40 rounded-lg p-4 border border-primary/20">
+                <h3 className="text-lg font-semibold text-primary mb-2">✔ Improved Productivity</h3>
+                <p className="text-primary/80 leading-relaxed">
                   Automates routine tasks such as code formatting, testing, and debugging, allowing developers to spend more time on strategic thinking and creative problem-solving.
                 </p>
               </div>
 
-              <div className="bg-primary/40 rounded-lg p-4 border border-secondary/20">
-                <h3 className="text-lg font-semibold text-secondary mb-2">✔ Seamless DevOps Integration</h3>
-                <p className="text-white/80 leading-relaxed">
+              <div className="bg-secondary/40 rounded-lg p-4 border border-primary/20">
+                <h3 className="text-lg font-semibold text-primary mb-2">✔ Seamless DevOps Integration</h3>
+                <p className="text-primary/80 leading-relaxed">
                   AI-generated code can be directly included in any CI/CD pipelines, making the whole deployment process effective. It also automates the testing of software for errors to allow smooth releases.
                 </p>
               </div>
@@ -197,24 +197,24 @@ const Blog13 = () => {
 
           {/* SECTION: Popular Tools */}
           <section id="popular-tools" className="scroll-mt-24 mb-10">
-            <h2 className="text-2xl font-bold text-white mb-4">Popular AI-Powered Code Generation Tools</h2>
+            <h2 className="text-2xl font-bold text-primary mb-4">Popular AI-Powered Code Generation Tools</h2>
             
             <div className="space-y-3 mb-6">
-              <div className="bg-primary/40 rounded-lg p-4 border border-secondary/20">
-                <p className="text-white/80 leading-relaxed">
-                  <strong className="text-secondary">GitHub Copilot:</strong> Assists in coding by suggesting code and functions.
+              <div className="bg-secondary/40 rounded-lg p-4 border border-primary/20">
+                <p className="text-primary/80 leading-relaxed">
+                  <strong className="text-primary">GitHub Copilot:</strong> Assists in coding by suggesting code and functions.
                 </p>
               </div>
 
-              <div className="bg-primary/40 rounded-lg p-4 border border-secondary/20">
-                <p className="text-white/80 leading-relaxed">
-                  <strong className="text-secondary">Tabnine:</strong> Uses deep learning to predict and complete code structures.
+              <div className="bg-secondary/40 rounded-lg p-4 border border-primary/20">
+                <p className="text-primary/80 leading-relaxed">
+                  <strong className="text-primary">Tabnine:</strong> Uses deep learning to predict and complete code structures.
                 </p>
               </div>
 
-              <div className="bg-primary/40 rounded-lg p-4 border border-secondary/20">
-                <p className="text-white/80 leading-relaxed">
-                  <strong className="text-secondary">OpenAI Codex:</strong> Powers tools like Copilot to help with natural language-to-code.
+              <div className="bg-secondary/40 rounded-lg p-4 border border-primary/20">
+                <p className="text-primary/80 leading-relaxed">
+                  <strong className="text-primary">OpenAI Codex:</strong> Powers tools like Copilot to help with natural language-to-code.
                 </p>
               </div>
             </div>
@@ -222,24 +222,24 @@ const Blog13 = () => {
 
           {/* SECTION: Challenges */}
           <section id="challenges" className="scroll-mt-24 mb-10">
-            <h2 className="text-2xl font-bold text-white mb-4">Challenges in Code Generation Automation</h2>
+            <h2 className="text-2xl font-bold text-primary mb-4">Challenges in Code Generation Automation</h2>
             
             <div className="space-y-3 mb-6">
-              <div className="bg-primary/40 rounded-lg p-4 border border-secondary/20">
-                <p className="text-white/80 leading-relaxed">
-                  <strong className="text-secondary">Over-reliance on AI:</strong> The logical accuracy in code needs to be reviewed by developers.
+              <div className="bg-secondary/40 rounded-lg p-4 border border-primary/20">
+                <p className="text-primary/80 leading-relaxed">
+                  <strong className="text-primary">Over-reliance on AI:</strong> The logical accuracy in code needs to be reviewed by developers.
                 </p>
               </div>
 
-              <div className="bg-primary/40 rounded-lg p-4 border border-secondary/20">
-                <p className="text-white/80 leading-relaxed">
-                  <strong className="text-secondary">Data Privacy Issues:</strong> AI models contain very large sets of data and therefore come with several security risks.
+              <div className="bg-secondary/40 rounded-lg p-4 border border-primary/20">
+                <p className="text-primary/80 leading-relaxed">
+                  <strong className="text-primary">Data Privacy Issues:</strong> AI models contain very large sets of data and therefore come with several security risks.
                 </p>
               </div>
 
-              <div className="bg-primary/40 rounded-lg p-4 border border-secondary/20">
-                <p className="text-white/80 leading-relaxed">
-                  <strong className="text-secondary">Algorithmic Bias:</strong> The code generated by AI may reflect biases from the training data.
+              <div className="bg-secondary/40 rounded-lg p-4 border border-primary/20">
+                <p className="text-primary/80 leading-relaxed">
+                  <strong className="text-primary">Algorithmic Bias:</strong> The code generated by AI may reflect biases from the training data.
                 </p>
               </div>
             </div>
@@ -247,8 +247,8 @@ const Blog13 = () => {
 
           {/* SECTION: Future of AI */}
           <section id="future-ai" className="scroll-mt-24 mb-10">
-            <h2 className="text-2xl font-bold text-white mb-4">Future of AI in Software Development</h2>
-            <p className="text-white/80 leading-relaxed mb-4">
+            <h2 className="text-2xl font-bold text-primary mb-4">Future of AI in Software Development</h2>
+            <p className="text-primary/80 leading-relaxed mb-4">
               With ongoing enhancement of AI, automation of code generation will be the basis for accelerating software development. The developers will, therefore, be at an advantage in developing applications that are efficient, scalable, and secure if they can adopt such tools.
             </p>
           </section>
@@ -278,26 +278,26 @@ const Blog13 = () => {
         }
 
         ::-webkit-scrollbar-track {
-          background: rgba(34, 48, 68, 0.3);
+          background: rgba(0, 0, 0, 0.3);
         }
 
         ::-webkit-scrollbar-thumb {
-          background: #1ddfea;
+          background: #000000;
           border-radius: 2px;
         }
 
         ::-webkit-scrollbar-thumb:hover {
-          background: rgba(29, 223, 234, 0.8);
+          background: rgba(0, 0, 0, 0.8);
         }
 
         ::-webkit-scrollbar-corner {
-          background: rgba(34, 48, 68, 0.3);
+          background: rgba(0, 0, 0, 0.3);
         }
 
         /* Firefox */
         * {
           scrollbar-width: thin;
-          scrollbar-color: #1ddfea rgba(34, 48, 68, 0.3);
+          scrollbar-color: #000000 rgba(0, 0, 0, 0.3);
         }
       `}</style>
     </div>

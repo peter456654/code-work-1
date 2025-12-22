@@ -47,7 +47,7 @@ const DevelopmentProcess = () => {
   }, []);
 
   return (
-    <div className="relative bg-primary min-h-screen overflow-hidden py-8 sm:py-12 lg:py-20 px-4 sm:px-6 lg:px-20">
+    <div className="relative bg-secondary min-h-screen overflow-hidden py-8 sm:py-12 lg:py-20 px-4 sm:px-6 lg:px-20">
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-40 h-40 bg-secondary/20 rounded-full"></div>
@@ -67,15 +67,15 @@ const DevelopmentProcess = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header Section */}
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-          <div className="inline-flex items-center border border-secondary/30 bg-white/5 backdrop-blur-sm text-secondary px-4 sm:px-6 py-2 sm:py-3 rounded-full text-sm font-medium mb-4 sm:mb-6 lg:mb-8">
+          <div className="inline-flex items-center border border-secondary/30 bg-secondary/10 backdrop-blur-sm text-primary px-4 sm:px-6 py-2 sm:py-3 rounded-full text-sm font-medium mb-4 sm:mb-6 lg:mb-8">
             <span className="w-2 h-2 bg-secondary rounded-full mr-2 animate-pulse"></span>
             Development Process
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 px-2">
-            Agile <span className="bg-gradient-to-r from-secondary via-cyan-400 to-secondary bg-clip-text text-transparent">Software Process</span>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6 px-2">
+            Agile <span className="text-primary">Software Process</span>
           </h2>
-          <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-secondary to-transparent rounded-full mx-auto mb-3 sm:mb-4"></div>
-          <p className="text-white/90 max-w-3xl mx-auto text-sm sm:text-base lg:text-lg leading-relaxed px-4">
+          <div className="w-16 sm:w-20 h-1 bg-secondary rounded-full mx-auto mb-3 sm:mb-4"></div>
+          <p className="text-primary max-w-3xl mx-auto text-sm sm:text-base lg:text-lg leading-relaxed px-4">
             Our streamlined approach ensures efficient delivery of high-quality software solutions through proven methodologies and best practices.
           </p>
         </div>
@@ -95,7 +95,7 @@ const DevelopmentProcess = () => {
                       idx < current ? 'opacity-0 scale-95 -translate-x-8' : 'opacity-0 scale-95 translate-x-8'
                     }`}
                   >
-                    <div className="bg-primary/70 backdrop-blur-xl rounded-2xl sm:rounded-3xl border border-white/20 shadow-2xl p-4 sm:p-6 lg:p-8 h-full flex flex-col justify-between relative overflow-hidden group">
+                    <div className="bg-secondary/70 backdrop-blur-xl rounded-2xl sm:rounded-3xl border border-secondary/30 shadow-2xl p-4 sm:p-6 lg:p-8 h-full flex flex-col justify-between relative overflow-hidden group hover:bg-secondary/80 transition-colors duration-300">
                       {/* Step Number Badge */}
                       <div className="absolute top-3 sm:top-4 lg:top-6 right-3 sm:right-4 lg:right-6">
                         <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-secondary to-secondary/80 rounded-full flex items-center justify-center text-primary font-bold shadow-lg text-xs sm:text-sm lg:text-base">
@@ -107,14 +107,14 @@ const DevelopmentProcess = () => {
                       <div className="relative z-10">
                         <div className="flex flex-col sm:flex-row sm:items-center mb-4 sm:mb-6">
                           <div className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-secondary/20 rounded-2xl mb-3 sm:mb-0 sm:mr-4 mx-auto sm:mx-0">
-                            <Icon className="text-xl sm:text-2xl lg:text-3xl text-secondary animate-pulse" />
+                            <Icon className="text-xl sm:text-2xl lg:text-3xl text-primary animate-pulse" />
                           </div>
-                          <h3 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-white text-center sm:text-left leading-tight">
+                          <h3 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-primary text-center sm:text-left leading-tight">
                             {step.title}
                           </h3>
                         </div>
 
-                        <p className="text-white/90 text-sm sm:text-base lg:text-lg leading-relaxed mb-4 sm:mb-6 text-center sm:text-left px-2 sm:px-0">
+                        <p className="text-primary text-sm sm:text-base lg:text-lg leading-relaxed mb-4 sm:mb-6 text-center sm:text-left px-2 sm:px-0">
                           {step.description}
                         </p>
                       </div>
@@ -128,8 +128,8 @@ const DevelopmentProcess = () => {
                           ></div>
                         </div>
                         <div className="flex justify-between mt-2 px-1">
-                          <span className="text-xs sm:text-sm text-white/70">Step {step.step} of {steps.length.toString().padStart(2, '0')}</span>
-                          <span className="text-xs sm:text-sm text-secondary font-bold">{Math.round(((idx + 1) / steps.length) * 100)}%</span>
+                          <span className="text-xs sm:text-sm text-primary">Step {step.step} of {steps.length.toString().padStart(2, '0')}</span>
+                          <span className="text-xs sm:text-sm text-primary font-bold">{Math.round(((idx + 1) / steps.length) * 100)}%</span>
                         </div>
                       </div>
 
@@ -165,11 +165,11 @@ const DevelopmentProcess = () => {
                     <div className={`w-8 h-8 lg:w-10 lg:h-10 rounded-full border-2 flex items-center justify-center transition-all duration-500 ${
                       idx <= current
                         ? 'border-secondary bg-secondary text-primary shadow-lg'
-                        : 'border-white/30 bg-primary text-white/50'
+                        : 'border-white/30 bg-primary text-primary/50'
                     }`}>
                       <span className="text-xs font-bold">{step.step}</span>
                     </div>
-                    <span className="text-xs text-white/70 mt-2 text-center max-w-16">
+                    <span className="text-xs text-primary mt-2 text-center max-w-16">
                       {step.title.split(' ')[0]}
                     </span>
                   </div>

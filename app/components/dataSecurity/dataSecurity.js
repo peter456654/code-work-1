@@ -8,7 +8,7 @@ export default function DataSecurity() {
   const industryCards = [
     {
       title: "Healthcare",
-      img: "/Industires/healthcare.jpg",
+      img: "https://codework-ebook.s3.us-east-1.amazonaws.com/codework-media/industry/Healthcare.jpg",
       description: "Our AI-powered healthcare solutions revolutionize diagnostics with precision and speed, enabling personalized treatment plans tailored to each patient.",
       link: "/ai-in-healthcare-you-must-know",
       icon: (
@@ -19,7 +19,7 @@ export default function DataSecurity() {
     },
     {
       title: "Finance",
-      img: "/Industires/finance.jpg",
+      img: "https://codework-ebook.s3.us-east-1.amazonaws.com/codework-media/industry/finance.jpg",
       description: "Find out how new AI technologies in finance are empowering decisions and paving the way for a brighter, more efficient financial future.",
       link: "/new-ai-in-finance",
       icon: (
@@ -30,7 +30,7 @@ export default function DataSecurity() {
     },
     {
       title: "E-commerce",
-      img: "/Industires/ecommerce.jpg",
+      img: "https://codework-ebook.s3.us-east-1.amazonaws.com/codework-media/industry/AI-E-commerce.avif",
       description: "Discover the secrets of integrating AI in e-commerce and unlock remarkable success for your business with our expert strategies.",
       link: "/ai-in-ecommerce",
       icon: (
@@ -42,17 +42,17 @@ export default function DataSecurity() {
   ];
 
   return (
-    <div className="bg-primary text-white min-h-screen">
+    <div className="bg-secondary text-primary min-h-screen">
       
       {/* Hero Section */}
-      <section className="relative bg-primary min-h-screen overflow-hidden">
+      <section className="relative bg-secondary min-h-screen overflow-hidden">
         {/* Background overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-primary/70 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/95 to-secondary/70 z-10"></div>
         
         {/* Background image positioned at bottom half with responsive positioning */}
         <div className="absolute bottom-0 left-[5%] sm:left-[10%] md:left-[15%] lg:left-[20%] h-1/4 sm:h-1/3 md:h-2/5 lg:h-1/2 w-[90%] sm:w-4/5 md:w-4/5 lg:w-4/5">
           <Image
-            src="/Industires/datascurity.jpg"
+            src="https://codework-ebook.s3.us-east-1.amazonaws.com/codework-media/industry/DataSecurity.avif"
             alt="AI in Data Security"
             fill
             className="object-cover rounded-tl-xl sm:rounded-tl-2xl md:rounded-tl-3xl"
@@ -63,7 +63,7 @@ export default function DataSecurity() {
         {/* Contact button - HIDDEN on mobile, visible from tablet up */}
         <div className="absolute hidden sm:block top-24 right-6 md:top-32 md:right-8 lg:top-52 lg:right-8 z-30">
   <Link href="/contact-ai-solutions">
-    <button className="bg-secondary hover:bg-secondary/90 text-primary font-bold py-2.5 px-6 md:py-3 md:px-8 text-sm md:text-base rounded-full transition-colors duration-200 shadow-lg">
+    <button className="bg-transparent border-2 border-primary text-primary font-bold py-2.5 px-6 md:py-3 md:px-8 text-sm md:text-base rounded-none transition-colors duration-200 hover:bg-primary/10">
       Contact us →
     </button>
   </Link>
@@ -76,10 +76,10 @@ export default function DataSecurity() {
             {/* Left side - Text content with balanced spacing */}
             <div className="flex flex-col pl-4 sm:pl-8 md:pl-12 justify-center space-y-4 sm:space-y-6 md:space-y-8 pt-8 pb-16 sm:pt-8 sm:pb-8 md:pt-4 md:pb-4 lg:pt-0 lg:pb-0">            
               <div>
-                <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-6xl font-extrabold text-white mb-4 sm:mb-6 drop-shadow-glow leading-tight">
+                <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-6xl font-extrabold text-primary mb-4 sm:mb-6 leading-tight">
                   AI in Data Security
                 </h1>
-                <p className="text-base sm:text-lg md:text-lg lg:text-lg text-white/90 leading-relaxed max-w-full sm:max-w-xl md:max-w-2xl">
+                <p className="text-base sm:text-lg md:text-lg lg:text-lg text-primary/90 leading-relaxed max-w-full sm:max-w-xl md:max-w-2xl">
                   AI in data security uses artificial intelligence to protect sensitive information from cyber threats. AI-powered systems detect suspicious activities, analyze data in real time, and respond instantly to potential breaches.
                 </p>
               </div>
@@ -99,43 +99,43 @@ export default function DataSecurity() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           
           {/* Contact Form */}
-          <div className="bg-primary/80 rounded-xl p-8 border border-secondary/30">
-            <h2 className="text-2xl font-bold text-secondary mb-4">Fill the form to receive a call</h2>
-            <p className="text-white/70 mb-6">
+          <div className="bg-secondary/30 rounded-xl p-8 border border-primary/30">
+            <h2 className="text-2xl font-bold text-primary mb-4">Fill the form to receive a call</h2>
+            <p className="text-primary/70 mb-6">
               Connect with our cybersecurity AI experts to learn how we can help protect your organization's data.
             </p>
             
             <form className="space-y-4">
               <div>
-                <label className="block text-sm font-medium text-white/80 mb-2">Full name</label>
+                <label className="block text-sm font-medium text-primary/80 mb-2">Full name</label>
                 <input 
                   type="text" 
                   placeholder="John Carter"
-                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-secondary"
+                  className="w-full px-4 py-3 rounded-lg bg-primary/10 border border-primary/20 text-primary placeholder-primary/50 focus:outline-none focus:border-primary"
                 />
               </div>
               
               <div>
-                <label className="block text-sm font-medium text-white/80 mb-2">Email address</label>
+                <label className="block text-sm font-medium text-primary/80 mb-2">Email address</label>
                 <input 
                   type="email" 
                   placeholder="example@yourdomain.com"
-                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-secondary"
+                  className="w-full px-4 py-3 rounded-lg bg-primary/10 border border-primary/20 text-primary placeholder-primary/50 focus:outline-none focus:border-primary"
                 />
               </div>
               
               <div>
-                <label className="block text-sm font-medium text-white/80 mb-2">Phone number</label>
+                <label className="block text-sm font-medium text-primary/80 mb-2">Phone number</label>
                 <input 
                   type="tel" 
                   placeholder="(123) 456-7890"
-                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-secondary"
+                  className="w-full px-4 py-3 rounded-lg bg-primary/10 border border-primary/20 text-primary placeholder-primary/50 focus:outline-none focus:border-primary"
                 />
               </div>
               
               <button 
                 type="submit"
-                className="w-full bg-secondary hover:bg-secondary/90 text-primary font-bold py-3 px-6 rounded-lg transition-colors duration-200"
+                className="w-full bg-transparent border-2 border-primary text-primary font-bold py-3 px-6 rounded-none transition-colors duration-200 hover:bg-primary hover:text-secondary"
               >
                 Receive a call →
               </button>
@@ -145,89 +145,89 @@ export default function DataSecurity() {
           {/* Content */}
           <div className="lg:col-span-2 space-y-8">
             <div>
-              <h2 className="text-4xl font-bold text-white mb-6">Why Data Security is Important</h2>
-              <p className="text-white/80 leading-relaxed mb-6">
+              <h2 className="text-4xl font-bold text-primary mb-6">Why Data Security is Important</h2>
+              <p className="text-primary/80 leading-relaxed mb-6">
                 In today's digital era, data is the backbone of every organization. From personal customer information to financial transactions, any unauthorized access can result in identity theft, data breaches, and financial loss. Strong data security safeguards business reputation, ensures compliance with laws like GDPR and HIPAA, and builds customer trust. Without it, organizations face legal penalties, lost revenue, and damage to brand credibility.
               </p>
             </div>
 
             <div>
-              <h3 className="text-2xl font-bold text-secondary mb-4">Benefits of Strong Data Security</h3>
-              <p className="text-white/80 mb-6">
+              <h3 className="text-2xl font-bold text-primary mb-4">Benefits of Strong Data Security</h3>
+              <p className="text-primary/80 mb-6">
                 A robust data security strategy offers multiple advantages that protect both your organization and your customers.
               </p>
               
-              <ul className="space-y-3 text-white/80">
+              <ul className="space-y-3 text-primary/80">
                 <li className="flex items-start space-x-3">
-                  <span className="text-secondary">•</span>
+                  <span className="text-primary">•</span>
                   <span><strong>Prevents data breaches</strong> – Stops cyberattacks and unauthorized access to sensitive information.</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <span className="text-secondary">•</span>
+                  <span className="text-primary">•</span>
                   <span><strong>Ensures compliance</strong> – Meets data privacy regulations like GDPR, HIPAA, and other legal requirements.</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <span className="text-secondary">•</span>
+                  <span className="text-primary">•</span>
                   <span><strong>Builds customer trust</strong> – Demonstrates commitment to protecting client data and privacy.</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <span className="text-secondary">•</span>
+                  <span className="text-primary">•</span>
                   <span><strong>Reduces downtime</strong> – Minimizes business interruptions from security incidents and cyber threats.</span>
                 </li>
               </ul>
             </div>
 
             <div>
-              <h3 className="text-2xl font-bold text-secondary mb-4">Data Security Use Cases</h3>
+              <h3 className="text-2xl font-bold text-primary mb-4">Data Security Use Cases</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                <div className="bg-primary/50 rounded-lg p-4 border border-secondary/20">
-                  <h4 className="font-semibold text-white mb-2">Banking & Finance</h4>
-                  <p className="text-white/70 text-sm">Stops online fraud and detects unusual transactions in real-time.</p>
+                <div className="bg-secondary/20 rounded-lg p-4 border border-primary/20">
+                  <h4 className="font-semibold text-primary mb-2">Banking & Finance</h4>
+                  <p className="text-primary/70 text-sm">Stops online fraud and detects unusual transactions in real-time.</p>
                 </div>
-                <div className="bg-primary/50 rounded-lg p-4 border border-secondary/20">
-                  <h4 className="font-semibold text-white mb-2">Healthcare</h4>
-                  <p className="text-white/70 text-sm">Safeguards patient records and medical data from cybercriminals.</p>
+                <div className="bg-secondary/20 rounded-lg p-4 border border-primary/20">
+                  <h4 className="font-semibold text-primary mb-2">Healthcare</h4>
+                  <p className="text-primary/70 text-sm">Safeguards patient records and medical data from cybercriminals.</p>
                 </div>
-                <div className="bg-primary/50 rounded-lg p-4 border border-secondary/20">
-                  <h4 className="font-semibold text-white mb-2">E-commerce</h4>
-                  <p className="text-white/70 text-sm">Ensures safe payments and protects customer privacy during transactions.</p>
+                <div className="bg-secondary/20 rounded-lg p-4 border border-primary/20">
+                  <h4 className="font-semibold text-primary mb-2">E-commerce</h4>
+                  <p className="text-primary/70 text-sm">Ensures safe payments and protects customer privacy during transactions.</p>
                 </div>
-                <div className="bg-primary/50 rounded-lg p-4 border border-secondary/20">
-                  <h4 className="font-semibold text-white mb-2">Government</h4>
-                  <p className="text-white/70 text-sm">AI-powered cyber defense systems protect sensitive national data.</p>
+                <div className="bg-secondary/20 rounded-lg p-4 border border-primary/20">
+                  <h4 className="font-semibold text-primary mb-2">Government</h4>
+                  <p className="text-primary/70 text-sm">AI-powered cyber defense systems protect sensitive national data.</p>
                 </div>
               </div>
             </div>
 
             <div>
-              <h3 className="text-2xl font-bold text-secondary mb-4">Best Practices for Data Security</h3>
+              <h3 className="text-2xl font-bold text-primary mb-4">Best Practices for Data Security</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-secondary rounded-full"></div>
-                    <span className="text-white/80"><strong>Encrypt sensitive data</strong> – Protect files and databases with strong encryption.</span>
+                    <span className="text-primary/80"><strong>Encrypt sensitive data</strong> – Protect files and databases with strong encryption.</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-secondary rounded-full"></div>
-                    <span className="text-white/80"><strong>Multi-factor authentication</strong> – Add extra layers of security for user access.</span>
+                    <span className="text-primary/80"><strong>Multi-factor authentication</strong> – Add extra layers of security for user access.</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-secondary rounded-full"></div>
-                    <span className="text-white/80"><strong>Regular updates</strong> – Keep systems updated with latest security patches.</span>
+                    <span className="text-primary/80"><strong>Regular updates</strong> – Keep systems updated with latest security patches.</span>
                   </div>
                 </div>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-secondary rounded-full"></div>
-                    <span className="text-white/80"><strong>Employee training</strong> – Educate staff on cybersecurity awareness and best practices.</span>
+                    <span className="text-primary/80"><strong>Employee training</strong> – Educate staff on cybersecurity awareness and best practices.</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-secondary rounded-full"></div>
-                    <span className="text-white/80"><strong>AI monitoring</strong> – Deploy AI tools for instant threat detection and response.</span>
+                    <span className="text-primary/80"><strong>AI monitoring</strong> – Deploy AI tools for instant threat detection and response.</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-secondary rounded-full"></div>
-                    <span className="text-white/80"><strong>Data backups</strong> – Maintain secure backups for business continuity.</span>
+                    <span className="text-primary/80"><strong>Data backups</strong> – Maintain secure backups for business continuity.</span>
                   </div>
                 </div>
               </div>
@@ -236,15 +236,15 @@ export default function DataSecurity() {
             {/* Data Security Image */}
             <div className="relative h-80 rounded-lg overflow-hidden">
               <Image
-                src="/Industires/datascurity.jpg"
+                src="https://codework-ebook.s3.us-east-1.amazonaws.com/codework-media/industry/DataSecurity.avif"
                 alt="AI Data Security Technology"
                 fill
                 className="object-cover"
               />
             </div>
 
-            <div className="bg-secondary/10 rounded-lg p-6 border border-secondary/30">
-              <p className="text-white/90 text-lg leading-relaxed">
+            <div className="bg-primary/10 rounded-lg p-6 border border-primary/30">
+              <p className="text-primary/90 text-lg leading-relaxed">
                 <strong>Conclusion:</strong> AI in data security is revolutionizing the way we defend against cyber threats. By combining advanced AI technology with best security practices, organizations can ensure data privacy, maintain customer trust, and achieve long-term resilience. In a world where cyber risks evolve daily, proactive AI-driven cybersecurity is no longer optional—it's essential.
               </p>
             </div>
@@ -253,18 +253,18 @@ export default function DataSecurity() {
       </section>
 
       {/* More Industries Section */}
-      <section className="bg-primary/50 py-16">
+      <section className="bg-secondary/40 py-16">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex justify-between items-center mb-12">
-            <h2 className="text-4xl font-bold text-white">More Industries</h2>
-            <Link href="/industries-you-must-know" className="text-secondary hover:text-secondary/80 font-semibold">
+            <h2 className="text-4xl font-bold text-primary">More Industries</h2>
+            <Link href="/industries-you-must-know" className="text-primary hover:text-primary/80 font-semibold">
               Browse all industries →
             </Link>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {industryCards.map((card, idx) => (
-              <div key={idx} className="bg-primary/80 rounded-lg p-6 border border-secondary/30 hover:border-secondary/50 transition-colors group">
+              <div key={idx} className="bg-secondary/20 rounded-lg p-6 border border-primary/30 hover:border-primary/50 transition-colors group">
                 <div className="relative h-48 rounded-lg overflow-hidden mb-4">
                   <Image
                     src={card.img}
@@ -272,13 +272,13 @@ export default function DataSecurity() {
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  <div className="absolute top-4 left-4 w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center text-secondary">
+                  <div className="absolute top-4 left-4 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary">
                     {card.icon}
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">{card.title}</h3>
-                <p className="text-white/70 mb-4">{card.description}</p>
-                <Link href={card.link} className="text-secondary group-hover:text-secondary/80 font-semibold">
+                <h3 className="text-xl font-bold text-primary mb-2">{card.title}</h3>
+                <p className="text-primary/70 mb-4">{card.description}</p>
+                <Link href={card.link} className="text-primary group-hover:text-primary/80 font-semibold">
                   Learn more →
                 </Link>
               </div>

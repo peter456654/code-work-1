@@ -1,25 +1,36 @@
 "use client";
 import React from 'react';
 import Link from "next/link";
+import { 
+  IoSettingsOutline,
+  IoSparklesOutline,
+  IoStatsChartOutline,
+  IoChatbubbleEllipsesOutline,
+  IoCubeOutline,
+  IoShieldCheckmarkOutline,
+  IoAnalyticsOutline,
+  IoGitNetworkOutline,
+  IoServerOutline,
+} from 'react-icons/io5';
 
 const AreasExcellence = () => {
   const expertiseAreas = [
-    { icon: '/AreasExcellenceICON/aiIcon.svg', name: 'AI Consulting', link: '/ai-powered-pdf-translator' },              
-    { icon: '/AreasExcellenceICON/generativeICOn.svg', name: 'Generative AI', link: '/generative-ai' },   
-    { icon: '/AreasExcellenceICON/MLICON.svg', name: 'Machine Learning', link: '/machine-learning' }, 
-    { icon: '/AreasExcellenceICON/Aichatpot.svg', name: 'AI Chatbot Integration', link: '/algorithms-to-agents' },                  
-    { icon: '/AreasExcellenceICON/DLICON.svg', name: 'Deep Learning', link: '/deep-learning' },  
-    { icon: '/AreasExcellenceICON/CyberICON.svg', name: 'AI in Cybersecurity', link: '/cybersecurity-service' }, 
-    { icon: '/AreasExcellenceICON/predictive.svg', name: 'Predictive Analysis', link: '/tweaks-powerful-adaptations' },                                                                               
-    { icon: '/AreasExcellenceICON/neuralNtwork.svg', name: 'Neural Networks', link: '/hype-hijack-goal' },  
-    { icon: '/AreasExcellenceICON/generativeICOn.svg', name: 'NLP', link: '/revolutionizing-hiring' },  
-    { icon: '/AreasExcellenceICON/dataEngICON.svg', name: 'Data Engineering', link: '/model-context-protocol' },                                   
+    { icon: IoSettingsOutline, name: 'AI Consulting', link: '/ai-powered-pdf-translator' },              
+    { icon: IoSparklesOutline, name: 'Generative AI', link: '/generative-ai' },   
+    { icon: IoStatsChartOutline, name: 'Machine Learning', link: '/machine-learning' }, 
+    { icon: IoChatbubbleEllipsesOutline, name: 'AI Chatbot Integration', link: '/algorithms-to-agents' },                  
+    { icon: IoCubeOutline, name: 'Deep Learning', link: '/deep-learning' },  
+    { icon: IoShieldCheckmarkOutline, name: 'AI in Cybersecurity', link: '/cybersecurity-service' }, 
+    { icon: IoAnalyticsOutline, name: 'Predictive Analysis', link: '/tweaks-powerful-adaptations' },                                                                               
+    { icon: IoGitNetworkOutline, name: 'Neural Networks', link: '/hype-hijack-goal' },  
+    { icon: IoChatbubbleEllipsesOutline, name: 'NLP', link: '/revolutionizing-hiring' },  
+    { icon: IoServerOutline, name: 'Data Engineering', link: '/model-context-protocol' },                                   
   ];
 
   
 
   return (
-    <div className="py-16 px-4 sm:px-6 md:px-8 lg:px-8 xl:px-12 relative bg-primary overflow-hidden min-h-screen flex items-center">
+    <div className="py-16 px-4 sm:px-6 md:px-8 lg:px-8 xl:px-12 relative bg-secondary overflow-hidden min-h-screen flex items-center text-primary">
         {/* Background Pattern Overlay */}
         {/* <div className="absolute inset-0 opacity-10">
           <div className="absolute top-10 left-10 w-32 h-32 bg-secondary/20 rounded-full animate-blob"></div>
@@ -31,30 +42,31 @@ const AreasExcellence = () => {
 
         <div className="w-full">
   <div className="-mt-4">
-    <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-extrabold leading-tight tracking-tight mb-4">
-      <span className="text-white bg-clip-text text-transparent drop-shadow-lg">
-        Areas of  <span className="text-secondary">Expertise</span>
+    <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-extrabold leading-tight tracking-tight mb-4 text-primary">
+      <span className="bg-clip-text text-primary drop-shadow-lg text-primary">
+        Areas of  <span className="text-primary">Expertise</span>
       </span>
       {/* Decorative underline */}
-      <div className="w-24 h-1 bg-gradient-to-r from-secondary to-transparent rounded-full mt-2"></div>
+      <div className="w-24 h-1 bg-gradient-to-r from-primary to-transparent rounded-full mt-2"></div>
     </h2>
-    <p className="text-lg sm:text-xl md:text-lg lg:text-lg xl:text-xl text-white/90 leading-relaxed font-light tracking-wide mb-6">
-      We bring <span className="text-white font-medium">innovation to life</span> through 
+    <p className="text-lg sm:text-xl md:text-lg lg:text-lg xl:text-xl text-primary/90 leading-relaxed font-light tracking-wide mb-6">
+      We bring <span className="text-primary font-medium">innovation to life</span> through 
     </p>
   </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mb-8">
             {expertiseAreas.map((area, index) => (
               <Link href={area.link} key={index}>
-                <div className="flex items-center h-[60px] sm:h-[72px]  hover:shadow-lg hover:shadow-secondary/25 transition-all duration-300 hover:transform hover:scale-105 cursor-pointer group">
+                <div className="flex items-center h-[60px] sm:h-[72px] hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 hover:transform hover:scale-105 cursor-pointer group">
                   <div className="flex items-center justify-center w-[50px] sm:w-[65px] md:w-[65px] lg:w-[65px] xl:w-[65px] h-[50px] sm:h-[65px] md:h-[65px] lg:h-[65px] xl:h-[65px] mr-3 ml-2">
-                    <img
-                      src={area.icon}
-                      alt={`${area.name} icon`}
-                      className="w-8 sm:w-10 md:w-10 lg:w-10 xl:w-10 h-8 sm:h-10 md:h-10 lg:h-10 xl:h-10 group-hover:scale-110 transition-transform duration-300"
-                    />
+                    {(() => {
+                      const Icon = area.icon;
+                      return (
+                        <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-primary group-hover:scale-110 transition-transform duration-300" aria-label={`${area.name} icon`} />
+                      );
+                    })()}
                   </div>
-                  <span className="text-white font-medium group-hover:text-secondary transition-colors duration-300 flex-1">
+                  <span className="text-primary font-medium group-hover:text-primary transition-colors duration-300 flex-1">
                     {area.name}
                   </span>
                 </div>
@@ -62,7 +74,7 @@ const AreasExcellence = () => {
             ))}
           </div>
 
-          <p className="text-white/80 mb-6">
+          <p className="text-primary/80 mb-6">
             Our team is passionate about crafting intelligent solutions to help businesses grow,
             improve efficiency, and stay ahead in today's tech-driven world. Trust us to deliver
             excellence.
@@ -74,7 +86,7 @@ const AreasExcellence = () => {
 
       {/* Decorative Elements */}
       <div className="absolute bottom-0 right-0 opacity-20">
-        <div className="w-32 h-32 bg-gradient-to-l from-secondary/30 to-transparent rounded-full"></div>
+        <div className="w-32 h-32 bg-gradient-to-l from-primary/30 to-transparent rounded-full"></div>
       </div>
     </div>
   );

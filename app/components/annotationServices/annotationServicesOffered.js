@@ -91,7 +91,7 @@ export default function WhoUsesAnnotation() {
   }, []);
 
   return (
-    <div className="relative bg-primary min-h-screen overflow-hidden py-20 px-4 sm:px-6 lg:px-20">
+    <div className="relative bg-secondary min-h-screen overflow-hidden py-20 px-4 sm:px-6 lg:px-20">
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-40 h-40 bg-secondary/20 rounded-full"></div>
@@ -111,15 +111,15 @@ export default function WhoUsesAnnotation() {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header Section */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center border border-secondary/30 bg-white/5 backdrop-blur-sm text-secondary px-6 py-3 rounded-full text-sm font-medium mb-8">
+          <div className="inline-flex items-center border border-secondary/30 bg-secondary/10 backdrop-blur-sm text-primary px-6 py-3 rounded-full text-sm font-medium mb-8">
             <span className="w-2 h-2 bg-secondary rounded-full mr-2 animate-pulse"></span>
             Industry Applications
           </div>
-          <h2 className="text-5xl font-bold text-white mb-6">
-            Who Uses <span className="bg-gradient-to-r from-secondary via-cyan-400 to-secondary bg-clip-text text-transparent">Annotation Services?</span>
+          <h2 className="text-5xl font-bold text-primary mb-6">
+            Who Uses <span className="text-primary">Annotation Services?</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-secondary to-transparent rounded-full mx-auto mb-6"></div>
-          <p className="text-xl text-white/90 leading-relaxed max-w-4xl mx-auto mb-16">
+          <p className="text-xl text-primary leading-relaxed max-w-4xl mx-auto mb-16">
             Annotation services are widely used across industries that depend on artificial intelligence, machine learning, and automation.
           </p>
         </div>
@@ -152,7 +152,7 @@ export default function WhoUsesAnnotation() {
                   className="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4"
                 >
                   <div
-                    className={`bg-primary/70 backdrop-blur-xl rounded-3xl border border-white/20 shadow-2xl overflow-hidden h-full transition-all duration-500 hover:bg-primary/80 hover:-translate-y-2 hover:shadow-3xl transform ${transformClasses} group`}
+                    className={`bg-secondary/70 backdrop-blur-xl rounded-3xl border border-secondary/30 shadow-2xl overflow-hidden h-full transition-all duration-500 hover:bg-secondary/80 hover:-translate-y-2 hover:shadow-3xl transform ${transformClasses} group`}
                   >
                     {/* Header with React icon and gradient */}
                     <div className={`bg-gradient-to-r ${card.gradient} p-8 relative overflow-hidden`}>
@@ -170,8 +170,8 @@ export default function WhoUsesAnnotation() {
                     </div>
 
                     {/* Body */}
-                    <div className="p-8 text-white/90 text-sm leading-relaxed flex-1 relative">
-                      <p className="group-hover:text-white transition-colors duration-300">
+                    <div className="p-8 text-primary text-sm leading-relaxed flex-1 relative">
+                      <p className="group-hover:text-primary transition-colors duration-300">
                         {card.text}
                       </p>
                       
@@ -183,7 +183,7 @@ export default function WhoUsesAnnotation() {
                             style={{ width: `${((idx + 1) / cards.length) * 100}%` }}
                           ></div>
                         </div>
-                        <span className="ml-3 text-secondary font-bold text-xs">
+                        <span className="ml-3 text-primary font-bold text-xs">
                           {String(idx + 1).padStart(2, '0')}
                         </span>
                       </div>
@@ -234,7 +234,7 @@ export default function WhoUsesAnnotation() {
                   className={`rounded-full transition-all duration-300 ${
                     page === currentPage
                       ? "bg-secondary w-8 h-3 shadow-lg"
-                      : "bg-white/30 w-3 h-3 hover:bg-white/50"
+                      : "bg-secondary/30 w-3 h-3 hover:bg-secondary/50"
                   }`}
                   aria-label={`Go to slide ${page + 1}`}
                 />
@@ -270,43 +270,43 @@ export default function WhoUsesAnnotation() {
         {/* Services Section - MOVED BELOW CAROUSEL */}
         <div className="mb-16">
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-white mb-6">
-              Our Comprehensive <span className="bg-gradient-to-r from-secondary via-cyan-400 to-secondary bg-clip-text text-transparent">Annotation Services</span>
+            <h3 className="text-3xl font-bold text-primary mb-6">
+              Our Comprehensive <span className="text-primary">Annotation Services</span>
             </h3>
-            <p className="text-lg text-white/90">We provide tailored solutions to match the needs of different industries:</p>
+            <p className="text-lg text-primary">We provide tailored solutions to match the needs of different industries:</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-primary/70 backdrop-blur-xl rounded-2xl border border-white/20 shadow-2xl p-6 text-center group hover:bg-primary/80 transition-all duration-300">
+            <div className="bg-secondary/70 backdrop-blur-xl rounded-2xl border border-secondary/30 shadow-2xl p-6 text-center group hover:bg-secondary/80 transition-all duration-300">
               <div className="w-12 h-12 bg-secondary/20 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                <span className="text-secondary font-bold">IMG</span>
+                <span className="text-primary font-bold">IMG</span>
               </div>
-              <h4 className="text-lg font-bold text-white mb-2">Image Annotation</h4>
-              <p className="text-sm text-white/80">Bounding boxes, polygons, segmentation, and object tagging.</p>
+              <h4 className="text-lg font-bold text-primary mb-2">Image Annotation</h4>
+              <p className="text-sm text-primary">Bounding boxes, polygons, segmentation, and object tagging.</p>
             </div>
             
-            <div className="bg-primary/70 backdrop-blur-xl rounded-2xl border border-white/20 shadow-2xl p-6 text-center group hover:bg-primary/80 transition-all duration-300">
+            <div className="bg-secondary/70 backdrop-blur-xl rounded-2xl border border-secondary/30 shadow-2xl p-6 text-center group hover:bg-secondary/80 transition-all duration-300">
               <div className="w-12 h-12 bg-secondary/20 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                <span className="text-secondary font-bold">TXT</span>
+                <span className="text-primary font-bold">TXT</span>
               </div>
-              <h4 className="text-lg font-bold text-white mb-2">Text Annotation</h4>
-              <p className="text-sm text-white/80">Entity recognition, intent labelling, sentiment analysis.</p>
+              <h4 className="text-lg font-bold text-primary mb-2">Text Annotation</h4>
+              <p className="text-sm text-primary">Entity recognition, intent labelling, sentiment analysis.</p>
             </div>
             
-            <div className="bg-primary/70 backdrop-blur-xl rounded-2xl border border-white/20 shadow-2xl p-6 text-center group hover:bg-primary/80 transition-all duration-300">
+            <div className="bg-secondary/70 backdrop-blur-xl rounded-2xl border border-secondary/30 shadow-2xl p-6 text-center group hover:bg-secondary/80 transition-all duration-300">
               <div className="w-12 h-12 bg-secondary/20 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                <span className="text-secondary font-bold">AUD</span>
+                <span className="text-primary font-bold">AUD</span>
               </div>
-              <h4 className="text-lg font-bold text-white mb-2">Audio Annotation</h4>
-              <p className="text-sm text-white/80">Speech tagging, transcription, speaker identification.</p>
+              <h4 className="text-lg font-bold text-primary mb-2">Audio Annotation</h4>
+              <p className="text-sm text-primary">Speech tagging, transcription, speaker identification.</p>
             </div>
             
-            <div className="bg-primary/70 backdrop-blur-xl rounded-2xl border border-white/20 shadow-2xl p-6 text-center group hover:bg-primary/80 transition-all duration-300">
+            <div className="bg-secondary/70 backdrop-blur-xl rounded-2xl border border-secondary/30 shadow-2xl p-6 text-center group hover:bg-secondary/80 transition-all duration-300">
               <div className="w-12 h-12 bg-secondary/20 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                <span className="text-secondary font-bold">VID</span>
+                <span className="text-primary font-bold">VID</span>
               </div>
-              <h4 className="text-lg font-bold text-white mb-2">Video Annotation</h4>
-              <p className="text-sm text-white/80">Frame-by-frame tracking, activity recognition, motion tagging.</p>
+              <h4 className="text-lg font-bold text-primary mb-2">Video Annotation</h4>
+              <p className="text-sm text-primary">Frame-by-frame tracking, activity recognition, motion tagging.</p>
             </div>
           </div>
         </div>

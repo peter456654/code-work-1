@@ -558,7 +558,7 @@ export default function RootLayout({ children }) {
         <main>{children}</main>
         <Footer />
 
-        <ChatBot />
+        {/* <ChatBot /> */}
 
         {/* Animation styles */}
         <style jsx global>{`

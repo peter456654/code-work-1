@@ -1,11 +1,11 @@
 "use client";
-import React from 'react';
+import React, { useState } from 'react';
 import { FiArrowRight, FiClock, FiUser } from 'react-icons/fi';
 const blogPosts = [
   {
     id: 1,
     date: '2025-01-15',
-    image: '/blog/blog1.jpg',
+    image: 'https://codework-ebook.s3.amazonaws.com/codework-media/blogs/125110.jpg',
     title: 'Deep Dive Into Activity Launch Modes in Android.',
     description: 'In Android, Activity Launch Modes determine how new instances of an activity are created and how they interact with existing activities. The four main launch modes are:',
     link: '/launch-modes-andorid',
@@ -15,7 +15,7 @@ const blogPosts = [
   {
     id: 2,
     date: '2025-02-10',
-    image: '/blog/blog2.jpg',
+    image: 'https://codework-ebook.s3.amazonaws.com/codework-media/blogs/1756765539463.jpg',
     title: 'From Algorithms to Agents',
     description: 'Artificial Intelligence (AI) has become a transformative force in today\'s world. From language models that can write poetry to autonomous systems solving complex problems, AI is revolutionizing the way we live, work, and create.',
     link: '/algorithms-to-agents',
@@ -25,7 +25,7 @@ const blogPosts = [
   {
     id: 3,
     date: '2025-03-05',
-    image: '/blog/blog3.jpg',
+    image: 'https://codework-ebook.s3.amazonaws.com/codework-media/blogs/18705.jpg',
     title: 'WorkManager. AlarmManager. JobScheduler : A Detailed Guide',
     description: 'This blog will explore WorkManager, AlarmManager, and JobScheduler in detail, comparing their functionality, ideal use cases, and examples.',
     link: '/workmanager-alarmmanager-Jobscheduler',
@@ -35,7 +35,7 @@ const blogPosts = [
   {
     id: 4,
     date: '2025-04-18',
-    image: '/blog/blog4.jpg',
+    image: 'https://codework-ebook.s3.amazonaws.com/codework-media/blogs/Affordablemarketingideasforyoursmallbusiness_featuredimage.jpg',
     title: 'How Model Context Protocol Is Transforming the Future of AI',
     description: 'In the rapidly evolving world of Artificial Intelligence (AI), new concepts are continuously emerging, bringing us closer to machines that think and respond like humans.',
     link: '/model-context-protocol',
@@ -45,7 +45,7 @@ const blogPosts = [
   {
     id: 5,
     date: '2025-05-22',
-    image: '/blog/blog5.jpg',
+    image: 'https://codework-ebook.s3.amazonaws.com/codework-media/blogs/Deep-Learning-vs-Machine-Learning.avif',
     title: 'Tiny Tweaks, Powerful Adaptations',
     description: 'Fine-tuning large language models (LLMs) like LLaMA or GPT-3 can require billions of parameters, massive GPUs, and weeks of training. But what if you could achieve similar results by training just 0.1% of the parameters.',
     link: '/tweaks-powerful-adaptations',
@@ -55,7 +55,7 @@ const blogPosts = [
   {
     id: 6,
     date: '2025-05-28',
-    image: '/blog/blog6.jpg',
+    image: 'https://codework-ebook.s3.amazonaws.com/codework-media/blogs/[Downloader.la]-6944e64e62c1e.jpg',
     title: 'Don\'t Let the Hype Hijack the Goal',
     description: 'Artificial Intelligence (AI) has become the crown jewel of innovation in today',
     link: '/hype-hijack-goal',
@@ -65,7 +65,7 @@ const blogPosts = [
   {
     id: 7,
     date: '2025-05-29',
-    image: '/blog/blog7.jpg',
+    image: 'https://codework-ebook.s3.amazonaws.com/codework-media/blogs/business-brainstorming-graph-chart-report-data-concept_53876-41686.avif',
     title: 'Revolutionizing Virtual Colonoscopy',
     description: 'Colorectal cancer remains one of the leading causes of cancer-related deaths globally. The introduction of virtual colonoscopy through CT colonography offers a non-invasive, patient-friendly diagnostic',
     link: '/revolutionizing-virtual-colonoscopy',
@@ -75,7 +75,7 @@ const blogPosts = [
   {
     id: 8,
     date: '2025-05-29',
-    image: '/blog/blog8.jpg',
+    image: 'https://codework-ebook.s3.amazonaws.com/codework-media/blogs/businessman-using-pen-touch-flowchart-virtual-screen-business-process-workflow-with-flowchart-processing-management-concept_568137-1311.jpg',
     title: 'UAE Makes History with Free ChatGPT Plus for Every Resident',
     description: 'In a groundbreaking development for the global AI community, the United Arab Emirates (UAE) has become the first nation to offer all its residents free access to ChatGPT Plus.',
     link: '/uae-makes-history',
@@ -85,7 +85,7 @@ const blogPosts = [
   {
     id: 9,
     date: '2025-05-29',
-    image: '/blog/blog9.jpg',
+    image: 'https://codework-ebook.s3.amazonaws.com/codework-media/blogs/closeup-african-american-entrepreneur-analyzing-company-profit_482257-20207.jpg',
     title: 'The Deepfake Dilemma: What Leaders Must Know',
     description: 'In the age of generative AI, deepfakes represent both an opportunity and a threat. As synthetic media becomes more convincing and accessible, organizations must understand the risks, legal frameworks, and best practices to protect their brand, stakeholders, and public trust',
     link: '/the-deepfake-dilemma',
@@ -95,7 +95,7 @@ const blogPosts = [
   {
     id: 10,
     date: '2025-06-13',
-    image: '/blog/blog10.jpg',
+    image: 'https://codework-ebook.s3.amazonaws.com/codework-media/blogs/creative-artificial-intelligence-concept-with-human-brain-hologram-modern-laptop-screen-3d-rendering_258654-19029.jpg',
     title: 'Revolutionizing Hiring: How CODEWORK is Automating Recruitment with AI',
     description: 'The recruitment process is undergoing a major shift, and CODEWORK is leading the way. CODEWORK transforms traditional hiring into an efficient, data-driven system by integrating AI recruitment tools and automation technologies.',
     link: '/revolutionizing-hiring',
@@ -105,7 +105,7 @@ const blogPosts = [
   {
     id: 11,
     date: '2025-06-17',
-    image: '/blog/blog11.jpg',
+    image: 'https://codework-ebook.s3.amazonaws.com/codework-media/blogs/cropped-shot-startup-ux-ui-front-end-designers-developing-programming-coding-mobile-application-from-prototype-wireframe-layout-mobile-application-developer-workplace-concept_68339-320.jpg',
     title: 'The New Era of AI: How Digital Marketing Will Never Be the Same Again',
     description: 'It\'s the backbone of a new age of hyper-intelligent digital marketing. AI impacts businesses in many ways, transforming audience engagement and performance measurement with automation, predictive analytics, audience-specific content creation, and automated real-time decision making using deep learning algorithms.',
     link: '/the-new-era-of-ai',
@@ -115,7 +115,7 @@ const blogPosts = [
   {
     id: 12,
     date: '2025-07-15',
-    image: '/blog/blog12.jpg',
+    image: 'https://codework-ebook.s3.amazonaws.com/codework-media/blogs/deepfake-concept-matching-facial-movements-face-swapping-impersonation_29488-11319.jpg',
     title: 'How is AI Transforming Software Development?',
     description: 'Artificial intelligence (AI) transforms software development by offering tools and practices that increase efficiency, accuracy, and innovation. Artificial Intelligence, especially generative AI and large language models,',
     link: '/ai-transforming-software',
@@ -125,7 +125,7 @@ const blogPosts = [
   {
     id: 13,
     date: '2025-07-16',
-    image: '/blog/blog13.jpg',
+    image: 'https://codework-ebook.s3.amazonaws.com/codework-media/blogs/double-exposure-caucasian-man-virtual-reality-vr-headset-is-presumably-gamer-hacker-cracking-code-into-secure-network-server-with-lines-code_146671-18938.jpg',
     title: 'Code Generation Automation: Revolutionizing Software Development with AI',
     description: 'In the fast-paced world of software development, AI-driven code generation automation is transforming how developers write, test, and optimize code. By leveraging machine learning algorithms, AI can generate high-quality code, reducing development time and minimizing errors. This innovation is a key aspect of how AI is transforming software development.',
     link: '/code-generation-automation',
@@ -135,7 +135,7 @@ const blogPosts = [
   {
     id: 14,
     date: '2025-07-16',
-    image: '/blog/blog14.jpg',
+    image: 'https://codework-ebook.s3.amazonaws.com/codework-media/blogs/european-union-using-radar-system-detect-missiles-attacking-member-states_482257-89727.jpg',
     title: 'Generative AI is revolutionizing software development.',
     description: 'Development with Intelligent Automation Generative AI is revolutionizing software development',
     link: '/generative-ai',
@@ -145,7 +145,7 @@ const blogPosts = [
   {
     id: 15,
     date: '2025-07-21',
-    image: '/blog/blog15.jpg',
+    image: 'https://codework-ebook.s3.amazonaws.com/codework-media/blogs/generative-ai-virtual-assistant-tools-prompt-engineer-end-user-snugly_31965-473234.jpg',
     title: 'What is Machine Learning? A Comprehensive Guide',
     description: 'Machine learning (ML), a subset of artificial intelligence (AI), empowers machines to learn from experience, operate independently, and enhance accuracy through exposure to data.',
     link: '/machine-learning',
@@ -155,7 +155,7 @@ const blogPosts = [
   {
     id: 16,
     date: '2025-07-22',
-    image: '/blog/blog16.jpg',
+    image: 'https://codework-ebook.s3.amazonaws.com/codework-media/blogs/generative-ai-virtual-assistant-tools-prompt-engineer-end-user-snugly_31965-651475.jpg',
     title: 'What is Deep Learning? A Comprehensive Guide',
     description: 'Deep learning is a part of machine learning that uses multiple-layered neural networks to imitate the human brain\'s decision-making process.',
     link: '/deep-learning',
@@ -165,7 +165,7 @@ const blogPosts = [
   {
     id: 17,
     date: '2025-07-22',
-    image: '/blog/blog17.jpg',
+    image: 'https://codework-ebook.s3.amazonaws.com/codework-media/blogs/graphic-designers-work-together-with-ux-ui-designer-planning-application_35892-978.jpg',
     title: 'Chatbots in 2025: Your Everyday AI Companion',
     description: 'Ever chatted with an online helper and thought, "Wow, this thing almost feels human!"? That\'s the charm of today\'s chatbots—smarter, friendlier, and more helpful than ever.',
     link: '/everyday-ai-companion',
@@ -175,7 +175,7 @@ const blogPosts = [
   {
     id: 18,
     date: '2025-07-23',
-    image: '/blog/blog18.jpg',
+    image: 'https://codework-ebook.s3.amazonaws.com/codework-media/blogs/hacker-girl-using-dangerous-malware-attack-government-database_482257-20620.jpg',
     title: 'Mixture of Experts: Making AI Smarter, Not Just Bigger',
     description: 'Large Language Models (LLMs) like GPT-4 and Claude are impressive - but they\'re also expensive.',
     link: '/mixture-of-experts',
@@ -185,7 +185,7 @@ const blogPosts = [
   {
     id: 19,
     date: '2025-07-23',
-    image: '/blog/blog19.jpg',
+    image: 'https://codework-ebook.s3.amazonaws.com/codework-media/blogs/human-resources-officer-choose-employee-standing-out-crowd-select-team-leader-concept_488220-62208.jpg',
     title: 'Demystifying Generative AI: A Friendly Guide to Different Model Types',
     description: 'Generative AI has quickly moved from a trending term to a foundational technology powering many modern applications. From powering conversational chatbots',
     link: '/demystifying-generative',
@@ -195,7 +195,7 @@ const blogPosts = [
   {
     id: 20,
     date: '2025-07-23',
-    image: '/blog/blog20.jpg',
+    image: 'https://codework-ebook.s3.amazonaws.com/codework-media/blogs/man-designer-architect-working-new-project-using-pc-with-graphic-software_482257-8233.jpg',
     title: 'What is Predictive Analytics?',
     description: 'Predictive analytics is a powerful branch of data science that utilizes statistical techniques, machine learning, deep learning,',
     link: '/predictive-analytics',
@@ -205,7 +205,7 @@ const blogPosts = [
   {
     id: 21,
     date: '2025-07-24',
-    image: '/blog/blog21.jpg',
+    image: 'https://codework-ebook.s3.amazonaws.com/codework-media/blogs/modern-computer-screen-with-social-network-media-concept-3d-rendering_258654-25313.jpg',
     title: 'What is a Neural Network?',
     description: 'A neural network is a type of machine learning model inspired by the way neurons in the human',
     link: '/neural-network',
@@ -215,7 +215,7 @@ const blogPosts = [
   {
     id: 22,
     date: '2025-07-24',
-    image: '/blog/blog2.jpg',
+    image: 'https://codework-ebook.s3.amazonaws.com/codework-media/blogs/woman-uses-ai-chatbot-system-computer-guide-her-through-tasks_482257-118915.avif',
     title: ' AI Consulting ',
     description: 'Transform your business with AI consulting and development services that position you as an industry leader.',
     link: '/ai-consulting',
@@ -225,7 +225,7 @@ const blogPosts = [
   {
     id: 23,
     date: '2025-07-24',
-    image: '/blog/blog23.jpg',
+    image: 'https://codework-ebook.s3.amazonaws.com/codework-media/blogs/young-person-vr-headset-with-laptop-symbolizing-advanced-technology-immersive-digital_72464-2290.jpg',
     title: 'What is Artificial Intelligence?',
     description: 'Artificial Intelligence (AI) refers to the capability of machines to carry out tasks that usually demand human intelligence. These tasks include learning from data, recognizing patterns, making decisions, understanding language, and interacting with humans.',
     link: '/artificial-intelligence',
@@ -335,8 +335,10 @@ const blogPosts = [
 ];
 
 const AllBlogList = () => {
+  const [showAll, setShowAll] = useState(false);
+  const displayedPosts = showAll ? blogPosts : blogPosts.slice(0, 9);
   return (
-    <div className="w-full px-4 py-16 bg-primary relative overflow-hidden">
+    <div className="w-full px-4 py-16 bg-primary text-secondary relative overflow-hidden">
       {/* Static Background Decorative Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-40 h-40 bg-secondary/20 rounded-full"></div>
@@ -346,14 +348,10 @@ const AllBlogList = () => {
       </div>
 
       {/* Header */}
-      <div className="text-center mb-16 relative z-10">
-        <div className="inline-flex items-center px-4 py-2 rounded-full border border-secondary/30 bg-white/5 backdrop-blur-sm mb-6">
-          <span className="text-secondary text-sm font-medium">— Latest Articles —</span>
-        </div>
-        
-        <h1 className="text-4xl font-bold mb-6">
-          <span className="text-white">Our </span>
-          <span className="bg-gradient-to-r from-secondary via-cyan-400 to-secondary bg-clip-text text-transparent">
+      <div className="text-center mb-16 relative z-10">        
+        <h1 className="text-4xl font-bold mb-6 text-secondary">
+          <span className="text-secondary">Our </span>
+          <span className="text-secondary">
             Blog Posts
           </span>
         </h1>
@@ -364,10 +362,10 @@ const AllBlogList = () => {
       {/* Consistent Card Grid - No animations */}
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogPosts.map((post) => (
+          {displayedPosts.map((post) => (
             <div
               key={post.id}
-              className="group bg-primary/30 backdrop-blur-xl border border-white/10 rounded-3xl overflow-hidden hover:bg-primary/40 hover:border-secondary/30 transition-all duration-500 h-full flex flex-col"
+              className="group bg-primary/30 backdrop-blur-xl border border-white/10 overflow-hidden hover:bg-primary/40 hover:border-white/30 transition-all duration-500 h-full flex flex-col"
             >
               {/* Image Section - No Label Text */}
               <div className="relative">
@@ -376,13 +374,13 @@ const AllBlogList = () => {
                   src={post.image}
                   alt={post.title}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/40 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-secondary/40 to-transparent"></div>
               </div>
 
               {/* Content Section */}
               <div className="p-6 flex flex-col flex-grow">
                 {/* Date and Read Time */}
-                <div className="flex items-center justify-between mb-3 text-white/70 text-sm">
+                <div className="flex items-center justify-between mb-3 text-secondary/70 text-sm">
                   <div className="flex items-center">
                     <FiClock className="mr-2 text-secondary" />
                     <span>{new Date(post.date).toLocaleDateString()}</span>
@@ -394,12 +392,12 @@ const AllBlogList = () => {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-bold text-white mb-3 leading-tight line-clamp-2">
+                <h3 className="text-xl font-bold text-secondary mb-3 leading-tight line-clamp-2">
                   {post.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-white/80 text-sm leading-relaxed mb-6 flex-grow line-clamp-3">
+                <p className="text-secondary/80 text-sm leading-relaxed mb-6 flex-grow line-clamp-3">
                   {post.description}
                 </p>
 
@@ -407,7 +405,7 @@ const AllBlogList = () => {
                 <div className="mt-auto">
                   <a
                     href={post.link}
-                    className="inline-flex items-center text-secondary hover:text-white text-sm font-semibold border border-secondary/50 hover:border-secondary hover:bg-secondary/10 px-4 py-2 rounded-lg transition-all duration-300 backdrop-blur-sm w-full justify-center"
+                    className="inline-flex items-center text-secondary hover:text-secondary text-sm font-semibold border-2 border-secondary hover:border-secondary/60 hover:bg-secondary/10 px-4 py-2  transition-all duration-300 backdrop-blur-sm w-full justify-center ring-1 ring-secondary ring-offset-2 ring-offset-primary"
                   >
                     <span>Continue Reading</span>
                     <FiArrowRight className="ml-2 w-4 h-4" />
@@ -418,6 +416,17 @@ const AllBlogList = () => {
           ))}
         </div>
       </div>
+
+      {!showAll && (
+        <div className="mt-12 flex justify-center relative z-10">
+          <button
+            onClick={() => setShowAll(true)}
+            className="inline-flex items-center text-secondary text-sm font-semibold border-2 border-secondary hover:bg-secondary/10 px-8 py-3 transition-all duration-300 rounded-none"
+          >
+            View All Blogs
+          </button>
+        </div>
+      )}
 
       {/* Line clamp CSS */}
       <style jsx>{`

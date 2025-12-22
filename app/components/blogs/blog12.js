@@ -51,7 +51,7 @@ const Blog12 = () => {
         {/* LEFT SIDEBAR - TABLE OF CONTENTS */}
         <div className="hidden lg:block w-64 sticky top-24 h-fit">
           <div className="bg-primary/60 backdrop-blur-sm rounded-xl border border-secondary/20 p-6 shadow-glow">
-            <h3 className="text-lg font-bold text-secondary mb-4 flex items-center">
+            <h3 className="text-lg font-bold text-primary mb-4 flex items-center">
               <FiList className="mr-2" />
               Table of Contents
             </h3>
@@ -65,8 +65,8 @@ const Blog12 = () => {
                   onClick={() => scrollToSection(item.id)}
                   className={`block w-full text-left px-3 py-2 rounded-lg text-sm transition-all duration-200 ${
                     activeSection === item.id
-                      ? "bg-secondary/20 text-secondary border-l-4 border-secondary"
-                      : "text-white/70 hover:text-white hover:bg-white/5"
+                      ? "bg-secondary/20 text-primary border-l-4 border-primary"
+                      : "text-primary/70 hover:text-primary hover:bg-secondary/10"
                   }`}
                 >
                   {index + 1}. {item.title}
@@ -86,9 +86,9 @@ const Blog12 = () => {
 
         {/* MOBILE TOC OVERLAY */}
         {isTocOpen && (
-          <div className="lg:hidden fixed inset-0 z-40 bg-black/50" onClick={() => setIsTocOpen(false)}>
+          <div className="lg:hidden fixed inset-0 z-40 bg-secondary/50" onClick={() => setIsTocOpen(false)}>
             <div className="bg-primary w-80 h-full overflow-y-auto p-6 shadow-xl" onClick={e => e.stopPropagation()}>
-              <h3 className="text-lg font-bold text-secondary mb-4 flex items-center">
+              <h3 className="text-lg font-bold text-primary mb-4 flex items-center">
                 <FiList className="mr-2" />
                 Table of Contents
               </h3>
@@ -102,8 +102,8 @@ const Blog12 = () => {
                     }}
                     className={`block w-full text-left px-3 py-2 rounded-lg text-sm transition-all duration-200 ${
                       activeSection === item.id
-                        ? "bg-secondary/20 text-secondary border-l-4 border-secondary"
-                        : "text-white/70 hover:text-white hover:bg-white/5"
+                        ? "bg-secondary/20 text-primary border-l-4 border-primary"
+                        : "text-primary/70 hover:text-primary hover:bg-secondary/10"
                     }`}
                   >
                     {index + 1}. {item.title}
@@ -117,12 +117,12 @@ const Blog12 = () => {
         {/* MAIN CONTENT */}
         <div className="flex-1 max-w-4xl">
           {/* TITLE */}
-          <h1 className="text-5xl font-extrabold text-secondary mb-8 drop-shadow-glow">
+          <h1 className="text-5xl font-extrabold text-primary mb-8 drop-shadow-glow">
             How is AI Transforming Software Development?
           </h1>
 
           {/* FEATURE IMAGE */}
-          <div className="relative w-full h-[400px] border-4 border-secondary border-t-0 border-l-0 rounded-lg overflow-hidden mb-8 shadow-glow">
+          <div className="relative w-full h-[400px] border-4 border-primary border-t-0 border-l-0 rounded-lg overflow-hidden mb-8 shadow-glow">
             <Image
               src="/blog/blog12.jpg"
               alt="AI in Software Development"
@@ -160,29 +160,29 @@ const Blog12 = () => {
             </p>
 
             <div className="space-y-4 mb-6">
-              <div className="bg-primary/40 rounded-lg p-4 border border-secondary/20">
-                <h3 className="text-lg font-semibold text-secondary mb-2">Intelligent Code Completion</h3>
+              <div className="bg-primary/40 rounded-lg p-4 border border-primary/20">
+                <h3 className="text-lg font-semibold text-primary mb-2">Intelligent Code Completion</h3>
                 <p className="text-white/80 leading-relaxed">
                   AI-driven tools scan for patterns with the aim of generating optimized code snippets, thus drastically reducing manual coding effort.
                 </p>
               </div>
 
-              <div className="bg-primary/40 rounded-lg p-4 border border-secondary/20">
-                <h3 className="text-lg font-semibold text-secondary mb-2">Error Detection and Debugging</h3>
+              <div className="bg-primary/40 rounded-lg p-4 border border-primary/20">
+                <h3 className="text-lg font-semibold text-primary mb-2">Error Detection and Debugging</h3>
                 <p className="text-white/80 leading-relaxed">
                   AI-driven systems can identify errors and correct them instantly, keeping the vulnerabilities in the software at their minimal levels.
                 </p>
               </div>
 
-              <div className="bg-primary/40 rounded-lg p-4 border border-secondary/20">
-                <h3 className="text-lg font-semibold text-secondary mb-2">NLP for Coding</h3>
+              <div className="bg-primary/40 rounded-lg p-4 border border-primary/20">
+                <h3 className="text-lg font-semibold text-primary mb-2">NLP for Coding</h3>
                 <p className="text-white/80 leading-relaxed">
                   AI understands human languages and converts them into code that the computer then will understand and execute, hence making the work of programming easier.
                 </p>
               </div>
 
-              <div className="bg-primary/40 rounded-lg p-4 border border-secondary/20">
-                <h3 className="text-lg font-semibold text-secondary mb-2">Improved Maintenance of Software</h3>
+              <div className="bg-primary/40 rounded-lg p-4 border border-primary/20">
+                <h3 className="text-lg font-semibold text-primary mb-2">Improved Maintenance of Software</h3>
                 <p className="text-white/80 leading-relaxed">
                   Generative AI learns from existing codebases and continuously makes suggestions to improve the quality and maintainability of code.
                 </p>
@@ -195,22 +195,22 @@ const Blog12 = () => {
             <h2 className="text-2xl font-bold text-white mb-4">The Role of Generative AI in AI-Driven Software Development</h2>
             
             <div className="space-y-4 mb-6">
-              <div className="bg-primary/40 rounded-lg p-4 border border-secondary/20">
-                <h3 className="text-lg font-semibold text-secondary mb-2">Improved Productivity</h3>
+              <div className="bg-primary/40 rounded-lg p-4 border border-primary/20">
+                <h3 className="text-lg font-semibold text-primary mb-2">Improved Productivity</h3>
                 <p className="text-white/80 leading-relaxed">
                   Developers can be freed to work at higher levels of problem-solving by leaving more mundane and repetitive tasks to AI.
                 </p>
               </div>
 
-              <div className="bg-primary/40 rounded-lg p-4 border border-secondary/20">
-                <h3 className="text-lg font-semibold text-secondary mb-2">Smooth Integration with DevOps</h3>
+              <div className="bg-primary/40 rounded-lg p-4 border border-primary/20">
+                <h3 className="text-lg font-semibold text-primary mb-2">Smooth Integration with DevOps</h3>
                 <p className="text-white/80 leading-relaxed">
                   AI-driven code automation works well in conjunction with Continuous Integration/Continuous Deployment, improving efficiency in the workflow.
                 </p>
               </div>
 
-              <div className="bg-primary/40 rounded-lg p-4 border border-secondary/20">
-                <h3 className="text-lg font-semibold text-secondary mb-2">Scalability and Customization</h3>
+              <div className="bg-primary/40 rounded-lg p-4 border border-primary/20">
+                <h3 className="text-lg font-semibold text-primary mb-2">Scalability and Customization</h3>
                 <p className="text-white/80 leading-relaxed">
                   AI can adapt to a wide variety of project needs and offers solutions for most complex software applications.
                 </p>
@@ -234,21 +234,21 @@ const Blog12 = () => {
             <h2 className="text-2xl font-bold text-white mb-4">Benefits of Generative AI</h2>
             
             <div className="space-y-3 mb-6">
-              <div className="bg-primary/40 rounded-lg p-4 border border-secondary/20">
+              <div className="bg-primary/40 rounded-lg p-4 border border-primary/20">
                 <p className="text-white/80 leading-relaxed">
-                  <strong className="text-secondary">Faster Time to Market:</strong> With the automation of software creation, more innovation due to AI-driven creativity.
+                  <strong className="text-primary">Faster Time to Market:</strong> With the automation of software creation, more innovation due to AI-driven creativity.
                 </p>
               </div>
 
-              <div className="bg-primary/40 rounded-lg p-4 border border-secondary/20">
+              <div className="bg-primary/40 rounded-lg p-4 border border-primary/20">
                 <p className="text-white/80 leading-relaxed">
-                  <strong className="text-secondary">Enhanced Innovation:</strong> AI-driven creativity enables developers to explore new solutions and approaches.
+                  <strong className="text-primary">Enhanced Innovation:</strong> AI-driven creativity enables developers to explore new solutions and approaches.
                 </p>
               </div>
 
-              <div className="bg-primary/40 rounded-lg p-4 border border-secondary/20">
+              <div className="bg-primary/40 rounded-lg p-4 border border-primary/20">
                 <p className="text-white/80 leading-relaxed">
-                  <strong className="text-secondary">Better Security:</strong> Proactive detection of vulnerabilities through intelligent analysis.
+                  <strong className="text-primary">Better Security:</strong> Proactive detection of vulnerabilities through intelligent analysis.
                 </p>
               </div>
             </div>
@@ -287,26 +287,26 @@ const Blog12 = () => {
         }
 
         ::-webkit-scrollbar-track {
-          background: rgba(34, 48, 68, 0.3);
+          background: rgba(0, 0, 0, 0.3);
         }
 
         ::-webkit-scrollbar-thumb {
-          background: #1ddfea;
+          background: #000000;
           border-radius: 2px;
         }
 
         ::-webkit-scrollbar-thumb:hover {
-          background: rgba(29, 223, 234, 0.8);
+          background: rgba(0, 0, 0, 0.8);
         }
 
         ::-webkit-scrollbar-corner {
-          background: rgba(34, 48, 68, 0.3);
+          background: rgba(0, 0, 0, 0.3);
         }
 
         /* Firefox */
         * {
           scrollbar-width: thin;
-          scrollbar-color: #1ddfea rgba(34, 48, 68, 0.3);
+          scrollbar-color: #000000 rgba(0, 0, 0, 0.3);
         }
       `}</style>
     </div>

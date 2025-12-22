@@ -91,7 +91,7 @@ export default function CloudComputing() {
   }, []);
 
   return (
-    <div className="relative bg-primary min-h-screen overflow-hidden py-20 px-4 sm:px-6 lg:px-20">
+    <div className="relative bg-secondary min-h-screen overflow-hidden py-20 px-4 sm:px-6 lg:px-20">
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-40 h-40 bg-secondary/20 rounded-full"></div>
@@ -111,12 +111,12 @@ export default function CloudComputing() {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header Section */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center border border-secondary/30 bg-white/5 backdrop-blur-sm text-secondary px-6 py-3 rounded-full text-sm font-medium mb-8">
+          <div className="inline-flex items-center border border-secondary/30 bg-secondary/10 backdrop-blur-sm text-primary px-6 py-3 rounded-full text-sm font-medium mb-8">
             <span className="w-2 h-2 bg-secondary rounded-full mr-2 animate-pulse"></span>
             Cloud Computing Services
           </div>
-          <h2 className="text-5xl font-bold text-white mb-6">
-            Cloud <span className="bg-gradient-to-r from-secondary via-cyan-400 to-secondary bg-clip-text text-transparent">Computing</span> Services
+          <h2 className="text-5xl font-bold text-primary mb-6">
+            Cloud <span className="text-primary">Computing</span> Services
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-secondary to-transparent rounded-full mx-auto"></div>
         </div>
@@ -146,11 +146,11 @@ export default function CloudComputing() {
                   className="flex-shrink-0 w-full sm:w-1/2 lg:w-1/2 xl:w-1/3 px-4"
                 >
                   <div
-                    className={`bg-primary/70 backdrop-blur-xl rounded-3xl border border-white/20 shadow-2xl overflow-hidden h-full transition-all duration-500 hover:bg-primary/80 hover:-translate-y-2 hover:shadow-3xl transform ${transformClasses} group`}
+                    className={`bg-secondary/70 backdrop-blur-xl rounded-3xl border border-secondary/30 shadow-2xl overflow-hidden h-full transition-all duration-500 hover:bg-secondary/80 hover:-translate-y-2 hover:shadow-3xl transform ${transformClasses} group`}
                   >
                     {/* Header with React icon and gradient */}
                     <div className={`bg-gradient-to-r ${card.gradient} p-8 relative overflow-hidden`}>
-                      <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent"></div>
+                      <div className="absolute inset-0 bg-gradient-to-br from-secondary/10 to-transparent"></div>
                       <div className="relative z-10 flex items-center">
                         <div className="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center mr-4">
                           <Icon className="text-2xl text-primary" />
@@ -164,8 +164,8 @@ export default function CloudComputing() {
                     </div>
 
                     {/* Body */}
-                    <div className="p-8 text-white/90 text-sm leading-relaxed flex-1 relative">
-                      <p className="group-hover:text-white transition-colors duration-300">
+                    <div className="p-8 text-primary text-sm leading-relaxed flex-1 relative">
+                      <p className="group-hover:text-primary transition-colors duration-300">
                         {card.text}
                       </p>
                       {/* Progress indicator */}
@@ -176,7 +176,7 @@ export default function CloudComputing() {
                             style={{ width: `${((idx + 1) / cards.length) * 100}%` }}
                           ></div>
                         </div>
-                        <span className="ml-3 text-secondary font-bold text-xs">
+                        <span className="ml-3 text-primary font-bold text-xs">
                           {String(idx + 1).padStart(2, "0")}
                         </span>
                       </div>

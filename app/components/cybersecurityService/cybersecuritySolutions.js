@@ -3,7 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 
 const CybersecuritySolutions = () => (
-  <section className="relative bg-primary min-h-screen overflow-hidden py-20 px-4 sm:px-6 lg:px-20">
+  <section className="relative bg-secondary min-h-screen overflow-hidden py-20 px-4 sm:px-6 lg:px-20">
     {/* Background Decorative Elements */}
     <div className="absolute inset-0 opacity-10">
       <div className="absolute top-20 left-20 w-40 h-40 bg-secondary/20 rounded-full"></div>
@@ -26,22 +26,22 @@ const CybersecuritySolutions = () => (
         {/* Text Column */}
         <div className="w-full lg:w-1/2 lg:max-w-2xl">
           {/* Section Badge */}
-          <div className="inline-flex items-center border border-secondary/30 bg-white/5 backdrop-blur-sm text-secondary px-6 py-3 rounded-full text-sm font-medium mb-8">
+          <div className="inline-flex items-center border border-secondary/30 bg-secondary/10 backdrop-blur-sm text-primary px-6 py-3 rounded-full text-sm font-medium mb-8">
             <span className="w-2 h-2 bg-secondary rounded-full mr-2 animate-pulse"></span>
             Cybersecurity Solutions
           </div>
 
           {/* Heading - Updated to text-5xl */}
-          <h2 className="text-5xl font-bold text-white mb-6 leading-tight">
-            Future-Proof <span className="bg-gradient-to-r from-secondary via-cyan-400 to-secondary bg-clip-text text-transparent">Cybersecurity Solutions</span>
+          <h2 className="text-5xl font-bold text-primary mb-6 leading-tight">
+            Future-Proof <span className="text-primary">Cybersecurity Solutions</span>
           </h2>
 
           {/* Decorative underline */}
           <div className="w-20 h-1 bg-gradient-to-r from-secondary to-transparent rounded-full mb-6"></div>
 
           {/* Description - Updated to larger text */}
-          <p className="text-xl text-white/90 leading-relaxed pl-4 border-l-4 border-secondary/40">
-            Cyber threats are constantly evolving, making advanced cybersecurity solutions a necessity. <span className="text-secondary font-medium">Codework.ai</span> delivers proactive security strategies to keep businesses protected, compliant, and resilient in the face of cyber risks. Explore tailored cybersecurity solutions today and strengthen digital security against evolving threats.
+          <p className="text-xl text-primary leading-relaxed pl-4 border-l-4 border-secondary/40">
+            Cyber threats are constantly evolving, making advanced cybersecurity solutions a necessity. <span className="text-primary font-medium">Codework.ai</span> delivers proactive security strategies to keep businesses protected, compliant, and resilient in the face of cyber risks. Explore tailored cybersecurity solutions today and strengthen digital security against evolving threats.
           </p>
         </div>
 
@@ -49,7 +49,7 @@ const CybersecuritySolutions = () => (
         <div className="w-full lg:w-auto lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2 lg:-mr-12 xl:-mr-20 2xl:-mr-20">
           <div className="relative">
             {/* Primary color overlay with low opacity */}
-            <div className="absolute inset-0 bg-primary opacity-20 rounded-2xl"></div>
+            <div className="absolute inset-0 bg-secondary opacity-20 rounded-2xl"></div>
             <Image
               src="/AllServices/Cybersecurity.svg"
               alt="Cybersecurity solutions illustration"

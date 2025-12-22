@@ -47,12 +47,12 @@ const Blog18 = () => {
   }, []);
 
   return (
-    <div className="bg-primary py-12 pt-40 min-h-screen">
+    <div className="bg-secondary py-12 pt-40 min-h-screen">
       <div className="max-w-screen-xl mx-auto px-4 flex gap-8">
         {/* LEFT SIDEBAR - TABLE OF CONTENTS */}
         <div className="hidden lg:block w-64 sticky top-24 h-fit">
           <div className="bg-primary/60 backdrop-blur-sm rounded-xl border border-secondary/20 p-6 shadow-glow">
-            <h3 className="text-lg font-bold text-secondary mb-4 flex items-center">
+            <h3 className="text-lg font-bold text-primary mb-4 flex items-center">
               <FiList className="mr-2" />
               Table of Contents
             </h3>
@@ -66,8 +66,8 @@ const Blog18 = () => {
                   onClick={() => scrollToSection(item.id)}
                   className={`block w-full text-left px-3 py-2 rounded-lg text-sm transition-all duration-200 ${
                     activeSection === item.id
-                      ? "bg-secondary/20 text-secondary border-l-4 border-secondary"
-                      : "text-white/70 hover:text-white hover:bg-white/5"
+                      ? "bg-primary/20 text-primary border-l-4 border-primary"
+                      : "text-primary hover:text-primary/80 hover:bg-primary/5"
                   }`}
                 >
                   {index + 1}. {item.title}
@@ -87,9 +87,9 @@ const Blog18 = () => {
 
         {/* MOBILE TOC OVERLAY */}
         {isTocOpen && (
-          <div className="lg:hidden fixed inset-0 z-40 bg-black/50" onClick={() => setIsTocOpen(false)}>
+          <div className="lg:hidden fixed inset-0 z-40 bg-secondary/50" onClick={() => setIsTocOpen(false)}>
             <div className="bg-primary w-80 h-full overflow-y-auto p-6 shadow-xl" onClick={e => e.stopPropagation()}>
-              <h3 className="text-lg font-bold text-secondary mb-4 flex items-center">
+              <h3 className="text-lg font-bold text-primary mb-4 flex items-center">
                 <FiList className="mr-2" />
                 Table of Contents
               </h3>
@@ -103,8 +103,8 @@ const Blog18 = () => {
                     }}
                     className={`block w-full text-left px-3 py-2 rounded-lg text-sm transition-all duration-200 ${
                       activeSection === item.id
-                        ? "bg-secondary/20 text-secondary border-l-4 border-secondary"
-                        : "text-white/70 hover:text-white hover:bg-white/5"
+                        ? "bg-primary/20 text-primary border-l-4 border-primary"
+                        : "text-primary hover:text-primary/80 hover:bg-primary/5"
                     }`}
                   >
                     {index + 1}. {item.title}
@@ -118,12 +118,12 @@ const Blog18 = () => {
         {/* MAIN CONTENT */}
         <div className="flex-1 max-w-4xl">
           {/* TITLE */}
-          <h1 className="text-5xl font-extrabold text-secondary mb-8 drop-shadow-glow">
+          <h1 className="text-5xl font-extrabold text-primary mb-8 drop-shadow-glow">
             Mixture of Experts: Making AI Smarter, Not Just Bigger
           </h1>
 
           {/* FEATURE IMAGE */}
-          <div className="relative w-full h-[400px] border-4 border-secondary border-t-0 border-l-0 rounded-lg overflow-hidden mb-8 shadow-glow">
+          <div className="relative w-full h-[400px] border-4 border-primary border-t-0 border-l-0 rounded-lg overflow-hidden mb-8 shadow-glow">
             <Image
               src="/blog/blog18.jpg"
               alt="Mixture of Experts"
@@ -134,14 +134,14 @@ const Blog18 = () => {
           </div>
 
           {/* META */}
-          <div className="flex items-center text-sm text-white mb-10 space-x-3">
-            <div className="w-8 h-8 rounded-full bg-cyan-400/20 flex items-center justify-center text-cyan-400 font-extrabold drop-shadow-glow">
+          <div className="flex items-center text-sm text-primary mb-10 space-x-3">
+            <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-extrabold drop-shadow-glow">
               S
             </div>
             <span className="uppercase tracking-wide font-semibold">Sathish</span>
             <span>•</span>
             <div className="flex items-center">
-              <FiClock className="mr-1 text-cyan-400" />
+              <FiClock className="mr-1 text-primary" />
               <span>20 July 2025</span>
             </div>
           </div>
@@ -223,7 +223,7 @@ const Blog18 = () => {
           {/* SECTION: Internal Link */}
           <section id="explore-more" className="scroll-mt-24">
             <p className="text-white/80 leading-relaxed mb-6">
-              <strong>Explore More:</strong> Discover the broader impact of AI <Link href="/ai-transforming-software" className="text-secondary hover:underline font-medium"> How is AI Transforming Software Development?</Link>
+              <strong>Explore More:</strong> Discover the broader impact of AI <Link href="/ai-transforming-software" className="text-primary hover:underline font-medium"> How is AI Transforming Software Development?</Link>
             </p>
           </section>
         </div>
@@ -231,10 +231,10 @@ const Blog18 = () => {
 
       <style jsx global>{`
         .drop-shadow-glow {
-          text-shadow: 0 0 12px #1ddfea66, 0 0 2px #223044;
+          text-shadow: 0 0 12px rgba(255, 255, 255, 0.4), 0 0 2px rgba(0, 0, 0, 0.3);
         }
         .shadow-glow {
-          box-shadow: 0 0 32px #1ddfea22, 0 0 8px #22304426;
+          box-shadow: 0 0 32px rgba(255, 255, 255, 0.12), 0 0 8px rgba(0, 0, 0, 0.15);
         }
         .scroll-mt-24 {
           scroll-margin-top: 6rem;
@@ -252,26 +252,26 @@ const Blog18 = () => {
         }
 
         ::-webkit-scrollbar-track {
-          background: rgba(34, 48, 68, 0.3);
+          background: rgba(0, 0, 0, 0.3);
         }
 
         ::-webkit-scrollbar-thumb {
-          background: #1ddfea;
+          background: #ffffff;
           border-radius: 2px;
         }
 
         ::-webkit-scrollbar-thumb:hover {
-          background: rgba(29, 223, 234, 0.8);
+          background: rgba(255, 255, 255, 0.8);
         }
 
         ::-webkit-scrollbar-corner {
-          background: rgba(34, 48, 68, 0.3);
+          background: rgba(0, 0, 0, 0.3);
         }
 
         /* Firefox */
         * {
           scrollbar-width: thin;
-          scrollbar-color: #1ddfea rgba(34, 48, 68, 0.3);
+          scrollbar-color: #ffffff rgba(0, 0, 0, 0.3);
         }
       `}</style>
     </div>

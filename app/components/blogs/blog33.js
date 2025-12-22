@@ -55,13 +55,13 @@ const Blog33 = () => {
   }, []);
 
   return (
-    <div className="bg-primary py-12 pt-40 min-h-screen">
+    <div className="bg-secondary py-12 pt-40 min-h-screen">
       <div className="max-w-screen-xl mx-auto px-4 flex gap-8">
 
         {/* LEFT SIDEBAR - TABLE OF CONTENTS */}
         <div className="hidden lg:block w-64 sticky top-24 h-fit">
           <div className="bg-primary/60 backdrop-blur-sm rounded-xl border border-secondary/20 p-6 shadow-glow">
-            <h3 className="text-lg font-bold text-secondary mb-4 flex items-center">
+            <h3 className="text-lg font-bold text-primary mb-4 flex items-center">
               <FiList className="mr-2" />
               Table of Contents
             </h3>
@@ -75,8 +75,8 @@ const Blog33 = () => {
                   onClick={() => scrollToSection(item.id)}
                   className={`block w-full text-left px-3 py-2 rounded-lg text-sm transition-all duration-200 ${
                     activeSection === item.id
-                      ? "bg-secondary/20 text-secondary border-l-4 border-secondary"
-                      : "text-white/70 hover:text-white hover:bg-white/5"
+                      ? "bg-primary/20 text-primary border-l-4 border-primary"
+                      : "text-primary hover:text-primary/80 hover:bg-primary/5"
                   }`}
                 >
                   {index + 1}. {item.title}
@@ -96,9 +96,9 @@ const Blog33 = () => {
 
         {/* MOBILE TOC OVERLAY */}
         {isTocOpen && (
-          <div className="lg:hidden fixed inset-0 z-40 bg-black/50" onClick={() => setIsTocOpen(false)}>
+          <div className="lg:hidden fixed inset-0 z-40 bg-secondary/50" onClick={() => setIsTocOpen(false)}>
             <div className="bg-primary w-80 h-full overflow-y-auto p-6 shadow-xl" onClick={e => e.stopPropagation()}>
-              <h3 className="text-lg font-bold text-secondary mb-4 flex items-center">
+              <h3 className="text-lg font-bold text-primary mb-4 flex items-center">
                 <FiList className="mr-2" />
                 Table of Contents
               </h3>
@@ -112,8 +112,8 @@ const Blog33 = () => {
                     }}
                     className={`block w-full text-left px-3 py-2 rounded-lg text-sm transition-all duration-200 ${
                       activeSection === item.id
-                        ? "bg-secondary/20 text-secondary border-l-4 border-secondary"
-                        : "text-white/70 hover:text-white hover:bg-white/5"
+                        ? "bg-primary/20 text-primary border-l-4 border-primary"
+                        : "text-primary hover:text-primary/80 hover:bg-primary/5"
                     }`}
                   >
                     {index + 1}. {item.title}
@@ -127,12 +127,12 @@ const Blog33 = () => {
         {/* MAIN CONTENT */}
         <div className="flex-1 max-w-4xl">
           {/* TITLE */}
-          <h1 className="text-5xl font-extrabold text-secondary mb-8 drop-shadow-glow">
+          <h1 className="text-5xl font-extrabold text-primary mb-8 drop-shadow-glow">
             Crowd Management: Ensuring Safety and Order in Large Gatherings
           </h1>
 
           {/* FEATURE IMAGE */}
-          <div className="relative w-full h-[400px] border-4 border-secondary border-t-0 border-l-0 rounded-lg overflow-hidden mb-8 shadow-glow">
+          <div className="relative w-full h-[400px] border-4 border-primary border-t-0 border-l-0 rounded-lg overflow-hidden mb-8 shadow-glow">
             <Image
               src="/blog/blog3.jpg"
               alt="Crowd Management Technology"
@@ -143,14 +143,14 @@ const Blog33 = () => {
           </div>
 
           {/* META */}
-          <div className="flex items-center text-sm text-white mb-10 space-x-3">
-            <div className="w-8 h-8 rounded-full bg-cyan-400/20 flex items-center justify-center text-cyan-400 font-extrabold drop-shadow-glow">
+          <div className="flex items-center text-sm text-primary mb-10 space-x-3">
+            <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-extrabold drop-shadow-glow">
               K
             </div>
             <span className="uppercase tracking-wide font-semibold">Felista</span>
             <span>•</span>
             <div className="flex items-center">
-              <FiClock className="mr-1 text-cyan-400" />
+              <FiClock className="mr-1 text-primary" />
               <span>22 October 2025</span>
             </div>
           </div>
@@ -349,7 +349,7 @@ const Blog33 = () => {
               Crowd disasters or crowd collapses and crushes happen when the density of the crowd reaches or exceeds 4 to 5 persons per m². The crowd collapses in on itself, or becomes so densely packed that individuals are crushed. The pressure through the crowd on the lungs causes a lack of oxygen (Asphyxia) which can lead to death.
             </p>
             <div className="bg-primary/40 rounded-lg p-6 border border-secondary/20 mb-4">
-              <h3 className="text-lg font-semibold text-secondary mb-3">World Crowd Disasters Map</h3>
+              <h3 className="text-lg font-semibold text-primary mb-3">World Crowd Disasters Map</h3>
               <p className="text-white/80 leading-relaxed">
                 The World Crowd Disasters Map by Dr. Ali Asgary, Associate Professor, Disaster & Emergency Management, York University illustrates that crowd disasters unfortunately can happen everywhere and often do so with high number of fatalities. Thorough crowd management is the best way to avoid such tragedies.
               </p>
