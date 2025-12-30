@@ -29,11 +29,6 @@ const AIEnabled = () => {
             CodeWork AI provides an integrated family of development tools to meet the needs of different development communities.
           </p>
 
-          {/* Learn More Button */}
-          <button className="group relative border-2 border-primary px-12 py-4 text-xl font-semibold overflow-hidden transition-all duration-300 hover:text-secondary">
-            <div className="absolute inset-0 bg-primary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
-            <span className="relative z-10">Learn More</span>
-          </button>
         </div>
 
         {/* Categories Grid */}

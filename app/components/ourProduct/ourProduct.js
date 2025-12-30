@@ -36,7 +36,7 @@ const OurProduct = () => {
           <div className="relative group cursor-pointer overflow-hidden w-full max-w-sm bg-secondary/30 backdrop-blur-xl border border-primary/10 rounded-none hover:bg-secondary/40 hover:border-primary/30 transition-all duration-500 shadow-2xl shadow-primary/20">
             
             {/* Product Label */}
-            <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-20">
+            {/* <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-20">
               <div className="w-28 h-14 backdrop-blur-sm rounded-2xl p-1 shadow-lg border border-white/20">
                 <img
                   src="/Hyperflx.svg"
@@ -44,7 +44,7 @@ const OurProduct = () => {
                   className="w-full h-full object-contain"
                 />
               </div>
-            </div>
+            </div> */}
 
             {/* Main Image */}
             <div className="relative overflow-hidden rounded-none">
