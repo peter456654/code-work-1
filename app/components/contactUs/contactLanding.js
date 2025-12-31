@@ -18,6 +18,7 @@ const ContactLanding = () => {
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
   const [responseMessage, setResponseMessage] = useState("");
+  const [submitted, setSubmitted] = useState(false);
 
   // ─── Accordion State ─────────────────────────────────────────────────────
   const [activeIndex, setActiveIndex] = useState(0);
@@ -71,7 +72,9 @@ const ContactLanding = () => {
       if (!res.ok) {
         setResponseMessage(result.message || "Failed to send contact details.");
       } else {
-        setResponseMessage(result.message || "Thank you! We'll be in touch.");
+        setResponseMessage("Thanks for reaching out to us, We will get back to you soon");
+        setTimeout(() => setResponseMessage(""), 3000);
+        setSubmitted(true);
         setFormData({
           first_name: "",
           last_name: "",
@@ -169,7 +172,7 @@ const ContactLanding = () => {
 
           <button
             type="submit"
-            disabled={loading}
+            disabled={loading || submitted}
             className="px-10 py-4 border border-secondary rounded-none text-secondary font-semibold w-fit hover:bg-secondary hover:text-primary transition"
           >
             {loading ? "Submitting…" : "Submit"}

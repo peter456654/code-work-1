@@ -14,6 +14,7 @@ const WeListening = () => {
   const [errors, setErrors] = useState({});
   const [responseMessage, setResponseMessage] = useState('');
   const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   const isValidEmail = (value) => {
     const email = String(value || '').trim();
@@ -82,7 +83,9 @@ const WeListening = () => {
       }
 
       const data = await response.json();
-      setResponseMessage(data.message || 'Message sent successfully!');
+      setResponseMessage('Thanks for reaching out to us, We will get back to you soon');
+      setTimeout(() => setResponseMessage(''), 3000);
+      setSubmitted(true);
       setFormData({
         name: '',
         email: '',
@@ -163,7 +166,7 @@ const WeListening = () => {
             )}
           </div>
 
-          <button type="submit" disabled={loading} className="px-10 py-4 border border-secondary rounded-none text-secondary font-semibold w-fit hover:bg-secondary hover:text-primary transition">
+          <button type="submit" disabled={loading || submitted} className="px-10 py-4 border border-secondary rounded-none text-secondary font-semibold w-fit hover:bg-secondary hover:text-primary transition">
             {loading ? 'Submitting…' : 'Submit'}
           </button>
 

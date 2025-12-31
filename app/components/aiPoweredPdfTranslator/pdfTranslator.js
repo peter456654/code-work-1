@@ -6,13 +6,7 @@ function PdfTranslator() {
     <div className="relative bg-secondary min-h-screen overflow-hidden">
       {/* Background Decorative Elements */}
 
-      {/* Floating Elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-32 left-16 w-2 h-2 md:w-3 md:h-3 bg-secondary rounded-full animate-pulse"></div>
-        <div className="absolute top-48 right-20 w-1 h-1 md:w-2 md:h-2 bg-white/60 rounded-full animate-bounce"></div>
-        <div className="absolute bottom-56 left-1/4 w-3 h-3 md:w-4 md:h-4 bg-secondary/80 rounded-full animate-ping"></div>
-        <div className="absolute top-3/4 right-1/3 w-1 h-1 md:w-2 md:h-2 bg-white/40 rounded-full animate-pulse"></div>
-      </div>
+      
 
       <div className="container mx-auto px-6 sm:px-8 md:px-16 py-12 relative z-10">
         {/* Introduction */}
